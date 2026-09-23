@@ -152,12 +152,12 @@ func TestGzipETagMetodo(t *testing.T) {
 
 func TestArquivosSEO(t *testing.T) {
 	s := newSite(t)
-	for _, p := range []string{"/robots.txt", "/sitemap.xml", "/llms.txt", "/llms-full.txt", "/.well-known/security.txt", "/assets/ovelha-og.jpg", "/healthz"} {
+	for _, p := range []string{"/robots.txt", "/sitemap.xml", "/llms.txt", "/llms-full.txt", "/.well-known/security.txt", "/assets/adriana-nogueira-og.jpg", "/healthz"} {
 		if w := do(s, "GET", canon, p, nil); w.Code != 200 {
 			t.Errorf("%s: %d", p, w.Code)
 		}
 	}
-	if w := do(s, "GET", canon, "/assets/ovelha-og.jpg", nil); !strings.Contains(w.Header().Get("Cache-Control"), "immutable") {
+	if w := do(s, "GET", canon, "/assets/adriana-nogueira-og.jpg", nil); !strings.Contains(w.Header().Get("Cache-Control"), "immutable") {
 		t.Error("assets sem cache longo")
 	}
 }
