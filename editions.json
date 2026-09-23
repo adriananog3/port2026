@@ -1,0 +1,353 @@
+{
+ "editions": [
+  {
+   "id": 1,
+   "number": 1,
+   "title": "Meta vai ultrapassar o Google em receita de Ads, saiba o que muda para o seu negócio!",
+   "subtitle": "Pela primeira vez na história, o reinado do Google na publicidade digital está com os dias contados. Mais: Visa + TikTok lançam cartão para creators, Retail Media explode no Brasil e a Creator Economy bate US$ 44 bilhões.",
+   "date": "2026-04-29",
+   "readTime": 8,
+   "tags": [
+    "Marketing Digital",
+    "Meta Ads",
+    "Google Ads",
+    "Retail Media",
+    "Creator Economy",
+    "IA",
+    "Mídia Paga"
+   ],
+   "headerImage": "/manus-storage/ovelha_news_banner_deluxe_5831bfab.webp",
+   "summary": "Esta edição cobre seis movimentos que estão redesenhando o mercado de marketing digital em 2026: Meta ultrapassa Google em ads, Google reage com AI Max, Visa + TikTok lançam Creator Card, Retail Media explode no Brasil, Creator Economy bate US$ 44 bilhões, e custo de mídia sobe ~20% no Brasil.",
+   "content": {
+    "hero": {
+     "title": "Meta vai ultrapassar o Google em receita de ads.",
+     "subtitle": "Pela primeira vez na história, o reinado do Google na publicidade digital está com os dias contados."
+    },
+    "body": "<p>Parece título de filme, mas é dado da <strong>eMarketer</strong>: em 2026, a <strong>Meta vai faturar US$ 243,5 bilhões</strong> em receita publicitária global, contra <strong>US$ 239,5 bilhões do Google</strong>. É a primeira vez que isso acontece. E não é por pouco, a Meta está crescendo cerca de <strong>24,1% ao ano</strong>, enquanto o Google anda a <strong>11,9%</strong>.</p>\n<p>O que está por trás disso? Três palavras: <strong>Advantage+, Reels e automação</strong>. A Meta transformou a compra de mídia em algo quase plug-and-play. O anunciante joga a URL do site, define o orçamento, e a IA da Meta cuida de tudo: criativo, segmentação, posicionamento. E o resultado? Quem migrou para campanhas consolidadas no Advantage+ viu <strong>redução de até 32% no CPA</strong>. Não é promessa de guru, é métrica real, reportada por ad buyers mundo afora.</p>\n<p>Enquanto isso, o Google também não está parado. Em 15 de abril, lançou o <strong>AI Max</strong> para campanhas de Search, que substitui as Dynamic Search Ads e elimina a necessidade de segmentação manual por keywords. O Gemini agora lê a landing page, interpreta a intenção do usuário e gera os anúncios automaticamente. Os primeiros testes mostram <strong>+14% de conversões</strong> com CPA similar. Além disso, o Google começou a exibir anúncios dentro do <strong>AI Mode</strong>, com formatos de shopping patrocinado aparecendo nas respostas conversacionais da busca.</p>\n<div class=\"data-box\">\n<p>US$ 243,5 bi — Receita Meta (projeção 2026)</p>\n<p>US$ 239,5 bi — Receita Google (projeção 2026)</p>\n<p>24,1% — Crescimento Meta vs 11,9% Google</p>\n<p>-32% CPA — Resultado médio com Advantage+</p>\n<p>+14% conversões — Google AI Max vs campanhas tradicionais</p>\n</div>\n<p>A grande questão para quem opera mídia paga no Brasil: com o <strong>custo de mídia subindo +20%</strong> em ano de Copa e eleições, a automação deixou de ser opção e virou <strong>sobrevivência</strong>. Se você ainda faz campanhas manuais segmentadas por interesse no Meta Ads, está literalmente pagando mais caro pelo mesmo resultado. A hora de testar <strong>Advantage+</strong> e <strong>AI Max</strong> é agora, não daqui a três meses.</p>\n<blockquote>A briga Google x Meta está empurrando a indústria inteira para um novo paradigma. O gestor de tráfego que não souber trabalhar com <strong>IA generativa aplicada a anúncios</strong> corre o risco de ficar tão obsoleto quanto quem ainda fazia links patrocinados na mão em 2015.</blockquote>",
+    "highlights": {
+     "title": "O QUE VOCÊ VAI VER NESTA EDIÇÃO",
+     "items": [
+      "Meta vs Google: a virada histórica na publicidade digital (você acabou de ler)",
+      "Visa + TikTok lançam cartão de débito para creators",
+      "Retail Media no Brasil: iFood, Mercado Livre e a corrida bilionária",
+      "Creator Economy: US$ 44 bilhões em 2026 e o que isso muda",
+      "Pensamentos de terça + Frase do dia"
+     ]
+    },
+    "quickReads": {
+     "title": "DON'T LEAVE, JUST READ (pra ler rapidinho)",
+     "items": [
+      {
+       "icon": "💳",
+       "title": "Visa + TikTok lançam cartão para creators",
+       "text": "A Visa se juntou ao TikTok para lançar o Creator Card, um cartão de débito pensado para criadores de conteúdo. A lógica: resolver o maior gargalo da creator economy — fluxo de caixa. Dinheiro que antes demorava dias ou semanas vira liquidez quase imediata. Dados da Visa mostram que 86% dos negócios de creators são autofinanciados e 49% enfrentam atrasos em pagamentos. Para a Visa, o objetivo é virar a infraestrutura financeira de um mercado de US$ 500 bilhões."
+      },
+      {
+       "icon": "🛒",
+       "title": "Retail Media no Brasil: iFood compra empresa de IA e Mercado Livre vira plataforma full-funnel",
+       "text": "O iFood anunciou a aquisição da Advolve, startup de IA aplicada a performance marketing, para turbinar o iFood Ads. A empresa projeta crescer 5x até 2030. Enquanto isso, o Mercado Ads (Mercado Livre) está deixando de ser apenas 'mídia de marketplace' para se consolidar como plataforma de mídia digital completa, combinando first-party data, inventário on-site + off-site e CTV/streaming. O mercado de retail media na América Latina deve ultrapassar US$ 5 bilhões até 2030."
+      },
+      {
+       "icon": "🎥",
+       "title": "Creator Economy: US$ 44 bilhões em publicidade em 2026",
+       "text": "O gasto com publicidade na creator economy nos EUA deve saltar para US$ 43,9 bilhões em 2026, alta de 18% sobre 2025 (dado IAB). O número mais que dobrou em três anos. Quase metade dos anunciantes já classifica creators como 'must buy', no mesmo patamar de search e social pago. O grande motor: amplificação paga de conteúdo de creators fora das redes sociais crescendo 56%."
+      },
+      {
+       "icon": "🤖",
+       "title": "Google AI Max sai do beta e mata as Dynamic Search Ads",
+       "text": "O Google lançou oficialmente o AI Max para campanhas de Search em 15 de abril, substituindo as DSAs. A IA (Gemini) agora lê a landing page e gera anúncios automaticamente, sem necessidade de keywords manuais. Resultado médio: +14% de conversões com CPA similar. A partir de setembro, todas as campanhas com DSA serão migradas automaticamente."
+      },
+      {
+       "icon": "📈",
+       "title": "Custo de mídia paga sobe +20% no Brasil em 2026",
+       "text": "Com Copa do Mundo e eleições gerais, o custo de mídia paga no Brasil tende a subir cerca de 20%, além do aumento de 12,5% já anunciado pela Meta nos CPMs. Empresas que não equilibrarem mídia paga com SEO, GEO e construção de marca sentirão o impacto direto na margem. O mercado brasileiro de marketing digital movimentou mais de R$ 35 bilhões em 2025, com projeção de +18% para 2026."
+      },
+      {
+       "icon": "🔍",
+       "title": "LinkedIn é a 2ª maior fonte de IAs (atrás só do Reddit)",
+       "text": "Estudo da SEMrush mostra que o LinkedIn é a segunda plataforma mais citada por IAs como ChatGPT e Perplexity, atrás apenas do Reddit e à frente de Wikipedia e YouTube. Artigos longos e origináis performam melhor. Perfis pessoais são priorizados pelo ChatGPT e Google AI, enquanto Perplexity favorece páginas corporativas. A dica: poste pelo menos 5x por mês com conteúdo educativo e original."
+      }
+     ]
+    },
+    "thoughts": {
+     "title": "PENSAMENTOS DE TERÇA",
+     "items": [
+      "Se o algoritmo me conhece melhor do que eu, por que ainda me mostra anúncio de coisa que eu já comprei?",
+      "A melhor estratégia de conteúdo é aquela que você não precisa explicar que é estratégia de conteúdo.",
+      "Branding sem dados é achismo. Dados sem branding é planilha.",
+      "Todo mundo quer viralizar, mas ninguém quer ser consistente por 6 meses.",
+      "Se a sua marca só existe quando está impulsionada, ela não existe."
+     ]
+    },
+    "recommendations": {
+     "title": "A REDAÇÃO RECOMENDA",
+     "items": [
+      {
+       "title": "Unreasonable Hospitality (livro, Will Guidara)",
+       "text": "O ex-dono do melhor restaurante do mundo explica como obsessão por experiência transforma qualquer negócio. Se você trabalha com marketing e ainda não leu, está perdendo um MBA em customer experience disfarçado de história de restaurante."
+      },
+      {
+       "title": "The Diary of a CEO (podcast, Steven Bartlett)",
+       "text": "Episódios recentes com lideranças de Meta, Google e founders de startups estão imperdíveis. Profundidade real, sem aquele tom motivacional vazio."
+      },
+      {
+       "title": "Perplexity Spaces (ferramenta gratuita)",
+       "text": "Se você ainda não usa o Perplexity para pesquisa, comece pelos Spaces: crie um espaço temático (ex: 'Trends de Marketing 2026') e a IA vai curar e atualizar conteúdo relevante para você. É como ter um analista junior trabalhando 24h."
+      }
+     ]
+    },
+    "quote": {
+     "text": "A melhor propaganda é feita por clientes satisfeitos.",
+     "author": "Philip Kotler, o pai do marketing moderno"
+    }
+   },
+   "published": true,
+   "homeTitle": "Meta vai ultrapassar o Google em receita de Ads: saiba o que muda para o marketing financeiro",
+   "homeSummary": "Análise da virada histórica no mercado de publicidade digital e o impacto direto para estratégias de marketing no setor financeiro. Retail Media, Creator Economy e o novo mapa de mídia paga.",
+   "homeTags": [
+    "Meta Ads",
+    "Marketing Digital"
+   ],
+   "aiSummary": [
+    "Pela primeira vez, a Meta deve superar o Google em receita publicitária global em 2026: US$ 243,5 bilhões contra US$ 239,5 bilhões, segundo projeção da eMarketer, com crescimento de 24,1% ao ano contra 11,9%.",
+    "A virada é puxada por Reels, Advantage+ e automação. Do lado do Google, o AI Max para Search substitui as Dynamic Search Ads e anúncios começam a aparecer dentro do AI Mode.",
+    "Com o custo de mídia subindo cerca de 20% no Brasil em ano de Copa e eleições, a automação com IA deixa de ser opção: campanhas manuais tendem a pagar mais caro pelo mesmo resultado."
+   ]
+  },
+  {
+   "id": 2,
+   "number": 2,
+   "title": "Como a IA enxerga sua marca — e como influenciar essa narrativa",
+   "subtitle": "O que os modelos de linguagem usam para falar da sua empresa, por que seu site não é seu melhor ativo de GEO, e o framework prático para conquistar visibilidade nas respostas de IA.",
+   "date": "2026-05-04",
+   "readTime": 13,
+   "tags": [
+    "GEO",
+    "IA Generativa",
+    "Branding",
+    "LLM",
+    "SEO",
+    "Mercado Financeiro",
+    "Visibilidade Digital"
+   ],
+   "headerImage": "/manus-storage/ovelha_news_banner_deluxe_5831bfab.webp",
+   "summary": "Esta edição explora como modelos de linguagem constroem a percepção pública sobre marcas: quais fontes alimentam a narrativa sintetizada, por que o site institucional tem influência limitada, o conceito de LLM Perception Drift, e um framework de 5 passos para influenciar o que a IA diz sobre sua empresa — com foco especial no mercado financeiro brasileiro.",
+   "content": {
+    "hero": {
+     "title": "Como a IA enxerga sua marca",
+     "subtitle": "O que os modelos de linguagem usam para falar da sua empresa — e como influenciar essa narrativa"
+    },
+    "body": "<p>A forma como a IA generativa constrói respostas sobre empresas não depende de um site isolado, nem do que a marca acredita que comunica bem. Em vez disso, os modelos de linguagem — as <strong>LLMs</strong> — <strong>sintetizam padrões recorrentes</strong>: como a marca é descrita em diferentes fontes, em quais contextos ela aparece, quais fatos se repetem e quais fontes são percebidas como confiáveis.</p>\n<p>Na prática, isso cria uma mudança sutil, porém decisiva. A marca deixa de competir apenas por clique e passa a disputar <strong>presença e coerência</strong> no conjunto de sinais públicos que alimentam a narrativa sintetizada. Quando a resposta de um Large Language Model (LLM) é o primeiro contato do público com um tema, <strong>a percepção nasce antes do tráfego</strong>.</p>\n<p>Segundo a <strong>Similarweb</strong>, as visitas a plataformas de IA cresceram <strong>+28,6%</strong> entre janeiro de 2025 e janeiro de 2026 somente nos EUA. Ao mesmo tempo, o volume de tráfego que essas plataformas encaminham a sites externos permaneceu estável. Mais pessoas usando IA com mais frequência, sem aumentar os cliques de saída. <strong>As plataformas retêm atenção; não a distribuem.</strong></p>\n<div class=\"data-box\">\n<p>79% — Share do ChatGPT no tráfego global de IA generativa</p>\n<p>+157% — Crescimento do Gemini (abr–set 2025)</p>\n<p>1,1 bi — Visitas mensais ao Gemini</p>\n<p>170 mi — Visitas mensais ao Perplexity</p>\n<p>157 mi — Visitas mensais ao Claude</p>\n<p>&lt;1% — Usuários que clicam em links nas respostas de AI Overviews</p>\n<p>29% — Adultos que verão resumos de IA diariamente até 2026</p>\n</div>\n<p>O <strong>ChatGPT</strong> concentra cerca de <strong>79%</strong> do tráfego global de IA generativa. O <strong>Gemini</strong> cresceu <strong>157%</strong> entre abril e setembro de 2025, atingindo 1,1 bilhão de visitas mensais. O <strong>Perplexity</strong> alcançou 170 milhões de visitas mensais e o Claude, 157 milhões. Mas a dominância de uma plataforma específica importa menos do que o padrão de comportamento que todas compartilham: o usuário faz uma pergunta, recebe uma resposta sintetizada e, na maioria das vezes, <strong>não clica em nenhum link</strong>.</p>\n<p>De acordo com dados da Pew Research, <strong>menos de 1%</strong> dos usuários clicam em links dentro das respostas de AI Overviews. E segundo a Deloitte, até 2026, aproximadamente <strong>29% dos adultos</strong> em países desenvolvidos verão pelo menos um resumo gerado por IA diariamente em suas buscas.</p>\n<blockquote>Para uma parcela significativa do público, a primeira impressão sobre uma empresa já não se forma em um site ou em um resultado de busca tradicional. <strong>Ela se forma dentro da resposta de um modelo de linguagem.</strong> <em>E essa resposta não é escrita por você.</em></blockquote>",
+    "highlights": {
+     "title": "O QUE VOCÊ VAI VER NESTA EDIÇÃO",
+     "items": [
+      "A escala da mudança: quanto do público já forma opinião dentro de uma IA",
+      "O que o LLM usa como matéria-prima para falar da sua marca",
+      "Por que seu site não é o seu melhor ativo de GEO",
+      "A anatomia de uma marca visível para a IA: o caso do setor financeiro",
+      "O conceito de LLM Perception Drift",
+      "O paradoxo do tráfego zero: por que visibilidade em IA importa mesmo sem cliques",
+      "Framework prático: 5 passos para influenciar o que a IA diz sobre sua marca"
+     ]
+    },
+    "quickReads": {
+     "title": "DEEP DIVES (os pontos-chave do artigo)",
+     "items": [
+      {
+       "icon": "🧠",
+       "title": "O que o LLM usa como matéria-prima",
+       "text": "Modelos de linguagem sintetizam padrões de informação confiável e consistente no ecossistema digital: imprensa, documentos públicos, relatórios, páginas de referência. Pesquisa da Ekamoira (2026) identificou que a autoridade da marca é o preditor mais forte de citação (correlação 0,334), seguida pela presença multiplataforma em 4+ canais. Seções autossuficientes de 50 a 150 palavras recebem 2,3x mais citações."
+      },
+      {
+       "icon": "🏢",
+       "title": "Por que seu site não é seu melhor ativo de GEO",
+       "text": "Pesquisa de Princeton, Georgia Tech e Allen Institute mostrou que 32,5% das citações em respostas de IA vêm de artigos comparativos, seguidos por artigos de opinião com 10%. Conteúdo de terceiros — não conteúdo próprio — é a fonte primária. O site precisa existir como base de dados estruturada que alimenta fontes externas, não como peça de persuasão isolada."
+      },
+      {
+       "icon": "📊",
+       "title": "O caso do setor financeiro (Index2026)",
+       "text": "O Generative AI Brand Visibility Index da Similarweb analisou 11 mil prompts no setor financeiro, rastreando 113 marcas em 4 plataformas. Chase lidera com 15,89% de share. Mas plataformas de conteúdo estruturado como NerdWallet e Bankrate competem lado a lado com gigantes institucionais. Autoridade de conteúdo pode superar o tamanho da marca."
+      },
+      {
+       "icon": "🔄",
+       "title": "LLM Perception Drift: sua marca muda mês a mês dentro da IA",
+       "text": "A Previsible documentou variação mensal significativa em como modelos referenciam e posicionam marcas. Segundo a Gartner, até 2026, 30% da percepção de marca será moldada por conteúdo gerado por IA. A marca não é mais definida apenas pelo que a empresa comunica — é definida pelo que a IA sintetiza a partir de tudo que existe sobre ela."
+      },
+      {
+       "icon": "👻",
+       "title": "O problema da invisibilidade",
+       "text": "47% das marcas ainda não possuem estratégia de GEO. 35% dos consumidores nos EUA usam IA na fase de descoberta de produtos, contra apenas 13,6% que usam busca tradicional. Quando o consumidor chega ao mecanismo de busca, a lista de opções já está formada. Para o mercado financeiro, ser invisível nas respostas de IA equivale a não existir."
+      },
+      {
+       "icon": "⚡",
+       "title": "O paradoxo do tráfego zero",
+       "text": "Menos de 1% clicam em links dentro de respostas de IA. Mas marcas citadas consistentemente experimentam aumento em branded search e tráfego direto. O efeito é indireto, porém composto: cada citação reforça a associação, e a associação gera busca ativa posterior. Para o setor financeiro, onde confiança é construída por exposição repetida, essa dinâmica é particularmente poderosa."
+      }
+     ]
+    },
+    "thoughts": {
+     "title": "FRAMEWORK: 5 PASSOS PARA INFLUENCIAR A NARRATIVA DA IA",
+     "items": [
+      "1. Construa clareza de entidade — Mantenha nomenclatura consistente em todas as plataformas. Implemente schema markup de Organization e Person com dados verificáveis. A IA reconhece sua marca como conceito com atributos e relações definidas.",
+      "2. Produza conteúdo estruturado para extração — Headings descritivos, respostas diretas nos primeiros 50 palavras, parágrafos autossuficientes de 50-150 palavras, dados com fonte verificável, tabelas comparativas. IA favorece conteúdo que ela consegue processar.",
+      "3. Invista em validação externa — Marcas com 12+ peças de conteúdo otimizado ganham visibilidade até 200x mais rápido. Gere menções em imprensa especializada, participe de comparativos de terceiros, contribua com dados para relatórios setoriais.",
+      "4. Mantenha frequência e recência — Sistemas RAG preferem conteúdo ~25,7% mais recente que buscas tradicionais. Estratégia de 'publicar e esquecer' é inviável. Atualize, republique e redistribua com consistência.",
+      "5. Monitore a narrativa sintetizada — Teste 10-15 consultas relevantes mensalmente no ChatGPT, Perplexity e Gemini. Métricas: brand mention share, sentiment, citation source mapping e momentum."
+     ]
+    },
+    "recommendations": {
+     "title": "O QUE MUDA PARA O MERCADO FINANCEIRO BRASILEIRO",
+     "items": [
+      {
+       "title": "Setor YMYL exige E-E-A-T reforçado",
+       "text": "O setor financeiro é classificado como YMYL (Your Money or Your Life) tanto pelo Google quanto pelos LLMs. Sinais de Experience, Expertise, Authoritativeness e Trustworthiness são avaliados com rigor especial. Conteúdo técnico profundo com autoria verificável (nome, credencial, registro CVM) terá vantagem desproporcional."
+      },
+      {
+       "title": "A janela de oportunidade é agora",
+       "text": "Com 47% das marcas sem estratégia de GEO e concentração de visibilidade no topo, early adopters capturam vantagem composta — cada mês de presença consistente reforça a posição nos modelos, e a posição nos modelos reforça a percepção do público."
+      },
+      {
+       "title": "A síntese final",
+       "text": "A marca que entende essa dinâmica não está 'otimizando para IA'. Está fazendo o que sempre deveria ter feito: construir presença digital coerente, baseada em evidência, validada por terceiros e estruturada para ser encontrada, entendida e recomendada — por humanos e por máquinas."
+      }
+     ]
+    },
+    "quote": {
+     "text": "A marca não é mais o que você diz — é o que a IA consegue sintetizar a partir de todos os sinais públicos disponíveis.",
+     "author": "Adriana Nogueira"
+    }
+   },
+   "published": true,
+   "homeTitle": "Como a IA enxerga sua marca",
+   "homeSummary": "O que os modelos de linguagem usam para falar da sua empresa e como influenciar essa narrativa? Entenda como a percepção da IA sobre sua marca impacta sua visibilidade digital.",
+   "homeTags": [
+    "IA",
+    "Branding"
+   ],
+   "aiSummary": [
+    "Modelos de linguagem não descrevem uma marca a partir do site dela: sintetizam padrões recorrentes de várias fontes públicas consideradas confiáveis.",
+    "O uso de plataformas de IA cresceu (+28,6% de visitas nos EUA entre jan/2025 e jan/2026, segundo a Similarweb), mas o tráfego que elas enviam a sites não acompanhou. Menos de 1% dos usuários clicam em links dos AI Overviews (Pew Research).",
+    "A primeira impressão sobre uma empresa passa a se formar dentro da resposta da IA. A edição traz o conceito de LLM Perception Drift e um framework de 5 passos para influenciar essa narrativa."
+   ]
+  },
+  {
+   "id": 3,
+   "number": 3,
+   "title": "A Virada: Meta Destrona Google, Busca Morre em Silêncio e o Brasil Tokeniza Tudo",
+   "subtitle": "Meta ultrapassa Google em receita de anúncios, 93% das buscas no AI Mode terminam sem clique, Instagram prepara agente de compras com IA, dólar a R$ 4,91, B3 anuncia tokenizadora própria e ANBIMA abre piloto de DLT.",
+   "date": "2026-05-07",
+   "readTime": 12,
+   "tags": [
+    "Meta Ads",
+    "Google AI Mode",
+    "SEO",
+    "Social Commerce",
+    "Tokenização",
+    "Mercado Financeiro",
+    "Selic",
+    "B3",
+    "ANBIMA"
+   ],
+   "headerImage": "/manus-storage/ovelha_news_banner_deluxe_5831bfab.webp",
+   "summary": "Nesta edição: a Meta ultrapassa o Google em receita publicitária global pela primeira vez (US$ 243 bi vs US$ 239 bi), impulsionada por Reels e Advantage+. O Google AI Mode já processa 1 bilhão de buscas/mês com 93% terminando sem clique externo — o SEO tradicional está em erosão acelerada. A Meta desenvolve o agente de compras \"Hatch\" para Instagram com integração ao Mercado Livre na América Latina. No mercado financeiro brasileiro, o dólar fecha a R$ 4,91 (menor em 2 anos) e o Ibovespa atinge 187.690 pontos. A B3 anuncia tokenizadora própria e a ANBIMA abre piloto de DLT, consolidando o Brasil como referência global em tokenização de ativos reais (RWA), com R$ 20 bilhões em VGV já mobilizados.",
+   "content": {
+    "hero": {
+     "title": "A Virada: Meta Destrona Google, Busca Morre em Silêncio e o Brasil Tokeniza Tudo",
+     "subtitle": "Edição #03 — Curadoria semanal de Comunicação, Marketing & Mercado Financeiro"
+    },
+    "body": "<h2>01 — Mídia Paga &amp; Plataformas</h2>\n<h3>Meta ultrapassa Google em receita publicitária: o que muda na sua estratégia de mídia?</h3>\n<p>Pela primeira vez na história da publicidade digital, a <strong>Meta</strong> deve superar o Google em receita global de anúncios em 2026. A projeção é de US$ 243,46 bilhões para a Meta contra US$ 239,54 bilhões do Google. O dado mais revelador está na velocidade de crescimento: 24,1% da Meta contra 11,9% do Google.</p>\n<div class=\"data-box\">\n<p>US$ 243 bi - Receita Meta (projeção)</p>\n<p>US$ 239 bi - Receita Google (projeção)</p>\n<p>40% - Social ads no total digital</p>\n<p>US$ 162 bi - Mídia programática global</p>\n</div>\n<p><strong>Os motores dessa virada são:</strong> desempenho dos Reels, automação via <a href=\"https://www.facebook.com/business/ads/meta-advantage-plus?content_id=30WK6BuWv8UznT6&ref=sem_smb&utm_term=business%20suite&gclid=Cj0KCQjw8PDPBhCeARIsAOJwmWVuYyrU_Bhs3ea95bGM8ZrYq5cbR4AI-6h1aRFn63qS3JLqwGhAHnwaAlOFEALw_wcB&gad_source=1&gad_campaignid=21604101810&gbraid=0AAAAACr-yC-bGn6USya9nUEf6U0mNaS5h\" target=\"_blank\" rel=\"noopener noreferrer\">Advantage+</a> e dados primários (first-party data). <strong>Redes sociais já respondem por 40% do investimento total em mídia digital </strong>- US$ 117,7 bilhões, enquanto a programática ultrapassou <strong>US$ 162 bilhões e prepara o terreno para compra de mídia via agentes de IA.</strong></p>\n<p><strong>Ação prática:</strong> revise a alocação de orçamento entre Google e Meta. Se mais de 60% está em Search, <strong>teste Advantage+</strong> com criativos dinâmicos e <strong>segmentação por dados primários. </strong>A curva de crescimento favorece quem diversifica agora.</p>\n<h2>02 — Busca &amp; SEO</h2>\n<p><strong>Google AI </strong><strong>Mode</strong> processa 1 bilhão de buscas por mês, e 93% delas terminam sem clique. O Google substituiu a barra de pesquisa por \"Ask Google\" no Android. O <strong>AI </strong><strong>Mode</strong> já alcança 75 milhões de usuários ativos diários e processa mais de 1 bilhão de consultas mensais. <strong>O impacto no tráfego orgânico é severo.</strong></p>\n<blockquote>93% das consultas no AI Mode terminam sem nenhum clique para site externo, segundo estudo da Seer Interactive com 25,1 milhões de impressões.</blockquote>\n<p>Anúncios já aparecem em 25,5% dos resultados gerados por IA, alta de 394% em um ano. Páginas na posição nº 1 orgânica sofreram queda de <strong>34,5% no CTR</strong>, pois os <strong>AI Overviews</strong> aparecem acima de todos os resultados tradicionais. O Google Marketing Live, agendado para 21 de maio, deve <strong>trazer novas funcionalidades publicitárias dentro do AI </strong><strong>Mode</strong><strong>.</strong></p>\n<p><strong>Implicação estratégica:</strong> o SEO baseado em posicionamento de ranking está em erosão acelerada. A nova fronteira é otimizar para ser a fonte citada pelo <strong>AI Overview.</strong> Conteúdo com E-E-A-T forte, dados proprietários e respostas diretas a buscas de cauda longa são a nova moeda de troca.</p>\n<h2>03 — Social Commerce &amp; IA</h2>\n<h3>Meta constrói agente de compras com IA para o Instagram e integra <strong>Mercado Livre na América Latina</strong><strong>.</strong></h3>\n<p>A Meta está desenvolvendo o \"Hatch\", um agente de IA que roda sobre o modelo <strong>Muse Spark</strong>, com lançamento previsto antes do quarto trimestre de 2026.</p>\n<p><strong>A proposta:</strong> enquanto o usuário assiste Reels ou navega no feed, o agente identifica produtos, oferece informações detalhadas e permite concluir a compra sem sair do aplicativo.</p>\n<p>A rede de afiliados já inclui Amazon, eBay e Temu nos EUA; Mercado Livre na América Latina; e Shopee na Ásia. Para marcas brasileiras, a integração com o Mercado Livre é um sinal claro de que <strong>o social </strong><strong>commerce</strong><strong> latino-americano está prestes a escalar.</strong></p>\n<p><strong>Para marcas:</strong> prepare catálogos otimizados para leitura por IA, descrições estruturadas, atributos ricos e imagens de alta qualidade. O agente Hatch vai \"ler\" seus produtos no Instagram. <strong>Esse é o novo SEO do social </strong><strong>commerce</strong><strong>.</strong></p>\n<p><strong>Tendência-chave:</strong> use IA para escalar distribuição e análise de dados, mas <strong>preserve a voz humana na criação.</strong> O diferencial competitivo em 2026 é <strong>autenticidade </strong>e não volume.</p>\n<h2>05 — Mercado Financeiro Brasileiro</h2>\n<h3>Dólar a R$ 4,91 e Ibovespa em alta: cenário favorável com ressalvas</h3>\n<p>O dólar à vista fechou a R$ 4,91 na segunda-feira (5/5), menor cotação desde janeiro de 2024. Em 2026, a moeda norte-americana acumula queda de 10,51% frente ao real. O Ibovespa encerrou a terça-feira (6/5) em alta de 0,5%, aos 187.690 pontos, com volume de R$ 29,16 bilhões.</p>\n<div class=\"data-box\">\n<p>187.690 - Ibovespa (pontos)</p>\n<p>R$ 4,91 - Dólar (menor em 2 anos)</p>\n<p>14,50% - Selic (atual)</p>\n<p>12,50% - Selic (projeção ANBIMA dez/26)</p>\n</div>\n<p>O Copom se reúne nos dias 6–7 de maio para definir o novo patamar da Selic. Na última reunião (29/4) e a tendência de queda permanece, o Banco Central reduziu a taxa em 0,25 p.p. para <strong>14,50%</strong> a.a. <strong>O cenário é complexo:</strong> tensões no Oriente Médio pressionam o petróleo, e o IPCA-15 acelerou de 0,44% para 0,89% em abril.</p>\n<p><strong><strong>Carteiras recomendadas: rotação setorial em andamento</strong></strong></p>\n<p>Menos concentração em bancos tradicionais, mais exposição a energia, indústria e crescimento estrutural.</p>\n<p><strong>Destaques:</strong> Petrobras (PETR4), Embraer (EMBJ3), Totvs (TOTS3), Vale (VALE3) e Localiza (RENT3).</p>\n<p><em>*Rentabilidade passada não representa garantia de resultados futuros.</em></p>\n<h2>06 — Tokenização &amp; Inovação</h2>\n<h3><strong>B3 anuncia </strong><strong>tokenizadora</strong><strong> própria e ANBIMA abre piloto</strong><strong>, </strong><strong>Brasil na vanguarda </strong><strong>da tokenização </strong><strong>global</strong></h3>\n<p>Dois movimentos institucionais marcaram a semana. A B3 anunciou o <strong>lançamento de uma </strong><strong>tokenizadora</strong><strong> própria</strong> <strong>em 2026</strong>, com início pelo mercado de ações, preparando um ecossistema híbrido onde infraestruturas tradicionais e tokenizadas coexistam. A ANBIMA abriu inscrições para o Projeto-Piloto de Tokenização, que testará em ambiente controlado uma <strong>infraestrutura baseada em DLT para o mercado de capitais.</strong><strong> Babado!</strong></p>\n<p>Já são <strong>R$ 20 bilhões</strong><strong> </strong><strong>em Valor Geral de Vendas (VGV) já mobilizados pela tokenização imobiliária no Brasil,</strong> consolidando o país como referência global em Real World Assets (RWA).</p>\n<p>O Banco Central reafirmou que a <strong>tokenização pode simplificar operações</strong>, <strong>reduzir custos e ampliar a inclusão financeira.</strong> Profissionais do mercado precisarão se atualizar e bancos tradicionais rebolar para seguir o ritmo.</p>\n<p>As Resoluções BCB 519, 520 e 521, em vigor desde fevereiro de 2026, disciplinam a intermediação e custódia de criptoativos. <strong>Desde 4 de maio, operações cambiais com criptoativos exigem reporte obrigatório ao Bacen.</strong></p>\n<p><strong>Para profissionais de marketing financeiro:</strong> a tokenização cria uma nova categoria de produto que demanda educação de mercado. Quem dominar a narrativa de acessibilidade e democratização dos investimentos tokenizados, se aprofundar em DeFi e DLT, <strong>terá vantagem competitiva na comunicação com o investidor de varejo.</strong> Atenção: toda comunicação sobre ativos tokenizados deve observar a Resolução CVM 35/2021 e o Parecer de Orientação CVM 40 sobre criptoativos.</p>\n<h2>→ Giro Semanal</h2>\n<h3><strong>Seis decisões para tomar até segunda-feira</strong><strong>!</strong></h3>\n<ol>\n<li>Rebalanceamento do orçamento Meta × Google. A ultrapassagem da Meta em receita de anúncios é estrutural, não pontual. Testagem em Advantage+ e Reels Ads com mais agressividade no próximo ciclo.</li>\n<li>Prepare-se para a era zero-click. Com 93% das buscas no AI Mode sem clique, <strong>SEO precisa migrar para otimização de citação em AI Overviews.</strong> Agende-se para o Google Marketing Live (21/05).</li>\n<li>Otimize <strong>catálogos</strong> para leitura por IA. O agente Hatch da Meta vai interpretar seus produtos. <strong>Descrições estruturadas e imagens de qualidade são o novo diferencial no social </strong><strong>commerce</strong><strong>.</strong></li>\n<li>Autenticidade supera produção. A fadiga digital é real. Criadores always-on com voz autêntica vencem produções genéricas. <strong>Use IA para escalar, não para substituir humanidade.</strong></li>\n<li><strong>Tokenização é a nova fronteira do marketing financeiro.</strong> “Espaço, a fronteira final”, agora todo mundo vai falar Klingon (tokenização), como em <a href=\"https://pt.wikipedia.org/wiki/Star_Trek\" target=\"_blank\" rel=\"noopener noreferrer\">Star Trek</a><strong>.</strong> <strong>B3, ANBIMA e Bacen</strong> e, por consequência, todo mercado de capitais. Quem educar o mercado primeiro, lidera a categoria.</li>\n<li><strong>Real forte e juros em queda abrem janela.</strong> Dólar abaixo de R$ 5 e Selic projetada para <strong>12,50% ao final do ano</strong> criam ambiente favorável para captação e investimento.</li>\n</ol>\n<p class=\"disclaimer\"><strong>Disclaimer</strong><strong>: </strong>Este material tem caráter exclusivamente informativo e educacional, não constituindo oferta, solicitação, sugestão ou recomendação de investimento. Rentabilidade passada não representa garantia de resultados futuros. Investimentos envolvem riscos, incluindo possibilidade de perda do capital investido. Antes de tomar qualquer decisão de investimento, consulte um profissional devidamente habilitado. As informações aqui apresentadas foram obtidas de fontes públicas consideradas confiáveis, mas sua exatidão e completude não são garantidas. Este conteúdo observa as diretrizes da CVM, do Bacen, da ANBIMA e da LGPD (Lei nº 13.709/2018).</p>\n<h3>Fontes e referências:</h3>\n<ul>\n<li>B2The7 — 5 Marketing & Digital Trends: Week of May 4, 2026</li>\n<li>ALM Corp — Digital Marketing Trends May 2026</li>\n<li>Digital Applied — Google AI Mode: 75M Users, Ads in 25% of AI Results</li>\n<li>Search Engine Land — Google AI-Powered Future for Shopping and Ads</li>\n<li>TechCrunch — Meta Turns to AI to Make Shopping Easier</li>\n<li>ALM Corp — Meta AI Shopping Tool Explained</li>\n<li>CNN Brasil — Dólar fecha a R$ 4,91, Ibovespa sobe</li>\n<li>Agência Brasil — Banco Central reduz juros para 14,5% a.a.</li>\n<li>ANBIMA — Projeção Selic 12,5% ao final de 2026</li>\n<li>Suno — Ações recomendadas para maio de 2026</li>\n<li>Capital Aberto — B3 se prepara para novo ciclo</li>\n<li>Exame — Tokenização vai democratizar acesso, diz BC</li>\n<li>Times Brasil — Tokenização de ativos deve ganhar escala em 2026</li>\n<li>Gazeta da Semana — MERGE São Paulo 2026</li>\n<li>Banco Central do Brasil — Decisão Copom</li>\n</ul>",
+    "highlights": {
+     "title": "NESTA EDIÇÃO",
+     "items": [
+      "Meta ultrapassa Google em receita de anúncios pela primeira vez",
+      "Google AI Mode: 93% das buscas encerram sem clique externo",
+      "Instagram prepara agente de compras com IA, codinome \"Hatch\"",
+      "Dólar fecha a R$ 4,91; Ibovespa atinge 187.690 pontos",
+      "B3 anuncia tokenizadora própria; ANBIMA abre piloto de DLT",
+      "Copom decide Selic, mercado atento ao ciclo de cortes"
+     ]
+    },
+    "quickReads": {
+     "title": "GIRO SEMANAL — 6 decisões para tomar até segunda-feira",
+     "items": [
+      {
+       "icon": "💰",
+       "title": "Rebalanceamento Meta × Google",
+       "text": "A ultrapassagem da Meta em receita de anúncios é estrutural, não pontual. Testagem em Advantage+ e Reels Ads com mais agressividade no próximo ciclo."
+      },
+      {
+       "icon": "🔍",
+       "title": "Prepare-se para a era zero-click",
+       "text": "Com 93% das buscas no AI Mode sem clique, SEO precisa migrar para otimização de citação em AI Overviews. Agende-se para o Google Marketing Live (21/05)."
+      },
+      {
+       "icon": "🛒",
+       "title": "Otimize catálogos para leitura por IA",
+       "text": "O agente Hatch da Meta vai interpretar seus produtos. Descrições estruturadas e imagens de qualidade são o novo diferencial no social commerce."
+      },
+      {
+       "icon": "🎯",
+       "title": "Autenticidade supera produção",
+       "text": "A fadiga digital é real. Criadores always-on com voz autêntica vencem produções genéricas. Use IA para escalar, não para substituir humanidade."
+      },
+      {
+       "icon": "🪙",
+       "title": "Tokenização é a nova fronteira",
+       "text": "B3, ANBIMA e Bacen estão todos convergindo. Quem educar o mercado primeiro, lidera a categoria. R$ 20 bilhões em VGV já mobilizados."
+      },
+      {
+       "icon": "📈",
+       "title": "Real forte e juros em queda abrem janela",
+       "text": "Dólar abaixo de R$ 5 e Selic projetada para 12,50% ao final do ano criam ambiente favorável para captação e investimento."
+      }
+     ]
+    },
+    "thoughts": {
+     "title": "DADOS-CHAVE DESTA EDIÇÃO",
+     "items": [
+      "US$ 243 bi — Receita Meta (projeção 2026) vs US$ 239 bi Google",
+      "93% das consultas no Google AI Mode terminam sem clique externo",
+      "75 milhões de usuários ativos diários no AI Mode",
+      "34,5% de queda no CTR da posição nº 1 orgânica",
+      "R$ 4,91 — Dólar (menor cotação desde jan/2024)",
+      "187.690 pontos — Ibovespa",
+      "R$ 20 bilhões em VGV mobilizados pela tokenização imobiliária no Brasil"
+     ]
+    },
+    "recommendations": {
+     "title": "PARA APROFUNDAR",
+     "items": [
+      {
+       "title": "Google Marketing Live (21/05)",
+       "text": "Evento deve trazer novas funcionalidades publicitárias dentro do AI Mode. Acompanhe para entender o futuro da busca paga."
+      },
+      {
+       "title": "Advantage+ (Meta Business)",
+       "text": "Se mais de 60% do orçamento está em Search, teste Advantage+ com criativos dinâmicos e segmentação por dados primários. A curva de crescimento favorece quem diversifica agora."
+      },
+      {
+       "title": "Resoluções BCB 519, 520 e 521",
+       "text": "Em vigor desde fevereiro de 2026, disciplinam intermediação e custódia de criptoativos. Desde 4 de maio, operações cambiais com criptoativos exigem reporte obrigatório ao Bacen."
+      }
+     ]
+    },
+    "quote": {
+     "text": "O diferencial competitivo em 2026 é autenticidade — e não volume.",
+     "author": "Adriana Nogueira, Ovelha News #03"
+    }
+   },
+   "published": true,
+   "homeTitle": "A Virada: Meta Destrona Google, Busca Morre em Silêncio e o Brasil Tokeniza Tudo",
+   "homeSummary": "Meta ultrapassa Google em receita de anúncios, 93% das buscas no AI Mode terminam sem clique, Instagram prepara agente de compras com IA, dólar a R$ 4,91, B3 anuncia tokenizadora própria e ANBIMA abre piloto de DLT.",
+   "homeTags": [
+    "Meta Ads",
+    "SEO"
+   ],
+   "aiSummary": [
+    "A Meta deve ultrapassar o Google em receita global de anúncios em 2026, e redes sociais já somam 40% do investimento em mídia digital. A recomendação é revisar a divisão de orçamento entre Search e Meta.",
+    "O Google AI Mode passa de 1 bilhão de buscas por mês e 93% delas terminam sem clique (Seer Interactive). O SEO de ranking perde força para o conteúdo citado pela IA, com E-E-A-T e dados próprios.",
+    "Meta prepara o agente de compras “Hatch” para o Instagram, integrado ao Mercado Livre na América Latina. No mercado brasileiro, dólar a R$ 4,91, B3 anuncia tokenizadora própria e ANBIMA abre piloto de DLT."
+   ]
+  }
+ ]
+}

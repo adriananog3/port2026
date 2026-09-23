@@ -1,0 +1,6 @@
+dist-standalone/
+source-cases/
+make_standalone.py
+*.exe
+*.zip
+Dockerfile

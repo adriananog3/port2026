@@ -1,0 +1,484 @@
+@import "tailwindcss" source(none);
+@source "../pages/BEE4Case.tsx";
+@source "../pages/ProjectItau.tsx";
+@source "../pages/ProjectGuide.tsx";
+@source "../pages/ProjectModal.tsx";
+@source "../pages/ProjectEmpiricus.tsx";
+@source "../components/AnimatedSection.tsx";
+@source "../components/MetricCard.tsx";
+@source "./FooterStub.tsx";
+@source "./main.tsx";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  /* ═══ OVELHA NEGRA BRAND TYPOGRAPHY ═══ */
+  --font-serif: "Open Sans", sans-serif;
+  --font-sans: "Open Sans", sans-serif;
+  --font-mono: "IBM Plex Mono", monospace;
+  --font-display: "Open Sans", sans-serif;
+  --font-body: "Open Sans", sans-serif;
+  --font-italic: "Open Sans", sans-serif;
+}
+
+:root {
+  /*
+   * ══════════════════════════════════════════════════════════════
+   * PALETA GLOBAL - OVELHA NEGRA by Adriana Nogueira
+   * Brand Identity v4.0 - Junho 2026 - PREMIUM LIGHT
+   * ══════════════════════════════════════════════════════════════
+   * Fundo: Champagne (#FDFBF7)
+   * Texto principal: Preto (#000000)
+   * Acento: Dourado (#C9A96E)
+   * Header: Preto (#000000)
+   * Tipografia: Open Sans (todo o site)
+   * ══════════════════════════════════════════════════════════════
+   */
+
+  /* ── CORES PRIMÁRIAS (Identidade Ovelha Negra - Premium Light) ── */
+  --brand-black: #000000;             /* Header e textos */
+  --brand-cream: #FDFBF7;             /* Fundo principal - champagne */
+  --brand-cream-muted: #898989;       /* Texto secundário - cinza médio */
+  --brand-gold: #C9A96E;              /* Dourado - acento gráfico */
+  --brand-gold-light: #D4B87A;        /* Hover states - dourado claro */
+  --brand-dark-gray: #F5F2ED;         /* Cards, superfícies elevadas */
+  --brand-mid-gray: #E8E4DF;          /* Bordas, separadores */
+  --brand-light-gray: #D9D9D9;        /* Elementos sutis */
+
+  /* ── CINZAS ESCUROS (Fundos de cases) ── */
+  --gray-950: #0A0A0A;
+  --gray-900: #1A1A1A;
+  --gray-800: #2A2A2A;
+  --primary-red: #FF4D4D;
+
+  /* ── CORES DE PROJETO (Harmonizadas com brand) ── */
+  /* BEE4 - Azul Tech */
+  --bee4-primary: #060B7A;
+  --bee4-accent: #2DBCF7;
+  --bee4-bg: #0A1628;
+  --bee4-light: #0D1494;
+
+  /* Itaú - Laranja Corporativo */
+  --itau-primary: #EC7000;
+  --itau-accent: #FFCC00;
+  --itau-bg: #1A0E00;
+  --itau-dark: #003A70;
+  --itau-yellow: #FFCC00;
+
+  /* Guide - Verde Financeiro */
+  --guide-primary: #00E676;
+  --guide-accent: #C9A96E;
+  --guide-bg: #0D2B2A;
+  --guide-teal: #1B5E5A;
+  --guide-bg-dark: #0D2B2A;
+  --guide-bg-mid: #143D3B;
+  --guide-bg-card: #1A4A47;
+  --guide-green: #00E676;
+  --guide-green-muted: #00C853;
+  --guide-pink: #C9A96E;
+  --guide-pink-muted: #CC0043;
+  --guide-white: #F0FDFA;
+
+  /* Modal - Turquesa Moderno */
+  --modal-primary: #4DD9C0;
+  --modal-accent: #2EBFA5;
+  --modal-bg: #0A3B38;
+  --modal-dark: #0D524E;
+
+  /* Empiricus - Vermelho Vibrante */
+  --empiricus-primary: #E63E3E;
+  --empiricus-accent: #FF6B6B;
+  --empiricus-bg: #0a0a0a;
+  --empiricus-dark: #E63E3E;
+
+  /* ── CORES SOCIAIS ── */
+  --social-linkedin: #0077B5;
+  --social-whatsapp: #25D366;
+  --social-email: #000000;
+  --social-calendar: #C9A96E;         /* Dourado */
+
+  /* ══════════════════════════════════════════════════════════════
+   * MAPEAMENTO PARA SISTEMA SHADCN/UI - TEMA PREMIUM LIGHT
+   * ══════════════════════════════════════════════════════════════
+   */
+  --background: #FDFBF7;
+  --foreground: #000000;
+  
+  --primary: #C9A96E;
+  --primary-foreground: #FFFFFF;
+  
+  --secondary: #F5F2ED;
+  --secondary-foreground: #000000;
+  
+  --accent: #F0EDE8;
+  --accent-foreground: #000000;
+  
+  --muted: #F5F2ED;
+  --muted-foreground: #555555;
+  
+  --card: #FFFFFF;
+  --card-foreground: #000000;
+  
+  --popover: #FFFFFF;
+  --popover-foreground: #000000;
+  
+  --border: #E8E4DF;
+  --input: #F5F2ED;
+  --ring: #C9A96E;
+  
+  --radius: 0.5rem;
+  
+  --chart-1: #C9A96E;
+  --chart-2: #000000;
+  --chart-3: #898989;
+  --chart-4: #D9D9D9;
+  --chart-5: #E8E4DF;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  *:focus-visible {
+    @apply outline-2 outline-offset-2 outline-[#C9A96E];
+  }
+  html {
+    overflow-x: hidden;
+    scrollbar-gutter: stable;
+    scrollbar-width: thin;
+    scrollbar-color: #D9D9D9 #FDFBF7;
+  }
+  html::-webkit-scrollbar {
+    width: 8px;
+  }
+  html::-webkit-scrollbar-track {
+    background: #FDFBF7;
+  }
+  html::-webkit-scrollbar-thumb {
+    background: #D9D9D9;
+    border-radius: 100px;
+    border: 2px solid #FDFBF7;
+  }
+  html::-webkit-scrollbar-thumb:hover {
+    background: #898989;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Open Sans", sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
+    overflow-x: hidden;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0.04em;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+  
+  /* ═══════════════════════════════════════════════════════
+   * TIPOGRAFIA PADRÃO - Open Sans em tudo
+   * TAMANHOS PADRÃO:
+   * - Subtítulo de seção (label): 11px uppercase tracking
+   * - Título principal (h1): 32px / 42px md
+   * - Título de seção (h2): 24px / 32px md
+   * - Título de bloco (h3): 19px
+   * - Corpo: 17px
+   * - Bullets/detalhes: 13px
+   * - Tags/footer: 11px
+   * ═══════════════════════════════════════════════════════ */
+
+  /* Brand Typography Classes */
+  .font-brand {
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0.08em;
+  }
+  
+  .font-brand-wide {
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  /* Tipografia padronizada */
+  .typo-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-weight: 600;
+  }
+
+  .typo-h1 {
+    font-size: 32px;
+    line-height: 1.2;
+    font-weight: 700;
+  }
+
+  @media (min-width: 768px) {
+    .typo-h1 {
+      font-size: 42px;
+    }
+  }
+
+  .typo-h2 {
+    font-size: 24px;
+    line-height: 1.3;
+    font-weight: 700;
+  }
+
+  @media (min-width: 768px) {
+    .typo-h2 {
+      font-size: 32px;
+    }
+  }
+
+  .typo-h3 {
+    font-size: 19px;
+    line-height: 1.4;
+    font-weight: 600;
+  }
+
+  .typo-body {
+    font-size: 17px;
+    line-height: 1.7;
+  }
+
+  .typo-bullet {
+    font-size: 13px;
+    line-height: 1.5;
+  }
+
+  .typo-tag {
+    font-size: 11px;
+    line-height: 1.3;
+  }
+
+  .font-typewriter {
+    font-family: var(--font-mono);
+  }
+  
+  .font-editorial {
+    font-family: "Open Sans", sans-serif;
+  }
+  
+  .font-poetic {
+    font-family: "Open Sans", sans-serif;
+    font-style: italic;
+  }
+
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Red dot accent element */
+  .brand-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #C9A96E;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0 0.3em;
+  }
+
+  .brand-dot-lg {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background-color: #C9A96E;
+    border-radius: 50%;
+    vertical-align: middle;
+    margin: 0 0.4em;
+  }
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 30s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Blink Animation */
+@keyframes blink {
+  0%, 49% {
+    opacity: 1;
+  }
+  50%, 100% {
+    opacity: 0.3;
+  }
+}
+
+.animate-blink {
+  animation: blink 1s infinite;
+}
+
+/* Float Animation for Hero Art */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(-50%) translateX(0);
+  }
+  50% {
+    transform: translateY(-50%) translateX(10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes pulse-subtle {
+  0%, 100% {
+    box-shadow: 0 4px 20px rgba(255, 77, 77, 0.3);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 0 8px 30px rgba(255, 77, 77, 0.5);
+    transform: scale(1.02);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 2s ease-in-out infinite;
+}
+
+/* Float Gentle Animation for Hero Image */
+@keyframes float-gentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-gentle {
+  animation: float-gentle 6s ease-in-out infinite;
+}
+
+/* Pulsing Red Brand Button Animation */
+@keyframes pulse-brand {
+  0%, 100% {
+    box-shadow: 0 0 8px rgba(255, 77, 77, 0.5), 0 0 20px rgba(255, 77, 77, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 16px rgba(255, 77, 77, 0.8), 0 0 40px rgba(255, 77, 77, 0.4);
+  }
+}
+
+.animate-pulse-brand {
+  animation: pulse-brand 2s ease-in-out infinite;
+}
+
+/* Shimmer Loading Animation for Progressive Images */
+@keyframes shimmer-sweep {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-loading {
+  background: linear-gradient(
+    90deg,
+    #F5F2ED 0%,
+    #FDFBF7 20%,
+    #FFFFFF 40%,
+    #FDFBF7 60%,
+    #F5F2ED 80%,
+    #F5F2ED 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer-sweep 1.8s ease-in-out infinite;
+}
+
+/* Thin line separator - brand style */
+.brand-line {
+  width: 60px;
+  height: 1px;
+  background-color: #C9A96E;
+  margin: 1rem auto;
+}

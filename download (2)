@@ -1,0 +1,8 @@
+.git
+.gcloudignore
+README-DEPLOY.md
+dist-standalone/
+source-cases/
+make_standalone.py
+*.exe
+*.zip

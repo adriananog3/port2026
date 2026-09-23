@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Buscadores e IAs de citação são bem-vindos (GEO)
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://adriana-nogueira.com/sitemap.xml
