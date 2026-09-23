@@ -292,7 +292,7 @@ func articleLD(e *edition) map[string]any {
 		"author":    map[string]any{"@type": "Person", "name": "Adriana Nogueira", "url": site + "/"},
 		"publisher": map[string]any{"@type": "Person", "name": "Adriana Nogueira"},
 		"isPartOf":  map[string]any{"@type": "CreativeWorkSeries", "name": "Newsletter Café com Marketing", "url": site + "/newsletter"},
-		"image":     site + "/assets/ovelha-og.jpg",
+		"image":     site + "/assets/adriana-nogueira-og.jpg",
 	}
 	if e.Date != "" {
 		ld["datePublished"] = e.Date
