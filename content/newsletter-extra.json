@@ -1,0 +1,59 @@
+{
+ "external": [
+  {
+   "label": "☕Café com Caos",
+   "title": "Como eles dizem... E por isso estamos voltando a colecionar coisas físicas",
+   "date": "2026-05-21",
+   "tags": [
+    "Autenticidade",
+    "Marketing"
+   ],
+   "url": "https://www.linkedin.com/pulse/como-eles-dizem-e-por-isso-estamos-voltando-coisas-adriana-rdpgc/",
+   "summary": "Ter coisas palpáveis, escrever e tocar algo com as mãos faz parte dos sentidos humanos, preserva nossa memória e acumula os afetos que dessa experiência surgem. Uma reflexão sobre autenticidade, mídias físicas e marketing experiencial."
+  },
+  {
+   "label": "☕Café com Caos",
+   "title": "O dia em que a terra parou e a maioria nem percebeu...",
+   "date": "2026-05-12",
+   "tags": [
+    "Marketing Digital",
+    "IA"
+   ],
+   "url": "https://www.linkedin.com/pulse/o-dia-em-que-terra-parou-e-maioria-nem-percebeu-nogueira-cea-gaipc-m4vkf/",
+   "summary": "Meta ultrapassou Google em receita publicitária, OpenAI abriu ChatGPT Ads, LinkedIn virou plataforma #1 de vídeo B2B. O marketing digital entrou em Zugzwang coletivo."
+  }
+ ],
+ "pending": [
+  {
+   "number": 7,
+   "title": "Strategic Foresight: Como Transformar Incerteza em Vantagem Competitiva no Mercado Financeiro",
+   "date": "2026-06-11",
+   "tags": [
+    "Strategic Foresight",
+    "Mercado Financeiro"
+   ],
+   "summary": "BaaS regulamentado, PSAVs em vigor, tokenização como prioridade na CVM, Marco das fintechs em tramitação... O mercado financeiro vai mudar radicalmente nos próximos 6 anos. Você está preparado?"
+  },
+  {
+   "number": 6,
+   "title": "O que muda na comunicação das Assessorias e Instituições Financeiras?",
+   "date": "2026-06-09",
+   "tags": [
+    "CVM",
+    "Regulação"
+   ],
+   "summary": "O Ofício Circular CVM/SIN 2/2026 redefine as regras de transparência, certificação e dever fiduciário. Entenda o que muda na comunicação institucional de consultorias e assessorias de investimento."
+  },
+  {
+   "number": 4,
+   "title": "Private Equity & M&A: como as Integrações de M&A podem superar os Desafios do Mercado",
+   "date": "2026-05-18",
+   "tags": [
+    "Private Equity",
+    "M&A"
+   ],
+   "summary": "Múltiplos mais baixos, períodos de gestão mais longos. Quando o mercado de private equity sai de uma era de ágio e entra em uma era de execução, a integração de M&A se torna a alavanca mais poderosa para criar valor real."
+  }
+ ],
+ "partial": []
+}
