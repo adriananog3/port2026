@@ -1,157 +1,82 @@
-# Adriana Nogueira — Ovelha Negra Consultoria | Financial Marketing
+# Adriana Nogueira | Comunicação e Marketing com compliance desde o início
 
-> Adriana Nogueira é Consultora & Especialista de Marketing com certificação CEA ANBIMA e GAIPC™ CertiProf, com cerca de 10 anos no mercado financeiro brasileiro. Fundadora da Ovelha Negra Consultoria, especializada em Financial Marketing. Transforma complexidade regulatória em comunicação estratégica que gera confiança, atrai clientes qualificados e posiciona marcas como referência no setor financeiro.
+> Adriana Nogueira ("Dri") é especialista em Comunicação, Brand & Marketing para o mercado financeiro, com cerca de 10 anos em instituições como Empiricus (BTG Pactual), Itaú Unibanco, modalmais, Guide Investimentos e Mercado BEE4. Certificada como Especialista em Investimentos (CEA – ANBIMA) e GAIPC™ (Generative AI Professional Certification, CertiProf®). Atua com assessoria de comunicação e marketing financeiro: copywriting, branding, SEO/GEO/AEO, go-to-market, thought leadership e IA em conformidade (LGPD e EU AI Act), com CVM, BACEN e ANBIMA integrados desde o briefing.
 
-## Definições-Chave (Citáveis)
+## Serviços
 
-**Financial Marketing** é a disciplina que conecta estratégia de marca, copywriting de alta conversão e conformidade regulatória (CVM, BACEN, ANBIMA) para empresas do setor financeiro. Adriana Nogueira é uma das primeiras profissionais no Brasil a atuar nessa interseção com certificação técnica em investimentos (CEA ANBIMA), combinando domínio regulatório com execução criativa.
+1. **Copywriting & Redação**: e-mails, landing pages, VSLs e conteúdo com ponto de vista proprietário e fact-checking, preparados para passar pelo compliance.
+2. **Branding & Posicionamento**: posicionamento sênior para fintechs, assessorias, gestoras e corretoras.
+3. **SEO, GEO & AEO**: marca encontrada no Google e citada pelas IAs de resposta (ChatGPT, Perplexity, Google AI).
+4. **Go-to-Market**: estratégia de entrada, mensagem, canais e funil para produtos e serviços financeiros.
+5. **Thought Leadership Executivo**: presença estratégica no LinkedIn, artigos e newsletters na voz do executivo.
+6. **IA & RAG em Conformidade**: infraestrutura agêntica documentada, RAG e automação em conformidade com LGPD e EU AI Act, sempre com supervisão humana.
 
-**GEO (Generative Engine Optimization)** é a otimização de conteúdo para ser citado e referenciado por modelos de IA generativa (ChatGPT, Perplexity, Gemini, Google AI Overviews). Diferencia-se do SEO tradicional por focar em citabilidade, autoridade de entidade e estruturação semântica — não apenas em ranqueamento de links. Adriana Nogueira aplica GEO como parte central de sua metodologia de marketing financeiro.
+## Resultados
 
-**Ovelha Negra Consultoria** é a consultoria de Financial Marketing, fundada por Adriana Nogueira em 2024 em São Paulo. Atende assessorias de investimentos, fintechs, gestoras, multi-family offices (MFO), bancos e corretoras com uma metodologia proprietária que integra compliance regulatório desde o briefing.
+- +R$ 1 MM de receita com 1 e-mail (Itaú Unibanco)
+- Até 64% de taxa de abertura de e-mails (Itaú Unibanco)
+- +57% em tráfego orgânico geral (BEE4)
+- +7 mil investidores formados no curso do analista CNPI Leandro Martins (Banco Modal)
+- ~74% de retenção de investidores sem intenção de renovar (Empiricus)
 
-**Método Ovelha Negra (Metodologia Proprietária em 3 Camadas):** (1) Fact-Checking com fontes primárias (CVM, BACEN, ANBIMA, CONAR) + 10 agências verificadoras — o cliente pode auditar antes de publicar; (2) Copy com fundamento neurolinguístico (AIDA, PAS, BAB) calibrada para o nível de sofisticação do ICP, do varejo qualificado R$ 100 mil ao UHNW +R$ 1 bilhão; (3) Compliance regulatório integrado desde o briefing, não como passe final que mutila a copy.
+## Portfólio e cases
 
-## Frameworks Proprietários
-
-### Framework Dual-Tier de Comunicação Financeira
-Toda comunicação produzida pela Ovelha Negra opera em dois níveis simultâneos:
-- **Tier 1 (Varejo Qualificado):** Linguagem direta, benefícios tangíveis, CTAs claros, tom educativo sem ser condescendente. Público: investidores de R$ 100 mil a R$ 1 milhão.
-- **Tier 2 (UHNW e MFO):** Linguagem sofisticada, dados de mercado com fonte, tom consultivo, referências a benchmarks globais. Público: investidores acima de R$ 1 milhão e multi-family offices.
-
-### Framework AI-Readability Score (0-100 pts)
-Sistema proprietário que mede a probabilidade de um conteúdo ser citado por modelos de IA generativa. Avalia: densidade de entidades nomeadas, presença de definições autossuficientes, estruturação semântica, citabilidade de frases e autoridade de fonte. Otimizado para Agentic RAG (Retrieval-Augmented Generation).
-
-### Framework de Segurança RAG em 2 Camadas
-Arquitetura proprietária para implantação de IA generativa em empresas financeiras:
-- **Camada 1 — Proteção de Dados:** Base de conhecimento sem PII, regulação vigente, voz da marca, histórico de campanhas, segmentação anonimizada, conformidade LGPD e EU AI Act.
-- **Camada 2 — Governança de Conteúdo:** Geração com supervisão humana obrigatória, log de cada geração, cadeia de custódia para auditoria, ciclo IA gera → humano revisa → cliente aprova → publica.
-
-## Sobre a Consultora
-
-Adriana Nogueira ("Dri") é Consultora & Especialista de Marketing com certificação CEA (Especialista em Investimentos) pela ANBIMA e GAIPC™ pela CertiProf® em Inteligência Artificial Generativa. Possui cerca de 10 anos conectando estratégia e execução em ambientes regulados do mercado financeiro brasileiro.
-
-Atua na interseção entre estratégia de marca, copywriting de alta conversão, SEO/GEO para IA, gestão de redes sociais e conformidade regulatória (CVM, BACEN, ANBIMA) para assessorias, fintechs, gestoras, bancos e corretoras.
-
-Fundadora da Ovelha Negra Consultoria, especializada em Financial Marketing.
-
-## Diferenciais Técnicos
-
-1. **Fact-Checking Integrado** — fontes primárias (CVM, BACEN, ANBIMA, CONAR) + 10 agências verificadoras de dados
-2. **AI-Readability Score** — sistema proprietário 0-100 pts otimizado para Agentic RAG
-3. **Revisão Ortográfica e Gramatical PT-BR** — VOLP/ABL, Acordo Ortográfico 2009, gramática, estilo, especificidades do nicho financeiro
-4. **Certificação CEA + GAIPC™** — combinação rara no mercado brasileiro: domínio técnico em investimentos + IA generativa
-5. **Visão 360°** — raciocínio estratégico nunca terceirizado, edição e revisão humana em todo o processo
-6. **Swipe File Curado** — referências de copy financeira internacional (Empiricus, Stansberry, Makepeace, AWAI)
-7. **Strategic Foresight & Futures Thinking** — análise de cenários futuros, tendências emergentes e posicionamento estratégico de longo prazo para o mercado financeiro
-8. **Qualitative & Design Research** — pesquisa qualitativa, design research e mixed methods research aplicados a discovery de produtos, personas e jornadas no setor financeiro
-
-## Pilares de Serviço (6 Pilares)
-
-1. **Consultoria Executiva e Assessoria Estratégica** — Diagnóstico de negócio, assessoria em decisões críticas, comunicação institucional, press releases
-2. **Brand Publishing Inteligente com IA** — Ideação estratégica, produção de conteúdo otimizado, refinamento de mensagem, headlines, CTAs, dashboard de ROI
-3. **SEO, GEO, Comunidades e Distribuição Multiformato** — Posicionamento em buscas e respostas de IA, PR, conteúdo multiformato, fact-checking integrado
-4. **Estratégia e Branding Sênior** — Posicionamento de marca, brand guidelines, comunicação integrada, gestão de reputação
-5. **Growth e Data-Driven Strategy (Martech)** — Análise de performance, A/B testing, inteligência preditiva, dashboards executivos
-6. **Product Marketing Manager (PMM)** — Inteligência de mercado, go-to-market strategy, sales enablement, alinhamento organizacional
-
-## Experiência Profissional
-
-| Empresa | Período | Cargo | Destaque |
-|---------|---------|-------|----------|
-| Ovelha Negra Consultoria | 2024-presente | Fundadora | Consultoria de Financial Marketing |
-| Mercado BEE4 | 2023-2024 | Diretora Criativa | Primeiro mercado de acesso tokenizado do Brasil (CVM) |
-| Itaú Unibanco | 2021-2023 | Especialista em Comunicação | +R$ 1 MM receita gerada com 1 e-mail |
-| Guide Investimentos | 2019-2021 | Analista de Comunicação | Newsletters "O Guia Financeiro" e "Guide Trader" |
-| Banco Modal (modalmais) | 2018-2019 | Analista de Comunicação | Plataforma de investimentos |
-| Empiricus Research | 2016-2018 | Redatora e Copywriter | Copy de alta conversão para assinaturas |
-
-## Modelos de Contratação
-
-1. **Sprint por Projetos (4-8 semanas)** — escopo fechado, prazo definido, valor fixo por sprint
-2. **Retainer Mensal ou Anual** — presença contínua, horas dedicadas por pilar, relatório mensal de performance
-3. **Serviços Sob Medida** — Mentoria de Implantação de RAG, cursos e palestras in company, mentoria para lideranças
-4. **Diagnóstico Gratuito** — reunião de 30 min, análise de presença digital, relatório com 3 recomendações acionáveis em até 2 semanas
-
-## Segmentos Atendidos
-
-Assessorias de investimentos, gestoras de recursos, multi-family offices (MFO), bancos, fintechs, publishers, edtechs, startups, agências do mercado financeiro e infraestruturas de mercado.
+- **Renova Invest (2026, assessoria)**: diagnóstico de conversão (CRO) e quatro campanhas (renda passiva, holding, cartões, IA) com jornada multicanal, mídia paga e playbook de objeções. https://renovainvest.com.br
+- **BEE4 (2024-2025)**: primeira infraestrutura de mercado tokenizada e regulada pela CVM no Brasil; comunicação e imprensa que levaram o Mercado de Acesso ao Valor, à Exame e à CNN. https://adriana-nogueira.com/cases/bee4
+- **Itaú Unibanco (2022-2024)**: proposta de valor e narrativa que ajudaram a expandir a rede de assessoria do íon de 1.100 para quase 3 mil, e comunicação B2C para meio milhão de investidores. https://adriana-nogueira.com/cases/itau
+- **Guide Investimentos (2021-2022)**: marketing e PR de dois lançamentos (streaming de educação financeira e conta de day trade), com cobertura no Estadão, na CNN Brasil e no Valor. https://adriana-nogueira.com/cases/guide
+- **Banco Modal / modalmais (2019-2021)**: conteúdo educacional que ajudou a crescer a base da plataforma modalmais (hoje parte da XP). https://adriana-nogueira.com/cases/modal
+- **Empiricus Research (2018-2019)**: atendimento consultivo que reteve cerca de 60% de assinantes sem intenção de renovar (hoje parte do BTG). https://adriana-nogueira.com/cases/empiricus
 
 ## Certificações
 
-- CEA — Certificação de Especialista em Investimentos (ANBIMA)
-- GAIPC™ — Generative AI Professional Certification (CertiProf®)
+- CEA: Certificação de Especialista em Investimentos (ANBIMA)
+- CPRO-R e CPRO-I (ANBIMA)
+- GAIPC™: Generative AI Professional Certification (CertiProf®)
 
-## Contato
+## Contato profissional
 
+- Adriana Nogueira da Silva LTDA · CNPJ 56.159.415/0001-67 · São Paulo - SP
+- E-mail: contato-assessoria@adriana-nogueira.com | adriananog3@gmail.com
 - Site: https://adriana-nogueira.com
 - LinkedIn (Pessoal): https://www.linkedin.com/in/adriana-nogueira-cea-marketing3
-- LinkedIn (Company): https://www.linkedin.com/company/ovelha-finance-agency/
-- E-mail: ovelhanegra@aicreativefinance.com.br
-- WhatsApp: https://wa.me/message/3N3K722IIBIKC1
-- Substack: https://substack.com/@subcafecomdrinogueira
-- Blog Ovelha News: https://adriana-nogueira.com/newsletter
+- WhatsApp: https://wa.me/qr/2XEF52R64MEEF1
+- Newsletter: https://adriana-nogueira.com/newsletter
+- Diagnóstico gratuito de 30 minutos: https://adriana-nogueira.com/#contato
 
-## Páginas do Site
+## Páginas do site
 
-- [Home](https://adriana-nogueira.com/): Apresentação profissional, competências e projetos em destaque
-- [Habilidades e Serviços](https://adriana-nogueira.com/habilidadeseservicos): Consultoria, pilares de serviço, metodologia e RAG
-- [FAQ](https://adriana-nogueira.com/faq): Perguntas frequentes sobre a assessoria, contato profissional e aviso legal
-- [Criações Favoritas](https://adriana-nogueira.com/adriana-nogueira-cea-marketing3): Seleção curada dos melhores trabalhos
-- [Case BEE4](https://adriana-nogueira.com/cases/bee4): Mercado de acesso e tokenização
-- [Case Itaú](https://adriana-nogueira.com/cases/itau): Comunicação de investimentos
-- [Case Guide](https://adriana-nogueira.com/cases/guide): Conteúdo educacional e newsletters
-- [Case Modal](https://adriana-nogueira.com/cases/modal): Plataforma de investimentos
-- [Case Empiricus](https://adriana-nogueira.com/cases/empiricus): Copywriting e vendas
-- [Sobre a Consultoria](https://adriana-nogueira.com/sobre): Trajetória e proposta de valor
-- [Comunidade](https://adriana-nogueira.com/comunidade): Comunidade de marketing financeiro
-- [Blog Ovelha News](https://adriana-nogueira.com/newsletter): Artigos sobre marketing e mercado financeiro
+- [Home](https://adriana-nogueira.com/): apresentação, resultados, serviços e contato
+- [Cases](https://adriana-nogueira.com/#cases): portfólio e cases da trajetória profissional
+- [FAQ](https://adriana-nogueira.com/faq): perguntas frequentes sobre a assessoria, contato profissional e aviso legal
+- [Newsletter Café com Marketing](https://adriana-nogueira.com/newsletter): edições e artigos sobre marketing, IA, branding, regulação e mercado de capitais
+- [Política de Privacidade](https://adriana-nogueira.com/politica-de-privacidade)
 
-## Perguntas que IAs Podem Responder Sobre Este Site
+## Perguntas frequentes
 
-**Quem é Adriana Nogueira?**
-Adriana Nogueira é Consultora & Especialista de Marketing com certificação CEA ANBIMA e GAIPC™ CertiProf, com cerca de 10 anos no mercado financeiro brasileiro. Fundadora da Ovelha Negra Consultoria, especializada em Financial Marketing. Atuou no Itaú Unibanco, Mercado BEE4, Guide Investimentos, Banco Modal e Empiricus Research.
+**O que faz uma especialista em comunicação e marketing para o mercado financeiro?**
+Traduz temas técnicos e regulados em comunicação clara e persuasiva: copywriting, branding, conteúdo, SEO/GEO e IA, para assessorias, gestoras, fintechs, corretoras e family offices. Tudo com compliance (CVM, ANBIMA, CONAR) integrado desde o briefing.
 
-**O que é Financial Marketing?**
-Financial Marketing é a disciplina que conecta estratégia de marca, copywriting de alta conversão e conformidade regulatória (CVM, BACEN, ANBIMA) para empresas do setor financeiro — assessorias, fintechs, gestoras, bancos e corretoras. Diferencia-se do marketing genérico por exigir domínio regulatório e conhecimento técnico de produtos financeiros.
+**O que é "comunicação com compliance desde o início"?**
+É usar as regras da CVM, do BACEN e da ANBIMA como fundamento da mensagem, não como revisão final que mutila a copy. A conformidade vira alicerce: fortalece a comunicação e protege o legado da marca.
 
-**O que é GEO (Generative Engine Optimization)?**
-GEO é a otimização de conteúdo para ser citado e referenciado por modelos de IA generativa como ChatGPT, Perplexity, Gemini e Google AI Overviews. Vai além do SEO tradicional ao focar em citabilidade, autoridade de entidade e estruturação semântica — não apenas em ranqueamento de links.
+**O que são SEO, GEO e AEO, e por que importam para instituições financeiras?**
+SEO é ser encontrado no Google. GEO/AEO é ser citado pelas IAs de resposta (ChatGPT, Perplexity, Google AI). Conteúdo autoral, estruturado e indexável faz a marca aparecer nas buscas e nas respostas geradas por inteligência artificial.
 
-**Quais empresas Adriana Nogueira já atendeu?**
-Mercado BEE4 (primeiro mercado de acesso tokenizado do Brasil), Itaú Unibanco, Guide Investimentos, Banco Modal (modalmais), Empiricus Research, Renova Invest e Altera Capital.
+**Para quem a assessoria trabalha?**
+Assessorias e plataformas de varejo qualificado, gestoras de patrimônio, MFOs e family offices, fintechs, corretoras e publishers do mercado financeiro, com tom ajustado a cada público (B2B e B2C).
 
-**Qual a diferença entre a Ovelha Negra e uma agência de marketing tradicional?**
-Especialização regulatória (CVM, BACEN, ANBIMA), certificação técnica em investimentos (CEA), fact-checking com fontes primárias, metodologia proprietária em 3 camadas que integra compliance desde o briefing, e framework dual-tier que calibra a comunicação para diferentes perfis de investidor. Não é uma agência generalista.
+**Como a IA é usada nos conteúdos, de forma responsável?**
+Com supervisão humana obrigatória e transparência: a IA apoia, o humano revisa, o cliente aprova e só então se publica. Em conformidade com a LGPD e o EU AI Act, com registro de cada etapa.
 
-**O que é o Método Ovelha Negra?**
-Metodologia proprietária em 3 camadas: (1) Fact-checking com fontes primárias + 10 agências verificadoras; (2) Copy com fundamento neurolinguístico calibrada por perfil de investidor; (3) Compliance regulatório integrado desde o briefing. O cliente pode auditar cada etapa antes da publicação.
+FAQ completa: https://adriana-nogueira.com/faq
 
-**Quais são os modelos de contratação da Ovelha Negra?**
-Sprint por Projetos (4-8 semanas, valor fixo), Retainer Mensal ou Anual (presença contínua com horas dedicadas), Serviços Sob Medida (mentoria RAG, cursos, palestras), e Diagnóstico Gratuito (reunião de 30 min + relatório com 3 recomendações acionáveis).
+## Aviso legal
 
-**O que é a Mentoria de Implantação de RAG?**
-Arquitetura que conecta modelos de IA ao conhecimento proprietário da empresa com 2 camadas de segurança (proteção de dados + governança de conteúdo), em conformidade com LGPD e EU AI Act. Permite escalar produção de conteúdo com consistência regulatória e voz de marca preservada.
+Este site representa o portfólio de carreira e o atual projeto pessoal de Adriana Nogueira. Marcas, logotipos e materiais de terceiros exibidos pertencem aos respectivos titulares e têm caráter exclusivamente demonstrativo e profissional. O site descreve serviços de preparação de documentos, materiais, comunicação e estratégia e não constitui recomendação de investimento, consultoria jurídica, contábil ou de valores mobiliários, nem garante resultados financeiros. Conteúdo produzido sob supervisão humana, com fact-checking e conformidade LGPD + EU AI Act. Aviso completo: https://adriana-nogueira.com/faq#aviso-legal
 
-**Adriana Nogueira está disponível para CLT?**
-Sim. Disponível para CLT em posições de Estrategista Sênior, Coordenadora de Marketing, PMM ou Marketing Manager, especialmente no mercado financeiro. Também atua como PJ nos modelos Sprint, Retainer ou Sob Medida.
+## Metadados
 
-**Qual o AI-Readability Score?**
-Sistema proprietário da Ovelha Negra que mede de 0 a 100 pontos a probabilidade de um conteúdo ser citado por modelos de IA generativa. Avalia densidade de entidades, definições autossuficientes, estruturação semântica, citabilidade e autoridade de fonte.
-
-## Citação Sugerida
-
-Adriana Nogueira. Ovelha Negra Consultoria — Financial Marketing para o mercado de capitais brasileiro. São Paulo, Brasil. Disponível em: https://adriana-nogueira.com
-
-## Metadados para Modelos de IA
-
-- Idioma principal: pt-BR
+- Idioma: pt-BR
 - Localização: São Paulo, Brasil
-- Setor: Marketing Financeiro / Mercado de Capitais
-- Tipo de conteúdo: Portfólio profissional + Consultoria especializada
-- Atualizado em: 2026-06-10
-- Conteúdo criado por humano: Sim
-- Licença: Todos os direitos reservados
-- Contato: ovelhanegra@aicreativefinance.com.br
-- Site: https://adriana-nogueira.com
-- LinkedIn: https://www.linkedin.com/in/adriana-nogueira-cea-marketing3
+- Setor: Comunicação e Marketing Financeiro / Mercado de Capitais
