@@ -81,7 +81,7 @@ nav .cta:hover{background:var(--platinum)}
 .idlogos img{height:72px;width:auto;border-radius:12px;box-shadow:0 4px 14px rgba(0,0,0,.4)}
 .idcta .btn-primary{white-space:nowrap;font-size:17px}
 @media(max-width:860px){.idgrid{grid-template-columns:1fr}.idcta{justify-self:start}}
-.hero .sub{font-size:18px;color:var(--platinum);max-width:560px;margin-bottom:14px}
+.hero .sub{font-size:18px;color:var(--platinum);max-width:560px;margin-bottom:22px}
 .hero .hero-quote{font-family:'Open Sans',sans-serif;font-style:italic;font-size:22px;line-height:1.4;color:var(--champagne);max-width:560px;margin-bottom:26px;padding-left:16px;border-left:2px solid var(--dourado)}
 .letter{max-width:760px;margin-top:20px}
 .letter p{color:var(--platinum);font-size:16.5px;line-height:1.8;margin-bottom:18px}
@@ -98,7 +98,7 @@ nav .cta:hover{background:var(--platinum)}
 .readmore:focus-visible{outline:3px solid #fff;outline-offset:3px}
 .readmore span{display:inline-block;transition:transform .3s}
 .readmore.open span{transform:rotate(180deg)}
-.herobio p{color:var(--platinum);font-size:16px;line-height:1.75;margin-bottom:14px;max-width:560px}
+.herobio p{color:var(--platinum);font-size:16px;line-height:1.75;margin-bottom:22px;max-width:560px}
 .herobio b{color:var(--champagne);font-weight:600}
 .hero-creds{margin-top:26px;max-width:560px}
 .hero-creds .hc-role{color:var(--champagne);font-weight:600;font-size:16px;line-height:1.5;margin-bottom:10px}
@@ -273,6 +273,8 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 /* footer */
 footer{padding:40px 0 60px;text-align:center;color:var(--cinza);font-size:13px}
 footer .disc{max-width:680px;margin:0 auto 12px;font-style:italic}
+footer ol.prem{max-width:680px;margin:0 auto 12px;padding-left:22px;text-align:left;font-style:normal}footer ol.prem li{margin-bottom:2px}
+footer .foot-contato{max-width:680px;margin:18px auto 16px;padding:18px 20px;border:1px solid var(--linha);border-radius:14px;background:var(--card);text-align:left;font-size:14px;color:var(--platinum)}footer .foot-contato b{color:var(--champagne)}footer .foot-contato .fc-tag{font-style:italic;font-size:16px;color:var(--champagne);margin-bottom:8px}footer .foot-contato p{margin-bottom:8px}footer .foot-contato a{color:var(--dourado)}footer .fc-links{line-height:2}
 /* chat launcher */
 .chat-fab{position:fixed;right:22px;bottom:22px;z-index:60;background:var(--dourado);color:#000;font-weight:800;font-size:15px;padding:15px 24px;border-radius:999px;box-shadow:0 10px 30px rgba(201,169,110,.35);cursor:pointer;border:none;display:flex;align-items:center;gap:9px;transition:.3s}
 .chat-fab:hover{background:var(--platinum);transform:translateY(-2px)}
@@ -501,7 +503,7 @@ nav .nav-li + .cta{margin-left:0}
     <p class="entry-sub">Deixe seu contato e receba um diagnóstico do seu cenário de comunicação e marketing financeiro, sem compromisso.</p>
     <div class="entry-form"><a class="entry-submit js-contato" href="#form-contato" data-origem="popup-entrada">Quero meu diagnóstico</a></div>
     <a class="entry-alt" id="entrySkip">Prefiro explorar o site primeiro →</a>
-    <p class="entry-lgpd">O formulário é hospedado pelo Tally (UE, conforme GDPR). Seus dados são usados só para responder ao seu pedido e tratados conforme a LGPD. <a href="/politica-de-cookies" style="color:inherit;text-decoration:underline">Política de privacidade</a>.</p>
+    <p class="entry-lgpd">O formulário é do próprio site e não usa cookies. Seus dados são usados só para responder ao seu pedido e tratados conforme a LGPD. <a href="/politica-de-privacidade" style="color:inherit;text-decoration:underline">Política de privacidade</a>.</p>
   </div>
 </div>
 
@@ -513,6 +515,7 @@ nav .nav-li + .cta{margin-left:0}
       <a href="#cases">Portfólio</a>
       <a href="#servicos">Serviços</a>
       <a href="/newsletter">Newsletter</a>
+      <a href="/faq">FAQ</a>
       <a href="#contato">Contato</a>
     </div>
     <a class="nav-li" href="https://www.linkedin.com/in/adriana-nogueira-cea-marketing3/" target="_blank" rel="noopener" aria-label="LinkedIn de Adriana Nogueira (abre em nova aba)"><svg class="li-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="nav-li-txt">LinkedIn</span></a><button class="cta" id="navChat" type="button" aria-controls="chatPanel" aria-expanded="false">Fale com a especialista</button>
@@ -524,14 +527,13 @@ nav .nav-li + .cta{margin-left:0}
     <div>
       <p class="eyebrow">Seção 01 · Sobre</p>
       <h1>Comunicação e Marketing com <span class="gold serif-it">compliance desde o início</span></h1>
-      <p class="sub">Para você que chegou até aqui: sou Adriana Nogueira, ou simplesmente <b>Dri</b> 😊. Sou a profissional de Comunicação, Brand &amp; Marketing que vai estar ao seu lado na construção e evolução dessa área tão importante para o seu negócio.</p>
-      <p class="hero-quote">A meu ver <span class="gold" style="font-weight:800;font-style:italic">comunicar é Poder</span> a chave-mestre que dá ritmo a produtos, serviços e inovação, e transforma tudo isso em venda e crescimento consistente.</p>
+      <p class="sub">Para você que chegou até aqui: sou Adriana Nogueira, ou simplesmente <b>Dri</b> 😊. Sou a profissional de Comunicação, Brand &amp; Marketing que vai estar ao seu lado na construção e na evolução dessa área tão importante para o seu negócio.</p>
+      <p class="hero-quote">A meu ver, <span class="gold" style="font-weight:800;font-style:italic">comunicar é Poder</span>: a chave-mestra que dá ritmo a produtos, serviços e inovação e transforma tudo isso em venda e crescimento consistente.</p>
       <div class="letter-more herobio" id="heroMore">
-        <p>Ao longo da jornada, participei da <b>concepção end-to-end</b> de produtos digitais e da infraestrutura tecnológica de conciliação financeira e pagamentos. Atuei diretamente no relacionamento com investidores, CEOs e <b>C-Levels</b> e conduzi treinamentos para empresas em crescimento sobre ferramentas financeiras e meios de pagamento. Por isso, esta apresentação é apenas uma pequena parcela do que já construí.</p>
-        <p>Desde garota, a escrita sempre foi minha maior habilidade, mas jamais pensei que evoluiria minha experiência e trajetória de vida no mercado financeiro. Atuei em grandes players como <b>Empiricus (BTG Pactual)</b> Itaú Unibanco, o banco digital <b>modalmais</b> <b>Guide Investimentos</b> e outros.</p>
-        <p>Ao escolher traçar uma jornada comigo, você vai observar parte dessa garota que ainda é apaixonada por <b>pesquisas, descobertas e criações</b>. Por isso, meus projetos são entregas <b>end-to-end</b>: conectando automações com IA, dados e inteligência prospectiva, estratégia, tática e execução, sempre orientada por testes e dados.</p>
-        <p>Hoje, sou certificada como <b>Especialista em Investimentos (CEA · CPRO-I · ANBIMA)</b> e possuo o <b>GAIPC™</b> certificação internacional em IA Generativa pela <b>CertiProf®</b>.</p>
-        <p>Por fim, sou uma pessoa neurodivergente (TDAH/TAG). 🌻 Descobri, durante a pandemia, que trabalhar remotamente potencializa minha produtividade e a qualidade das entregas. Por isso, meu modelo de trabalho é nesse formato, com encontros esporádicos quando necessário, o que me ajuda a ser mais ágil e a entregar com qualidade tudo que combinamos em nossa parceria.</p>
+        <p>Ao longo da jornada, participei da <b>concepção end-to-end</b> de produtos digitais e da infraestrutura tecnológica de conciliação financeira e pagamentos. Atuei diretamente no relacionamento com investidores, CEOs e <b>C-Levels</b> e conduzi treinamentos, para empresas em crescimento, sobre ferramentas financeiras e meios de pagamento. Por isso, esta apresentação é apenas uma pequena parcela do que já construí.</p>
+        <p>Desde garota, a escrita sempre foi minha maior habilidade, mas jamais imaginei que ela evoluiria junto com minha experiência e trajetória de vida no mercado financeiro. Atuei em grandes players, como <b>Empiricus (BTG Pactual)</b>, <b>Itaú Unibanco</b>, o banco digital <b>modalmais</b>, <b>Guide Investimentos</b>, entre outros.</p>
+        <p>Ao escolher traçar uma jornada comigo, você vai conhecer parte dessa garota que continua apaixonada por <b>pesquisas, descobertas e criações</b>. Por isso, meus projetos são <b>entregas consistentes</b>, que conectam automações com IA, dados, inteligência prospectiva, estratégia, tática e execução, sempre orientadas por testes e análises de performance.</p>
+        <p>Hoje, sou certificada como <b>Especialista em Investimentos (CEA – ANBIMA)</b> e possuo o <b>GAIPC™</b>, certificação internacional em IA Generativa pela <b>CertiProf®</b>.</p>
       </div>
       <button class="readmore" id="heroReadMore" aria-expanded="false" aria-controls="heroMore">Ler mais <span aria-hidden="true">▾</span></button>
       <div class="hero-creds">
@@ -571,7 +573,7 @@ nav .nav-li + .cta{margin-left:0}
     <p class="news-eyebrow">Newsletter Café com Marketing</p>
     <h2 class="news-h">Receba insights sobre <b>Mercado, Comunicação &amp; Marketing</b> no mesmo lugar</h2>
     <div class="news-form"><a class="news-btn js-contato" href="#form-contato" data-origem="newsletter">Quero receber</a></div>
-    <p class="news-sec">A inscrição é feita por formulário do Tally. Ao se inscrever, você concorda em receber a Newsletter Café com Marketing por e-mail. Cancele quando quiser, em um clique. <a href="/politica-de-cookies" style="color:inherit;text-decoration:underline">Política de privacidade</a>.</p>
+    <p class="news-sec">A inscrição é feita pelo formulário do próprio site. Ao se inscrever, você concorda em receber a Newsletter Café com Marketing por e-mail. Cancele quando quiser, em um clique. <a href="/politica-de-privacidade" style="color:inherit;text-decoration:underline">Política de privacidade</a>.</p>
   </div>
 </section>
 
@@ -595,8 +597,8 @@ nav .nav-li + .cta{margin-left:0}
       <div class="pcard" style="--brand:#D8F97F">
         <div class="ptop"><div class="ptags"><span class="tag">2026</span><span class="tag">Consultoria</span></div><img class="plogo" src="/images/home/a29791e551.webp" alt="Renova Invest"><span class="pshare" aria-hidden="true">↗</span></div>
         <h3>Renova Invest</h3>
-        <p class="pdesc">Diagnóstico de conversão (CRO) e quatro campanhas (renda passiva, holding, cartões, IA) com jornada multicanal, mídia paga e playbook de objeções, para uma assessoria independente premiada. O trabalho mais recente da consultora.</p>
-        <a class="pbtn js-contato" href="#form-contato" data-origem="case-renova">Conversar sobre este case</a>
+        <p class="pdesc">Diagnóstico de conversão (CRO) e quatro campanhas (renda passiva, holding, cartões, IA) com jornada multicanal, mídia paga e playbook de objeções, para uma assessoria independente premiada. O trabalho mais recente da assessora.</p>
+        <a class="pbtn" href="https://renovainvest.com.br" target="_blank" rel="noopener">Conhecer case →</a>
       </div>
       <div class="pcard" style="--brand:#2E7DF6">
         <div class="ptop"><div class="ptags"><span class="tag">2024-2025</span><span class="tag">Carreira</span></div><img class="plogo" src="/images/home/ddf7eb3d91.webp" alt="BEE4"><span class="pshare" aria-hidden="true">↗</span></div>
@@ -741,8 +743,17 @@ nav .nav-li + .cta{margin-left:0}
     <p class="foot-tag" style="font-family:'Open Sans',sans-serif;font-style:italic;font-size:19px;color:var(--dourado);margin-bottom:14px">Comunicação e Marketing com compliance desde o início.</p>
     <div class="disc-box" role="note" aria-label="Aviso legal">
       <a class="disc-li" href="https://www.linkedin.com/in/adriana-nogueira-cea-marketing3/" target="_blank" rel="noopener" aria-label="LinkedIn de Adriana Nogueira (abre em nova aba)"><svg class="li-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span>Adriana Nogueira no LinkedIn</span></a>
-      <p class="disc"><strong>Aviso Legal:</strong> este site representa um portfólio de carreira e meu atual projeto pessoal. Alguns conteúdos, marcas, logotipos e materiais exibidos são propriedade intelectual das respectivas empresas e instituições para as quais foram desenvolvidos. A reprodução desses materiais aqui tem caráter exclusivamente demonstrativo e profissional. Todos os direitos sobre marcas e conteúdos de terceiros pertencem aos seus respectivos titulares e não a mim.</p>
-      <p class="disc">Este site descreve serviços de comunicação e estratégia. Não constitui recomendação de investimento, consultoria jurídica, contábil ou de valores mobiliários, e não garante resultados financeiros. Serviços regulados são conduzidos pelos profissionais habilitados do cliente. Conteúdo produzido sob supervisão humana, com fact-checking e conformidade LGPD + EU AI Act. Dados tratados conforme a LGPD.</p>
+      <p class="disc"><strong>Aviso Legal e Mídia Incorporada:</strong> este site representa meu portfólio de carreira e meu atual projeto pessoal. Alguns conteúdos, marcas, logotipos e materiais exibidos são propriedade intelectual das respectivas empresas e instituições para as quais foram desenvolvidos. A reprodução desses materiais aqui tem caráter exclusivamente demonstrativo e profissional. Todos os direitos sobre marcas e conteúdos de terceiros pertencem aos seus respectivos titulares e não a mim.</p>
+      <p class="disc">Este site descreve serviços de preparação de documentos, materiais, comunicação e estratégia. Não constitui recomendação de investimento, consultoria jurídica, contábil ou de valores mobiliários, e não garante resultados financeiros. Serviços regulados são conduzidos por profissionais habilitados do cliente. Conteúdo produzido sob supervisão humana, com fact-checking e conformidade LGPD + EU AI Act.</p>
+      <p class="disc"><strong>Premissas fundamentais:</strong></p>
+      <ol class="disc prem"><li>Fact-checking obrigatório em toda informação.</li><li>Supervisão e curadoria humana: soberania humana antes de publicar ou finalizar.</li><li>Compliance desde o início: conformidade incorporada na origem, não no fim.</li></ol>
+      <p class="disc"><strong>Base normativa:</strong> Guia de IA do TCU · LGPD (Lei 13.709/2018) · Marco Civil da Internet · PL 2.338/2023 · EU AI Act · ISO/IEC 38507 e 23894 · CVM · BACEN · ANBIMA · ANCORD · CMN · CONAR · CF/1988 · CC · CLT · CP · CTN · Lei 8.906/94 (OAB) · Lei 7.492/86 (crimes contra o sistema financeiro) · Lei 9.613/98 (lavagem de dinheiro) · ECA Digital (Lei 15.211/2025).</p>
+      <div class="foot-contato" itemscope itemtype="https://schema.org/ProfessionalService">
+        <p class="eyebrow" style="margin-bottom:6px">Contato profissional</p>
+        <p class="fc-tag">Consultorias · Mentorias · Parcerias · Oportunidades</p>
+        <p><b itemprop="name">Adriana Nogueira da Silva LTDA</b><br><b>CNPJ:</b> <span itemprop="taxID">56.159.415/0001-67</span> · <b>Município:</b> São Paulo - SP<br><b>E-mail:</b> <a href="mailto:contato-assessoria@adriana-nogueira.com" itemprop="email">contato-assessoria@adriana-nogueira.com</a> | <a href="mailto:adriananog3@gmail.com">adriananog3@gmail.com</a></p>
+        <p class="fc-links"><a href="https://www.linkedin.com/in/adriana-nogueira-cea-marketing3/" target="_blank" rel="noopener">LinkedIn Profissional</a> · <a href="https://www.linkedin.com/company/ovelha-finance-agency/" target="_blank" rel="noopener">LinkedIn Page</a> · <a href="https://wa.me/qr/2XEF52R64MEEF1" target="_blank" rel="noopener">WhatsApp</a> · <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2mJ7oBY1F_XJtWoK_37E4jL-2duwBePyzlAd_EJy7okdjwImjYEaHidfLD6-RawkdyeyDsEA7c" target="_blank" rel="noopener">Agendar</a> · <a href="/faq#aviso-legal">Aviso legal completo</a> · <a href="/politica-de-privacidade">Política de Privacidade</a></p>
+      </div>
       <details class="sec-pol">
         <summary>Política de Segurança e Conformidade: 11 camadas de proteção</summary>
         <ol>
@@ -758,7 +769,7 @@ nav .nav-li + .cta{margin-left:0}
           <li><b>Governança e auditoria de IA:</b> classificação de risco conforme o EU AI Act, monitoramento de viés, desvio e alucinação, registro de decisões e inventário das ferramentas de IA.</li>
           <li><b>Compliance digital e publicidade online:</b> ECA Digital (Lei 15.211/2025), regras do Banco Central para tokenização, criptoativos e meios de pagamento, diretrizes People-First e E-E-A-T e Lei 14.790/2023 (apostas).</li>
         </ol>
-        <p class="sec-base"><b>Base normativa:</b> Guia de IA do TCU · LGPD (Lei 13.709/2018) · Marco Civil da Internet · PL 2.338/2023 · EU AI Act · ISO/IEC 38507, 23894, 27001 e 37001 · NIST CSF · COSO · CVM (Resoluções 39, 178 e 179) · BACEN · ANBIMA · ANCORD · BSM · CMN · CONAR · CF/1988 · Leis 12.846/2013, 15.211/2025, 14.790/2023, 9.613/1998 e 7.492/1986.</p>
+        <p class="sec-base"><b>Referências complementares:</b> ISO/IEC 27001 e 37001 · NIST CSF · COSO · Resoluções CVM 39, 178 e 179 · BSM · Leis 12.846/2013 e 14.790/2023.</p>
       </details>
     </div>
     <p>© Adriana Nogueira | Portfólio · Comunicação &amp; Marketing Financeiro · CEA · GAIPC™ · São Paulo</p>
