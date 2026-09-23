@@ -160,6 +160,11 @@ func loadSite(fsys fs.FS) (*site, error) {
 	if _, ok := s.files["/index.html"]; !ok {
 		return nil, errors.New("web/index.html ausente")
 	}
+	// Imagem de compartilhamento (Open Graph) servida com nome neutro.
+	if a, ok := s.files["/assets/ovelha-og.jpg"]; ok {
+		s.files["/assets/adriana-nogueira-og.jpg"] = a
+		delete(s.files, "/assets/ovelha-og.jpg")
+	}
 	s.csp = buildCSP(hashes)
 	s.cspLocal = strings.Replace(s.csp, "; upgrade-insecure-requests", "", 1)
 	return s, nil
