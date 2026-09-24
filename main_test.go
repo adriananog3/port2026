@@ -328,7 +328,7 @@ func TestShield(t *testing.T) {
 		{"/", "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GPTBot/1.2; +https://openai.com/gptbot)", 200},
 		{"/", "Mozilla/5.0 (compatible; ClaudeBot/1.0; +claudebot@anthropic.com)", 200},
 		{"/", "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)", 200},
-		{"/rag", "Mozilla/5.0 (Windows NT 10.0; Win64; x64)", 200},
+		{"/rag", "Mozilla/5.0 (Windows NT 10.0; Win64; x64)", 301},
 	}
 	for _, c := range cases {
 		req := httptest.NewRequest("GET", "https://adriana-nogueira.com"+c.path, nil)
