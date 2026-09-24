@@ -9,7 +9,7 @@ import AnimatedSection from "@/components/AnimatedSection";
 export default function ProjectItau() {
   useSEO({
     title: "Itaú Unibanco | Analista Sênior de Comunicação & Marketing | Adriana Nogueira",
-    description: "Case Itaú Unibanco: Campanhas de alto impacto (+R$ 1MM com 1 e-mail), comunicação para Itaú e íon, estratégias de marketing para Key Position. Experiência em comunicação corporativa e marketing financeiro.",
+    description: "Case Itaú Unibanco: Campanhas de alto impacto (+R$ 1MM com 1 e-mail), comunicação para Itaú e íon, estratégias de marketing para Key Position. Experiência em comunicação corporativa e marketing.",
     canonical: "/cases/itau",
     breadcrumbs: [
       { name: "Home", url: "/" },
