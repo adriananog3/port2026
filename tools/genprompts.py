@@ -27,7 +27,7 @@ form_id = data.get("tally_form") or "68GedB"
 faq = (ROOT / "web/faq.html").read_text(encoding="utf-8")
 BASE_CSS = faq[faq.index("<style>") + 7: faq.index("</style>")]
 LEGAL = (ROOT / "tools/snippets/aviso-legal.html").read_text(encoding="utf-8").strip()
-NAV = re.search(r"<nav>.*?</nav>", (ROOT / "web/rag.html").read_text(encoding="utf-8"), re.S).group(0)
+NAV = '<nav><div class="wrap"><a class="brand" href="/">Adriana Nogueira <i>Portfólio</i></a><div class="links"><a href="/#topo">Sobre</a><a href="/#cases">Portfólio</a><a href="/#servicos">Serviços</a><a href="/newsletter">Newsletter</a><a href="/prompts">Banco de Prompts</a><a href="/faq">FAQ</a><a href="/#contato">Contato</a></div></div></nav>'
 
 CSS = BASE_CSS + """
 .bp-hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,1fr);gap:32px;align-items:start}
@@ -36,10 +36,22 @@ CSS = BASE_CSS + """
 .gate h2{font-size:22px;margin-bottom:6px}.gate p.s{font-size:14px;color:var(--cinza);margin-bottom:10px}
 .gate iframe{display:block;width:100%;min-height:430px;border:0;background:transparent}
 .gate .nota{font-size:12.5px;color:var(--cinza);line-height:1.5;margin-top:8px}.gate .nota a{color:var(--dourado);text-decoration:underline}
-.bp-cats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.bp-cat{background:var(--card);border:1px solid var(--linha);border-radius:14px;padding:16px 18px}
-.bp-cat h3{font-size:16px;color:var(--champagne);margin-bottom:4px}.bp-cat p{font-size:14px;color:var(--cinza)}.bp-cat small{display:block;margin-top:8px;color:var(--dourado);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
-.bp-cat ul{list-style:none;margin-top:8px}.bp-cat li{font-size:13.5px;color:var(--platinum);padding:3px 0 3px 16px;position:relative}.bp-cat li::before{content:"🔒";position:absolute;left:0;font-size:10px;top:6px}
+.bp-car{position:relative}
+.bp-car-nav{display:flex;justify-content:flex-end;align-items:center;gap:10px;margin-bottom:12px}
+.bp-car-nav span{font-size:13px;color:var(--platinum);letter-spacing:.04em;margin-right:4px}
+.car-btn{width:42px;height:42px;border-radius:50%;border:1px solid var(--dourado);background:transparent;color:var(--dourado);font-size:20px;line-height:1;cursor:pointer;transition:background .2s,color .2s,opacity .2s}
+.car-btn:hover:not(:disabled),.car-btn:focus-visible{background:var(--dourado);color:#000}.car-btn:disabled{opacity:.3;cursor:default}
+.bp-cats{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 28px)/3.15);gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;padding-bottom:4px;overscroll-behavior-x:contain}
+.bp-cats::-webkit-scrollbar{display:none}.bp-cats>.bp-cat{scroll-snap-align:start}
+.bp-cats:focus-visible{outline:2px solid var(--dourado);outline-offset:4px;border-radius:14px}
+.car-seta{position:absolute;right:-6px;top:calc(50% + 20px);transform:translateY(-50%);width:52px;height:52px;border-radius:50%;border:0;background:var(--dourado);color:#000;font-size:24px;font-weight:700;cursor:pointer;box-shadow:0 6px 24px rgba(0,0,0,.6);transition:opacity .2s,transform .2s;z-index:2}
+.car-seta:hover{transform:translateY(-50%) translateX(3px)}.car-seta[hidden]{display:none}
+.bp-car::after{content:"";position:absolute;right:0;top:54px;bottom:4px;width:70px;background:linear-gradient(90deg,transparent,#000);pointer-events:none;transition:opacity .2s}.bp-car.fim::after{opacity:0}
+.bp-cat{background:#161513;border:1px solid #3a3328;border-radius:14px;padding:16px 18px;display:flex;flex-direction:column}
+.bp-assinar{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:999px;background:var(--dourado);color:#000;font-weight:800;font-size:14.5px;letter-spacing:.02em;text-decoration:none;box-shadow:0 6px 20px rgba(201,169,110,.25);transition:transform .2s,box-shadow .2s,background .2s}.bp-assinar svg{width:18px;height:18px;flex:none}.bp-assinar:hover,.bp-assinar:focus-visible{background:#FDFBF7;transform:translateY(-2px);box-shadow:0 10px 28px rgba(201,169,110,.4)}.bp-cat small{margin-bottom:14px}.bp-cat{transition:border-color .2s,transform .2s}.bp-cat:hover{border-color:var(--dourado);transform:translateY(-3px)}
+.bp-venda{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;margin:0 0 18px;padding:18px 22px;border:1px solid var(--dourado);border-radius:14px;background:linear-gradient(120deg,#1c1812,#0c0c0c)}.bp-venda p{margin:0;color:var(--champagne);font-size:16px;line-height:1.5;flex:1 1 420px;max-width:600px}.bp-venda p b{color:var(--dourado)}.bp-venda .bp-assinar{margin:0;padding:13px 22px}
+.bp-cat h3{font-size:16px;color:#FFFFFF;margin-bottom:4px}.bp-cat p{font-size:14px;color:var(--platinum)}.bp-cat small{display:block;margin-top:8px;color:var(--dourado);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.bp-cat ul{list-style:none;margin-top:8px}.bp-cat li{font-size:13.5px;color:var(--champagne);padding:3px 0 3px 16px;position:relative}.bp-cat li::before{content:"🔒";position:absolute;left:0;font-size:10px;top:6px}
 html.bp-ok .bp-cat li::before{content:"✓";color:var(--dourado);font-size:12px;top:3px}
 .lib{display:none}html.bp-ok .lib{display:block}html.bp-ok .gate-box{display:none}
 .lib-bar{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-bottom:16px}
@@ -56,8 +68,8 @@ html.bp-ok .bp-cat li::before{content:"✓";color:var(--dourado);font-size:12px;
 .pc .copiar:hover,.pc .copiar:focus-visible{background:var(--dourado);color:#000}
 .lib-vazio{color:var(--cinza);font-size:14.5px}
 .bp-aviso{margin-top:18px;padding:16px 20px;border-left:3px solid var(--dourado);background:#15110a;border-radius:0 12px 12px 0;font-size:14px;color:var(--platinum)}
-@media(max-width:900px){.bp-hero{grid-template-columns:1fr}.bp-cats{grid-template-columns:1fr 1fr}}
-@media(max-width:600px){.bp-cats{grid-template-columns:1fr}.gate iframe{min-height:470px}}
+@media(max-width:900px){.bp-hero{grid-template-columns:1fr}.bp-cats{grid-auto-columns:calc((100% - 14px)/2.15)}}
+@media(max-width:600px){.bp-cats{grid-auto-columns:86%}.car-seta{right:-4px;width:44px;height:44px}.gate iframe{min-height:470px}}
 .bp-cta{display:inline-flex;align-items:center;gap:10px;margin-top:16px;background:var(--dourado);color:#000;font-weight:800;border:0;border-radius:999px;padding:14px 24px;font:inherit;font-size:16px;font-weight:800;cursor:pointer;text-decoration:none}
 .bp-cta:hover,.bp-cta:focus-visible{background:#b8965b}
 html.bp-ok .bp-cta.abrir{display:none}
@@ -79,7 +91,8 @@ dialog.gate-dlg::backdrop{background:rgba(0,0,0,.82);backdrop-filter:blur(4px)}
 cat_cards = "".join(
     f'<div class="bp-cat"><h3>{e(c["nome"])}</h3><p>{e(c["descricao"])}</p><ul>'
     + "".join(f"<li>{e(p['titulo'])}</li>" for p in c["prompts"])
-    + f'</ul><small>{len(c["prompts"])} prompts</small></div>\n'
+    + f'</ul><small>{len(c["prompts"])} prompts</small>'
+    + '<a class="bp-assinar" href="https://wa.me/qr/2XEF52R64MEEF1" target="_blank" rel="noopener" data-evt="whatsapp_assinar" aria-label="Quero assinar: falar no WhatsApp sobre ' + e(c["nome"]) + '"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></svg>Quero assinar</a></div>\n'
     for c in cats)
 
 iframe_src = f"https://tally.so/embed/{form_id}?alignLeft=1&amp;hideTitle=1&amp;dynamicHeight=1&amp;origem=banco-de-prompts"
@@ -91,6 +104,19 @@ ld = {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Banco 
       "dateModified": data.get("atualizado", "")}
 
 JS = r"""(function(){
+  var cr=document.getElementById('bp-cats'),car=document.getElementById('bp-car');
+  if(cr&&car){
+    var pos=document.getElementById('car-pos'),seta=car.querySelector('.car-seta'),bts=car.querySelectorAll('[data-car]');
+    var passo=function(){var c=cr.querySelector('.bp-cat');return c?c.getBoundingClientRect().width+14:cr.clientWidth;};
+    var upd=function(){var n=cr.children.length,w=passo(),ini=Math.round(cr.scrollLeft/w)+1,vis=Math.max(1,Math.floor((cr.clientWidth+14)/w)),fim=cr.scrollLeft+cr.clientWidth>=cr.scrollWidth-4;
+      pos.textContent=ini+'–'+Math.min(n,ini+vis-1)+' de '+n;
+      bts.forEach(function(b){b.disabled=(b.dataset.car==='-1')?cr.scrollLeft<=4:fim;});
+      seta.hidden=fim;car.classList.toggle('fim',fim);};
+    bts.forEach(function(b){b.addEventListener('click',function(){cr.scrollBy({left:passo()*(+b.dataset.car),behavior:'smooth'});});});
+    cr.addEventListener('keydown',function(ev){if(ev.key==='ArrowRight'||ev.key==='ArrowLeft'){ev.preventDefault();cr.scrollBy({left:passo()*(ev.key==='ArrowRight'?1:-1),behavior:'smooth'});}});
+    cr.addEventListener('scroll',function(){window.requestAnimationFrame(upd);},{passive:true});
+    window.addEventListener('resize',upd);upd();
+  }
 var h=document.documentElement,dlg=document.getElementById('gate'),carregado=false,cards=[],cat='';
 function abrir(){if(h.classList.contains('bp-ok')||!dlg)return;if(dlg.showModal){if(!dlg.open)dlg.showModal();}else dlg.setAttribute('open','');var f=dlg.querySelector('input[name=nome]');if(f)setTimeout(function(){f.focus();},50);}
 function fechar(){if(!dlg)return;if(dlg.close&&dlg.open)dlg.close();else dlg.removeAttribute('open');}
@@ -162,8 +188,13 @@ page = f"""<!doctype html>
 <section aria-labelledby="h-cats"><div class="wrap">
   <h2 id="h-cats">O que você <em>encontra aqui</em></h2>
   <div class="rule"></div>
-  <div class="bp-cats">
-{cat_cards}  </div>
+  <div class="bp-venda"><p><b>Quer aplicar os prompts ao seu negócio com orientação especializada?</b> Fale comigo no WhatsApp e conheça as condições da assinatura.</p><a class="bp-assinar" href="https://wa.me/qr/2XEF52R64MEEF1" target="_blank" rel="noopener" data-evt="whatsapp_assinar"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></svg>Quero assinar</a></div>
+  <div class="bp-car" id="bp-car">
+    <div class="bp-car-nav"><span id="car-pos" aria-live="polite"></span><button type="button" class="car-btn" data-car="-1" aria-label="Categorias anteriores" disabled>←</button><button type="button" class="car-btn" data-car="1" aria-label="Próximas categorias">→</button></div>
+    <div class="bp-cats" id="bp-cats" tabindex="0" role="region" aria-label="Categorias do Banco de Prompts, deslize para a direita">
+{cat_cards}    </div>
+    <button type="button" class="car-seta" data-car="1" aria-label="Ver mais categorias">→</button>
+  </div>
   <div class="bp-lock" style="margin-top:18px"><p>A biblioteca completa abre na hora, depois de um cadastro rápido.</p><button type="button" class="bp-cta" data-abrir-gate>Desbloquear os {total} prompts →</button></div>
 </div></section>
 
