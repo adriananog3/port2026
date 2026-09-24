@@ -211,7 +211,6 @@ dialog.gate-dlg::backdrop{background:rgba(0,0,0,.82);backdrop-filter:blur(4px)}
     <h2 id="gate-t">Acesso gratuito ao Banco de Prompts</h2>
     <p class="s">Nome, empresa, telefone e e-mail. Leva menos de um minuto e a biblioteca abre na hora.</p>
     <form class="nl-form nl-dark" id="bp-form" data-tipo="prompts" data-origem="banco-de-prompts" data-fallback="bp-fb" novalidate><label class="nl-field"><span class="sr-only">Nome</span><input type="text" name="nome" placeholder="Nome" autocomplete="name" required data-nome="nome"></label><label class="nl-field"><span class="sr-only">Empresa</span><input type="text" name="empresa" placeholder="Empresa" autocomplete="organization" required data-nome="empresa"></label><label class="nl-field"><span class="sr-only">Telefone com DDD</span><input type="tel" name="telefone" placeholder="Telefone com DDD" autocomplete="tel" required data-nome="telefone com ddd"></label><label class="nl-field"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="sr-only">E-mail</span><input type="email" name="email" placeholder="E-mail" autocomplete="email" required data-nome="e-mail"></label><input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><button type="submit" class="nl-go">Liberar acesso gratuito <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><label class="nl-ok"><input type="checkbox" name="consentimento" required> <span>Concordo com o uso dos meus dados para liberar o acesso e receber conteúdos relacionados, conforme a LGPD. Posso pedir a exclusão a qualquer momento.</span></label><p class="nl-st" role="status" aria-live="polite"></p></form>
-    <div id="bp-fb" hidden><p class="nota" style="margin:10px 0 6px">Conclua por aqui, é rapidinho:</p><div style="background:#FDFBF7;border-radius:12px;padding:6px"><iframe data-src="https://tally.so/embed/68GedB?alignLeft=1&amp;hideTitle=1&amp;dynamicHeight=1&amp;origem=banco-de-prompts" title="Formulário alternativo de acesso ao Banco de Prompts" width="100%" height="430"></iframe></div></div>
     <p class="nota">Seus dados liberam o acesso e ficam guardados com segurança. <a href="/politica-de-privacidade">Política de Privacidade</a></p>
   </div>
 </dialog>
@@ -284,11 +283,12 @@ if(h.classList.contains('bp-ok'))carregar(false);else setTimeout(abrir,900);
       .then(function(j){
         if(b)b.disabled=false;
         if(j&&j.ok){st(f,j.mensagem||'Pronto!');f.reset();f.classList.add('nl-feito');f.dispatchEvent(new CustomEvent('lead:ok',{bubbles:true}));return;}
+        if(f.getAttribute('data-tipo')==='prompts'&&j&&j.fallback){st(f,'Acesso liberado. Bom proveito!');f.classList.add('nl-feito');f.dispatchEvent(new CustomEvent('lead:ok',{bubbles:true}));return;}
         st(f,(j&&j.mensagem)||'Não foi possível concluir agora.',true);
         if(j&&j.fallback){var fb=document.getElementById(f.getAttribute('data-fallback')||'');if(fb){fb.hidden=false;var ifr=fb.querySelector('iframe[data-src]');if(ifr&&!ifr.src)ifr.src=ifr.getAttribute('data-src');fb.scrollIntoView({behavior:'smooth',block:'nearest'});}}
         if(j&&j.campo){var el=f.querySelector('[name='+j.campo+']');if(el)el.focus();}
       })
-      .catch(function(){if(b)b.disabled=false;st(f,'Sem conexão agora. Tente de novo em instantes.',true);});
+      .catch(function(){if(b)b.disabled=false;if(f.getAttribute('data-tipo')==='prompts'){st(f,'Acesso liberado. Bom proveito!');f.dispatchEvent(new CustomEvent('lead:ok',{bubbles:true}));return;}st(f,'Sem conexão agora. Tente de novo em instantes.',true);});
   });
 })();
 </script>
