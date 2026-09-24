@@ -122,26 +122,44 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
   <h2>Não encontrou sua dúvida? <em>mande sua mensagem</em></h2>
   <div class="rule"></div>
   <div class="cform tform" id="form-contato">
-    <iframe id="tally-contato" src="https://tally.so/embed/68GedB?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;origem=faq" title="Formulário de contato" loading="lazy" width="100%" height="700" frameborder="0"></iframe>
-    <p class="tnote">Ao enviar, você concorda que seus dados sejam usados apenas para responder a este contato, conforme a <a href="/politica-de-privacidade">Política de Privacidade</a> (LGPD). O formulário é operado pelo Tally. Se ele não carregar, <a href="https://tally.so/r/68GedB" target="_blank" rel="noopener">abra o formulário em outra aba</a>.</p>
+    <form class="cf" action="/api/contato" method="post" data-origem="faq" novalidate><style>.cf{display:grid;grid-template-columns:1fr 1fr;gap:14px 16px;font-family:'Open Sans',system-ui,sans-serif;color:#FDFBF7;text-align:left}.cf .full{grid-column:1/-1}.cf label{display:block;font-size:14px;font-weight:600;color:#FDFBF7;margin-bottom:6px;font-family:inherit}.cf label .op{font-weight:400;color:#9A9A9A}.cf input,.cf textarea{width:100%;box-sizing:border-box;background:#000;border:1px solid #898989;border-radius:6px;padding:12px 14px;font:inherit;font-size:16px;color:#FDFBF7}.cf textarea{min-height:130px;resize:vertical}.cf input::placeholder,.cf textarea::placeholder{color:#898989}.cf input:focus,.cf textarea:focus{outline:none;border-color:#C9A96E;box-shadow:0 0 0 2px rgba(201,169,110,.4)}.cf .ok{display:flex;gap:10px;align-items:flex-start;font-size:13.5px;line-height:1.5;font-weight:400;color:#D9D9D9}.cf .ok input{width:18px;height:18px;margin-top:2px;flex-shrink:0;accent-color:#C9A96E}.cf .ok a{color:#C9A96E;text-decoration:underline}.cf button{justify-self:start;display:inline-flex;align-items:center;gap:10px;background:#C9A96E;color:#000;border:0;border-radius:999px;padding:14px 26px;font:inherit;font-size:16px;font-weight:800;cursor:pointer}.cf button:hover,.cf button:focus-visible{background:#b8965b}.cf button:disabled{opacity:.6;cursor:default}.cf .st{min-height:20px;font-size:14.5px;font-weight:600;color:#C9A96E}.cf .st.erro{color:#ff8a7a}.cf .fb{border:1px solid #C9A96E;border-radius:12px;padding:14px 16px;background:#0e0b07}.cf .fb p{margin:0 0 8px;font-size:14px;color:#D9D9D9}.cf .fb a{display:inline-block;margin:0 14px 6px 0;color:#C9A96E;font-weight:700;text-decoration:underline}.cf .hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}@media(max-width:640px){.cf{grid-template-columns:1fr}}</style>
+<div><label for="cf-nome-faq">Nome</label><input id="cf-nome-faq" name="nome" autocomplete="name" required placeholder="Seu nome"></div>
+<div><label for="cf-email-faq">E-mail</label><input id="cf-email-faq" name="email" type="email" autocomplete="email" required placeholder="voce@empresa.com.br"></div>
+<div><label for="cf-empresa-faq">Empresa <span class="op">(opcional)</span></label><input id="cf-empresa-faq" name="empresa" autocomplete="organization" placeholder="Nome da empresa"></div>
+<div><label for="cf-tel-faq">Telefone ou WhatsApp <span class="op">(opcional)</span></label><input id="cf-tel-faq" name="telefone" type="tel" autocomplete="tel" placeholder="(11) 90000-0000"></div>
+<div class="full"><label for="cf-msg-faq">Mensagem</label><textarea id="cf-msg-faq" name="mensagem" required placeholder="Conte o que você precisa"></textarea></div>
+<input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><input type="hidden" name="origem" value="faq">
+<label class="ok full"><input type="checkbox" name="consentimento" value="sim" required> <span>Concordo que meus dados sejam usados apenas para responder a este contato, conforme a <a href="/politica-de-privacidade">Política de Privacidade</a> (LGPD).</span></label>
+<button type="submit" class="full">Enviar mensagem →</button>
+<p class="st full" role="status" aria-live="polite"></p>
+<div class="fb full" hidden><p>Escolha como prefere enviar:</p><a class="fb-mail" href="mailto:contato-assessoria@adriana-nogueira.com">Enviar por e-mail</a><a href="https://wa.me/qr/2XEF52R64MEEF1" target="_blank" rel="noopener">WhatsApp</a><a href="https://tally.so/r/68GedB" target="_blank" rel="noopener">Formulário alternativo</a></div>
+<script>(function(){var f=document.currentScript&&document.currentScript.closest('form.cf');if(!f||f.dataset.pronto)return;f.dataset.pronto='1';
+var st=f.querySelector('.st'),fb=f.querySelector('.fb'),bt=f.querySelector('button[type=submit]');
+function msg(t,e){st.textContent=t;st.classList.toggle('erro',!!e);}
+f.addEventListener('submit',function(ev){ev.preventDefault();
+ var req=[].slice.call(f.querySelectorAll('[required]'));for(var i=0;i<req.length;i++){var x=req[i];if(x.type==='checkbox'?!x.checked:!x.value.trim()){x.focus();msg(x.type==='checkbox'?'Marque a caixa de consentimento para enviar.':'Preencha este campo para enviar.',true);return;}}
+ var d=new URLSearchParams(new FormData(f));bt.disabled=true;msg('Enviando…');
+ fetch('/api/contato',{method:'POST',headers:{'X-Requested-With':'fetch','Content-Type':'application/x-www-form-urlencoded'},body:d.toString()})
+ .then(function(r){return r.json().catch(function(){return {ok:false,fallback:true};});})
+ .then(function(j){bt.disabled=false;if(j&&j.ok){msg(j.mensagem||'Mensagem enviada. Obrigada!');f.reset();fb.hidden=true;return;}
+  msg((j&&j.mensagem)||'Não foi possível enviar agora.',true);
+  if(j&&j.fallback){var g=function(n){var e=f.querySelector('[name='+n+']');return e?e.value.trim():'';};
+   var corpo='Nome: '+g('nome')+'\nE-mail: '+g('email')+'\nEmpresa: '+g('empresa')+'\nTelefone: '+g('telefone')+'\n\n'+g('mensagem');
+   f.querySelector('.fb-mail').href='mailto:contato-assessoria@adriana-nogueira.com?subject='+encodeURIComponent('Contato pelo site: '+g('nome'))+'&body='+encodeURIComponent(corpo);fb.hidden=false;}})
+ .catch(function(){bt.disabled=false;msg('Sem conexão agora. Tente de novo em instantes.',true);});});})();</script>
+</form>
   </div>
 </div></section>
 
-<section id="aviso-legal" class="legal"><div class="wrap">
-  <h2>Aviso Legal e <em>Mídia Incorporada</em></h2>
-  <div class="rule"></div>
-  <p>Este site representa meu portfólio de carreira e meu atual projeto pessoal. Alguns conteúdos, marcas, logotipos e materiais exibidos são propriedade intelectual das respectivas empresas e instituições para as quais foram desenvolvidos. A reprodução desses materiais aqui tem caráter exclusivamente demonstrativo e profissional. Todos os direitos sobre marcas e conteúdos de terceiros pertencem aos seus respectivos titulares e não a mim.</p>
-  <p>Este site descreve serviços de preparação de documentos, materiais, comunicação e estratégia. Não constitui recomendação de investimento, consultoria jurídica, contábil ou de valores mobiliários, e não garante resultados financeiros. Serviços regulados são conduzidos por profissionais habilitados do cliente. Conteúdo produzido sob supervisão humana, com fact-checking e conformidade LGPD + EU AI Act.</p>
-  <p><b>Premissas fundamentais:</b></p>
-  <ol>
-    <li>Fact-checking obrigatório em toda informação.</li>
-    <li>Supervisão e curadoria humana: soberania humana antes de publicar ou finalizar.</li>
-    <li>Compliance desde o início: conformidade incorporada na origem, não no fim.</li>
-  </ol>
-  <p class="base"><b>Base normativa:</b> Guia de IA do TCU · LGPD (Lei 13.709/2018) · Marco Civil da Internet · PL 2.338/2023 · EU AI Act · ISO/IEC 38507 e 23894 · CVM · BACEN · ANBIMA · ANCORD · CMN · CONAR · CF/1988 · CC · CLT · CP · CTN · Lei 8.906/94 (OAB) · Lei 7.492/86 (crimes contra o sistema financeiro) · Lei 9.613/98 (lavagem de dinheiro) · ECA Digital (Lei 15.211/2025).</p>
-  <p class="base">Dados pessoais enviados pelos formulários são tratados conforme a <a href="/politica-de-privacidade">Política de Privacidade</a>. Resumos e trechos assistidos por IA são identificados como tais e revisados por Adriana Nogueira antes da publicação (EU AI Act, art. 50).</p>
-</div></section>
 </main>
-<footer><div class="wrap"><p>© Adriana Nogueira | Portfólio · Comunicação &amp; Marketing Financeiro · CEA · GAIPC™ · São Paulo · <a href="/politica-de-privacidade">Política de Privacidade</a> · <a href="/faq#aviso-legal">Aviso legal</a></p></div></footer>
+<footer><div class="wrap"><div class="aviso-legal" id="aviso-legal" role="note" aria-label="Aviso legal e mídia incorporada"><style>.aviso-legal{max-width:980px;margin:0 auto 20px;padding:0;text-align:left;font-family:'Open Sans',system-ui,sans-serif;font-size:13px;line-height:1.65;color:#D9D9D9}.aviso-legal p,.aviso-legal li{margin:0 0 8px;font-size:13px;line-height:1.65;color:#D9D9D9;font-family:inherit}.aviso-legal .av-t{margin-bottom:10px;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#C9A96E}.aviso-legal b{color:#FDFBF7;font-weight:700}.aviso-legal ol{margin:0 0 8px 20px;padding:0}.aviso-legal li{margin-bottom:2px}.aviso-legal .av-base{color:#9A9A9A}.aviso-legal a{color:#C9A96E;text-decoration:underline;text-underline-offset:2px}</style>
+<p class="av-t">Aviso legal e mídia incorporada</p>
+<p>Este site representa meu portfólio de carreira e meu atual projeto pessoal. Alguns conteúdos, marcas, logotipos e materiais exibidos são propriedade intelectual das respectivas empresas e instituições para as quais foram desenvolvidos. A reprodução desses materiais aqui tem caráter exclusivamente demonstrativo e profissional. Todos os direitos sobre marcas e conteúdos de terceiros pertencem aos seus respectivos titulares e não a mim.</p>
+<p>Este site descreve serviços de preparação de documentos, materiais, comunicação e estratégia. Não constitui recomendação de investimento, consultoria jurídica, contábil ou de valores mobiliários, e não garante resultados financeiros. Serviços regulados são conduzidos por profissionais habilitados do cliente. Conteúdo produzido sob supervisão humana, com fact-checking e conformidade LGPD + EU AI Act.</p>
+<p><b>Premissas fundamentais:</b></p>
+<ol><li>Fact-checking obrigatório em toda informação.</li><li>Supervisão e curadoria humana: soberania humana antes de publicar ou finalizar.</li><li>Compliance desde o início: conformidade incorporada na origem, não no fim.</li></ol>
+<p class="av-base"><b>Base normativa:</b> Guia de IA do TCU · LGPD (Lei 13.709/2018) · Marco Civil da Internet · PL 2.338/2023 · EU AI Act · ISO/IEC 38507 e 23894 · CVM · BACEN · ANBIMA · ANCORD · CMN · CONAR · CF/1988 · CC · CLT · CP · CTN · Lei 8.906/94 (OAB) · Lei 7.492/86 (crimes contra o sistema financeiro) · Lei 9.613/98 (lavagem de dinheiro) · ECA Digital (Lei 15.211/2025).</p>
+<p class="av-base">Dados pessoais enviados pelos formulários são tratados conforme a <a href="/politica-de-privacidade">Política de Privacidade</a>. Resumos e trechos assistidos por IA são identificados como tais e revisados por Adriana Nogueira antes da publicação (EU AI Act, art. 50).</p>
+</div><p>© Adriana Nogueira | Portfólio · Comunicação &amp; Marketing Financeiro · CEA · GAIPC™ · São Paulo · <a href="/politica-de-privacidade">Política de Privacidade</a> · <a href="/faq#aviso-legal">Aviso legal</a></p></div></footer>
 
 </body></html>
