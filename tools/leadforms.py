@@ -16,7 +16,7 @@ def newsletter(origem, fallback_href, dark=False):
     return (f'<form class="nl-form{" nl-dark" if dark else ""}" data-tipo="newsletter" data-origem="{origem}" data-fallback="fb-{origem}" novalidate>'
             + field("email", "Seu e-mail", "email", "email", icon=ENV) + HP +
             f'<button type="submit" class="nl-go">Quero receber {ARROW}</button>'
-            '<label class="nl-ok"><input type="checkbox" name="consentimento" required> <span>Quero receber a Newsletter Café com Marketing por e-mail. Posso cancelar quando quiser (LGPD).</span></label>'
+            '<label class="nl-ok"><input type="checkbox" name="consentimento" required> <span>Quero receber a Newsletter Exponencial Future por e-mail. Posso cancelar quando quiser (LGPD).</span></label>'
             '<p class="nl-st" role="status" aria-live="polite"></p>'
             f'<p class="nl-fb" id="fb-{origem}" hidden><a href="{fallback_href}">Concluir a inscrição pelo formulário →</a></p></form>')
 
