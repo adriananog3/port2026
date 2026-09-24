@@ -52,6 +52,7 @@ var hostsToRedirect = map[string]bool{
 // legacyRoutes mapeia as rotas do site antigo (indexadas no Google) para a página nova.
 var legacyRoutes = map[string]string{
 	"/cases":                           "/#cases",
+	"/rag":                             "/#assessoria-ia",
 	"/projetos/bee4":                   "/cases/bee4",
 	"/projetos/itau":                   "/cases/itau",
 	"/projetos/guide":                  "/cases/guide",
