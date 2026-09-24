@@ -10,6 +10,7 @@
 4. **Go-to-Market**: estratégia de entrada, mensagem, canais e funil para produtos e serviços financeiros.
 5. **Thought Leadership Executivo**: presença estratégica no LinkedIn, artigos e newsletters na voz do executivo.
 6. **IA & RAG em Conformidade**: infraestrutura agêntica documentada, RAG e automação em conformidade com LGPD e EU AI Act, sempre com supervisão humana.
+7. **RAG para Conhecimento Empresarial**: da prova de conceito à produção, com citações corretas, controle de acesso e avaliação contínua, em parceria com engenharia especializada em Python. Três revisões automatizadas e uma humana antes de cada entrega. Detalhes: https://adriana-nogueira.com/rag
 
 ## Resultados
 
@@ -49,6 +50,7 @@
 - [Home](https://adriana-nogueira.com/): apresentação, resultados, serviços e contato
 - [Cases](https://adriana-nogueira.com/#cases): portfólio e cases da trajetória profissional
 - [FAQ](https://adriana-nogueira.com/faq): perguntas frequentes sobre a assessoria, contato profissional e aviso legal
+- [RAG para conhecimento empresarial](https://adriana-nogueira.com/rag): serviço de desenvolvimento RAG, fluxo em 13 etapas, escopo, quando contratar, bancos vetoriais e comparativo
 - [Newsletter Café com Marketing](https://adriana-nogueira.com/newsletter): edições e artigos sobre marketing, IA, branding, regulação e mercado de capitais
 - [Política de Privacidade](https://adriana-nogueira.com/politica-de-privacidade)
 
