@@ -494,6 +494,35 @@ nav .nav-li + .cta{margin-left:0}
 .pcase-close:hover{background:#000!important;color:#FDFBF7!important}
 @media(max-width:640px){.pcase{padding:18px 16px!important}.pcase .ctabs{border-radius:16px;top:70px}.pcase .ctabs button{flex:1 1 45%;font-size:13px;padding:8px 10px}}
 @media(max-width:640px){.pcase .csec{border-radius:10px}.pcase .ctiles{grid-template-columns:1fr 1fr!important;gap:10px}.pcase .ctile{padding:12px}.pcase .cnum{font-size:20px}}
+.nav-search{display:inline-flex;align-items:center;gap:4px;margin-left:auto;margin-right:-34px;padding:8px 12px;border-radius:999px;border:1px solid color-mix(in srgb,var(--dourado) 55%,transparent);background:transparent;color:var(--dourado);cursor:pointer;flex-shrink:0;transition:.25s}
+.nav-search svg{width:18px;height:18px}.nav-search:hover,.nav-search:focus-visible{background:var(--dourado);color:#000}
+nav .nav-search~.nav-li.nav-li{margin-left:0}
+@media(min-width:861px) and (max-width:1120px){nav .nav-search.nav-search{margin-right:-4px;padding:8px 10px}}
+.busca-fab{display:none}
+@media(max-width:1000px){nav .nav-search.nav-search{display:none}nav .nav-search~.nav-li.nav-li{margin-left:auto}.busca-fab{display:inline-flex;align-items:center;gap:4px;position:fixed;left:16px;bottom:16px;z-index:60;padding:13px 15px;border-radius:999px;border:1px solid var(--dourado);background:#000;color:var(--dourado);box-shadow:0 8px 24px rgba(0,0,0,.55);cursor:pointer}.busca-fab svg{width:20px;height:20px}}
+.busca{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.72);backdrop-filter:blur(6px);display:flex;align-items:flex-start;justify-content:center;padding:9vh 16px 16px}
+.busca[hidden]{display:none}
+.busca-box{width:100%;max-width:680px;max-height:82vh;overflow:auto;background:#0c0c0c;border:1px solid color-mix(in srgb,var(--dourado) 45%,var(--linha));border-radius:18px;padding:18px;box-shadow:0 24px 60px rgba(0,0,0,.6)}
+.busca-top{display:flex;align-items:center;gap:10px;border:1px solid var(--linha);border-radius:12px;padding:6px 6px 6px 12px;background:#000}
+.busca-top:focus-within{border-color:var(--dourado)}
+.busca-lupa svg{width:20px;height:20px;color:var(--dourado);display:block}
+.busca-top input{flex:1;min-width:0;background:transparent;border:0;color:var(--champagne);font:inherit;font-size:17px;padding:10px 0;outline:none}
+.busca-top input::placeholder{color:#8a8a8a}
+.busca-top input::-webkit-search-cancel-button{-webkit-appearance:none;appearance:none}
+.busca-mic{display:inline-flex;align-items:center;gap:6px;border:0;border-radius:999px;padding:9px 14px;background:var(--dourado);color:#000;font-weight:800;font-size:14px;cursor:pointer}
+.busca-mic svg{width:18px;height:18px}.busca-mic[aria-pressed=true]{background:#e24a3b;color:#fff;animation:ouvir 1.2s ease-in-out infinite}
+@keyframes ouvir{50%{box-shadow:0 0 0 8px rgba(226,74,59,.2)}}
+@media (prefers-reduced-motion:reduce){.busca-mic[aria-pressed=true]{animation:none}}
+.busca-x{border:0;background:transparent;color:var(--platinum);font-size:26px;line-height:1;padding:4px 8px;cursor:pointer;border-radius:8px}.busca-x:hover,.busca-x:focus-visible{color:var(--dourado)}
+.busca-st{min-height:20px;margin:12px 2px 6px;font-size:13.5px;color:var(--cinza)}
+.busca-res{list-style:none;display:grid;gap:8px}
+.busca-res a{display:block;padding:12px 14px;border:1px solid var(--linha);border-radius:12px;text-decoration:none;color:var(--platinum);background:#080808}
+.busca-res a:hover,.busca-res a:focus-visible{border-color:var(--dourado);outline:none;background:#110d07}
+.busca-res b{display:block;color:var(--champagne);font-size:15.5px;margin-bottom:3px}.busca-res small{display:inline-block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--dourado);font-weight:700;margin-bottom:4px}
+.busca-res span{display:block;font-size:14px;color:#a9a9a9;line-height:1.5}
+.busca-sug{display:flex;flex-wrap:wrap;gap:8px}.busca-sug button{border:1px solid var(--linha);background:transparent;color:var(--platinum);border-radius:999px;padding:7px 12px;font-size:13.5px;cursor:pointer}.busca-sug button:hover,.busca-sug button:focus-visible{border-color:var(--dourado);color:var(--dourado)}
+.busca-nota{margin-top:14px;font-size:12.5px;color:var(--cinza);line-height:1.5}.busca-nota a{color:var(--dourado);text-decoration:underline}
+@media(max-width:560px){.busca{padding-top:12px}.busca-mic-txt{display:none}.busca-mic{padding:10px}}
 /* Identidade visual: Archivo (títulos, nome da página, botões) · Cormorant Garamond (assinatura e frases editoriais) · Open Sans (texto) */
 h1,h2,h3,h4,.brand,.brand-txt,.slab,.cover b,.resumo summary,button,.btn,.cta,.cta a,.pbtn,.news-btn,.entry-submit{font-family:'Archivo','Open Sans',system-ui,sans-serif!important}
 h1 em,h2 em,h3 em,.brand-txt i,.brand small,blockquote p,.quote p{font-family:'Cormorant Garamond',Georgia,serif!important;font-style:italic;font-weight:600}
@@ -538,10 +567,28 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
       <a href="/faq">FAQ</a>
       <a href="#contato">Contato</a>
     </div>
+    <button type="button" class="nav-search" id="navSearch" aria-haspopup="dialog" aria-controls="buscaDlg" aria-label="Buscar no site por texto ou por voz" title="Buscar (texto ou voz)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M20 20l-4.2-4.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
     <a class="nav-li" href="https://www.linkedin.com/in/adriana-nogueira-cea-marketing3/" target="_blank" rel="noopener" aria-label="LinkedIn de Adriana Nogueira (abre em nova aba)"><svg class="li-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="nav-li-txt">LinkedIn</span></a><button class="cta" id="navChat" type="button" aria-controls="chatPanel" aria-expanded="false">Fale com a especialista</button>
   </div>
 </nav>
 
+
+<button type="button" class="busca-fab" id="buscaFab" aria-haspopup="dialog" aria-controls="buscaDlg" aria-label="Buscar no site por texto ou por voz"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M20 20l-4.2-4.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+<div class="busca" id="buscaDlg" role="dialog" aria-modal="true" aria-labelledby="buscaTit" hidden>
+  <div class="busca-box">
+    <h2 id="buscaTit" class="sr-only">Buscar no site</h2>
+    <div class="busca-top">
+      <label for="buscaIn" class="sr-only">O que você procura?</label>
+      <span class="busca-lupa"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M20 20l-4.2-4.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></span>
+      <input id="buscaIn" type="search" placeholder="Serviço, case, tema ou pergunta…" autocomplete="off" enterkeyhint="search">
+      <button type="button" class="busca-mic" id="buscaMic" aria-pressed="false" aria-label="Buscar por voz"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span class="busca-mic-txt">Falar</span></button>
+      <button type="button" class="busca-x" id="buscaFechar" aria-label="Fechar a busca">×</button>
+    </div>
+    <p class="busca-st" id="buscaSt" role="status" aria-live="polite"></p>
+    <ul class="busca-res" id="buscaRes"></ul>
+    <p class="busca-nota">Busca por voz: só funciona quando você toca em <b>Falar</b>. O áudio é convertido em texto pelo serviço de voz do seu navegador e não é gravado nem guardado pelo site. <a href="/politica-de-privacidade">Privacidade</a></p>
+  </div>
+</div>
 <main id="conteudo">
 <header class="hero" id="topo">
   <canvas class="hero-art" id="heroArt" aria-hidden="true"></canvas>
@@ -726,7 +773,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
           <tr><th scope="row">Problema principal</th><td data-l="Assessoria em IA generativa">Você precisa de estudos de viabilidade, validação de casos de uso, escolha de modelo, direcionamento da arquitetura, governança ou planejamento de prova de conceito (POC).</td><td data-l="Desenvolvimento de IA generativa">Você precisa de implementação, integrações, pipelines RAG, agentes de IA, implantação, avaliação ou monitoramento.</td></tr>
           <tr><th scope="row">Saída típica</th><td data-l="Assessoria em IA generativa">Avaliação de prontidão, parecer de viabilidade, recomendação de modelo, modelo de custos, mapa de riscos, escopo da prova de conceito.</td><td data-l="Desenvolvimento de IA generativa">Desenvolvimento de aplicação de IA, sistema RAG, chatbot, fluxo de trabalho do agente, camada de avaliação, integrações e implantação em produção.</td></tr>
           <tr><th scope="row">Pergunta do comprador</th><td data-l="Assessoria em IA generativa">Vale a pena desenvolver esse caso de uso? E qual é o caminho mais seguro?</td><td data-l="Desenvolvimento de IA generativa">Quem pode construir, integrar, avaliar e operar isso?</td></tr>
-          <tr><th scope="row">O melhor primeiro passo</th><td data-l="Assessoria em IA generativa">Avaliação da prontidão e da viabilidade da IA generativa.</td><td data-l="Desenvolvimento de IA generativa">Descoberta técnica e plano de implementação.</td></tr>
+          <tr><th scope="row">O melhor primeiro passo</th><td data-l="Assessoria em IA generativa">Avaliação da prontidão e da viabilidade da IA generativa, com pesquisa e benchmarking para implementação.</td><td data-l="Desenvolvimento de IA generativa">Descoberta técnica e plano de implementação.</td></tr>
         </tbody>
       </table>
     </div>
@@ -1015,6 +1062,63 @@ if(window.IntersectionObserver)new IntersectionObserver(function(e){visible=e[0]
 document.addEventListener("visibilitychange",function(){if(document.hidden)stop();else start();});
 var onMq=function(){sync();W=H=0;size();};if(mq.addEventListener)mq.addEventListener("change",onMq);else if(mq.addListener)mq.addListener(onMq);
 sync();size();
+})();
+</script>
+<script>
+(function(){
+  var IDX=null,carregando=null;
+  var dlg=document.getElementById('buscaDlg'),inp=document.getElementById('buscaIn'),res=document.getElementById('buscaRes'),st=document.getElementById('buscaSt'),mic=document.getElementById('buscaMic'),abrirBtn=document.getElementById('navSearch'),fechar=document.getElementById('buscaFechar');
+  if(!dlg||!inp)return;
+  var ultimoFoco=null,rec=null,ouvindo=false;
+  function norm(s){return (s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase();}
+  function carregar(){if(IDX)return Promise.resolve();if(!carregando)carregando=fetch('/busca.json').then(function(r){return r.json();}).then(function(D){IDX=D.map(function(d){return {d:d,t:norm(d.t),x:norm(d.d),k:norm(d.k)+' '+norm(d.c)};});}).catch(function(){IDX=[];});return carregando;}
+  var PARADAS={'a':1,'o':1,'as':1,'os':1,'de':1,'da':1,'do':1,'das':1,'dos':1,'e':1,'em':1,'no':1,'na':1,'um':1,'uma':1,'para':1,'por':1,'com':1,'que':1,'sobre':1,'me':1,'quero':1,'ver':1,'mostre':1,'busque':1,'buscar':1,'procuro':1};
+  function buscar(q){
+    var termos=norm(q).split(/[^a-z0-9]+/).filter(function(w){return w.length>1&&!PARADAS[w];});
+    if(!termos.length||!IDX)return [];
+    var out=[];
+    IDX.forEach(function(it){var sc=0,achou=0;termos.forEach(function(w){var p=0;if(it.t.indexOf(w)>=0)p+=6;if(it.x.indexOf(w)>=0)p+=3;if(it.k.indexOf(w)>=0)p+=1;if(p)achou++;sc+=p;});if(achou)out.push({it:it.d,sc:sc+(achou===termos.length?20:0)});});
+    out.sort(function(a,b){return b.sc-a.sc;});
+    return out.slice(0,8).map(function(o){return o.it;});
+  }
+  function el(tag,cls,txt){var e=document.createElement(tag);if(cls)e.className=cls;if(txt!=null)e.textContent=txt;return e;}
+  function sugestoes(){res.innerHTML='';var li=el('li');var box=el('div','busca-sug');['Diagnóstico gratuito','RAG','Assessoria em IA','Cases','Compliance','Newsletter'].forEach(function(s){var b=el('button',null,s);b.type='button';b.addEventListener('click',function(){inp.value=s;mostrar();inp.focus();});box.appendChild(b);});li.appendChild(box);res.appendChild(li);st.textContent='Digite ou toque em Falar. Sugestões:';}
+  function mostrar(){
+    var q=inp.value.trim();if(!q){sugestoes();return;}
+    if(!IDX){st.textContent='Carregando…';carregar().then(mostrar);return;}
+    var r=buscar(q);res.innerHTML='';
+    r.forEach(function(d){var li=el('li'),a=el('a');a.href=d.u;a.appendChild(el('small',null,d.c));a.appendChild(el('b',null,d.t));if(d.d)a.appendChild(el('span',null,d.d));a.addEventListener('click',function(){fecharDlg(false);});li.appendChild(a);res.appendChild(li);});
+    st.textContent=r.length?(r.length+(r.length===1?' resultado':' resultados')+' para “'+q+'”.'):'Nada encontrado para “'+q+'”. Tente outra palavra ou fale com a especialista no Diagnóstico gratuito.';
+  }
+  function abrirDlg(){carregar();ultimoFoco=document.activeElement;dlg.hidden=false;document.body.style.overflow='hidden';if(abrirBtn)abrirBtn.setAttribute('aria-expanded','true');mostrar();setTimeout(function(){inp.focus();},30);}
+  function fecharDlg(voltar){pararVoz();dlg.hidden=true;document.body.style.overflow='';if(abrirBtn)abrirBtn.setAttribute('aria-expanded','false');if(voltar!==false&&ultimoFoco&&ultimoFoco.focus)ultimoFoco.focus();}
+  if(abrirBtn)abrirBtn.addEventListener('click',abrirDlg);var fab=document.getElementById('buscaFab');if(fab)fab.addEventListener('click',function(){abrirBtn=fab;abrirDlg();});if(abrirBtn){var navB=abrirBtn;navB.addEventListener('click',function(){abrirBtn=navB;});}
+  fechar.addEventListener('click',function(){fecharDlg();});
+  dlg.addEventListener('click',function(e){if(e.target===dlg)fecharDlg();});
+  inp.addEventListener('input',mostrar);
+  inp.addEventListener('keydown',function(e){if(e.key==='Enter'){var a=res.querySelector('a');if(a){e.preventDefault();a.click();location.href=a.getAttribute('href');}}});
+  document.addEventListener('keydown',function(e){
+    if(!dlg.hidden){if(e.key==='Escape'){e.preventDefault();fecharDlg();return;}
+      if(e.key==='Tab'){var f=[].slice.call(dlg.querySelectorAll('input,button,a[href]')).filter(function(x){return x.offsetParent!==null;});if(!f.length)return;var i=f.indexOf(document.activeElement);if(e.shiftKey&&i<=0){e.preventDefault();f[f.length-1].focus();}else if(!e.shiftKey&&i===f.length-1){e.preventDefault();f[0].focus();}}
+      return;}
+    var t=e.target,editando=t&&(t.isContentEditable||/^(INPUT|TEXTAREA|SELECT)$/.test(t.tagName));
+    if(((e.ctrlKey||e.metaKey)&&e.key.toLowerCase()==='k')||(e.key==='/'&&!editando)){e.preventDefault();abrirDlg();}
+  });
+  /* Voz: Web Speech API do navegador, só quando a pessoa toca em Falar. */
+  var SR=window.SpeechRecognition||window.webkitSpeechRecognition;
+  function pararVoz(){if(rec&&ouvindo){try{rec.stop();}catch(e){}}}
+  if(!SR){mic.hidden=true;}
+  else{
+    mic.addEventListener('click',function(){
+      if(ouvindo){pararVoz();return;}
+      rec=new SR();rec.lang='pt-BR';rec.interimResults=true;rec.maxAlternatives=1;
+      rec.onstart=function(){ouvindo=true;mic.setAttribute('aria-pressed','true');mic.setAttribute('aria-label','Parar de ouvir');st.textContent='Ouvindo… diga o que você procura.';};
+      rec.onresult=function(ev){var t='';for(var i=ev.resultIndex;i<ev.results.length;i++){t+=ev.results[i][0].transcript;}inp.value=t.trim();mostrar();};
+      rec.onerror=function(ev){st.textContent=ev.error==='not-allowed'||ev.error==='service-not-allowed'?'Para buscar por voz, permita o uso do microfone no navegador. Você também pode digitar.':ev.error==='no-speech'?'Não ouvi nada. Toque em Falar e tente de novo.':'A busca por voz não funcionou agora. Você pode digitar.';};
+      rec.onend=function(){ouvindo=false;mic.setAttribute('aria-pressed','false');mic.setAttribute('aria-label','Buscar por voz');if(inp.value.trim())mostrar();inp.focus();};
+      try{rec.start();}catch(e){st.textContent='A busca por voz não está disponível neste navegador. Você pode digitar.';}
+    });
+  }
 })();
 </script>
 </body>
