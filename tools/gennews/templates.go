@@ -67,6 +67,8 @@ footer{background:#000;color:#BDBDBD;text-align:center;font-size:14px;padding:26
 .cv2{background:radial-gradient(120% 120% at 90% 0%,#4a3a1a 0%,#111 60%)}
 .cv3{background:linear-gradient(160deg,#1c1c1c 0%,#000 55%,#3a2d14 100%)}
 .cover::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(201,169,110,.07) 0 2px,transparent 2px 22px)}
+.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5}.cover b,.cover span{position:relative;z-index:1}
+.hfig{margin:26px 0 0}.hfig img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:6px}.hfig figcaption{margin-top:8px;font-size:12px;color:#B9B2A4}.hfig a{color:#C9A96E}
 .mag{max-width:1180px;margin:0 auto;padding:28px 16px 10px}
 .mag-top{display:grid;grid-template-columns:1.35fr 1fr;gap:22px}
 .feat{display:grid;grid-template-columns:1fr 1.05fr;gap:22px;background:#EFEBE3;padding:22px;text-decoration:none;color:var(--texto);border-radius:4px}
@@ -119,7 +121,7 @@ footer{background:#000;color:#BDBDBD;text-align:center;font-size:14px;padding:26
 {{define "i-x"}}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></svg>{{end}}
 {{define "i-share"}}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.1a2.9 2.9 0 0 0-2 .8l-7.1-4.1a3.3 3.3 0 0 0 0-1.6l7-4.1A3 3 0 1 0 15 5a3 3 0 0 0 .1.8l-7 4.1a3 3 0 1 0 0 4.3l7.1 4.2a2.8 2.8 0 0 0-.1.7 2.9 2.9 0 1 0 2.9-3z"/></svg>{{end}}
 {{define "i-in"}}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zm7 0h3.8v1.6h.1a4.2 4.2 0 0 1 3.8-2c4 0 4.8 2.6 4.8 6.1V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg>{{end}}
-{{define "cover"}}<div class="cover cv{{.Cover}}" aria-hidden="true"><b{{if .Label}} class="lbl"{{end}}>{{short .}}</b>{{if not .Label}}<span>Café com Marketing</span>{{end}}</div>{{end}}
+{{define "cover"}}<div class="cover cv{{.Cover}}" aria-hidden="true">{{if .Img}}<img src="{{.Img}}" alt="" loading="lazy" decoding="async">{{end}}<b{{if .Label}} class="lbl"{{end}}>{{short .}}</b>{{if not .Label}}<span>Café com Marketing</span>{{end}}</div>{{end}}
 {{define "top"}}<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="top"><div class="in"><a class="brand" href="/">Adriana Nogueira<small>PORTFÓLIO</small></a>
 <nav aria-label="Navegação"><a href="/">Início</a><a href="/#portfolio">Cases</a><a href="/newsletter">Newsletter</a></nav></div></header>{{end}}
@@ -144,6 +146,7 @@ footer{background:#000;color:#BDBDBD;text-align:center;font-size:14px;padding:26
 {{if .E.Subtitle}}<p class="sub">{{.E.Subtitle}}</p>{{end}}
 <div class="meta">{{if .E.DateBR}}<span>{{.E.DateBR}} ·</span>{{end}}{{if .E.ReadTime}}<span>{{.E.ReadTime}} min de leitura ·</span>{{end}}<span>Por Adriana Nogueira</span></div>
 <div class="tags">{{range .E.Tags}}<span class="tag">{{.}}</span>{{end}}</div>
+{{if .E.Img}}<figure class="hfig"><img src="{{.E.Img}}" alt="{{.E.ImgAlt}}" width="1200" height="675" decoding="async"><figcaption>Imagem: <a href="{{.E.ImgPage}}" target="_blank" rel="noopener">{{.E.ImgBy}} / Unsplash</a></figcaption></figure>{{end}}
 </div></section>
 <div class="art"><main id="conteudo">
 <div class="share">
@@ -203,7 +206,7 @@ else{window.prompt('Copie o link:',u);}});})();
 `
 
 const homeCardsTpl = `{{define "homecards"}}{{range .}}      <a class="ncard" href="{{.Href}}"{{if .External}} target="_blank" rel="noopener"{{end}} aria-label="Ler artigo: {{.Title}}">
-        <div class="ncover"><span class="nbadge">{{.Badge}}</span></div>
+        <div class="ncover">{{if .Img}}<img src="{{.Img}}" alt="" loading="lazy" decoding="async">{{end}}<span class="nbadge">{{.Badge}}</span></div>
         <div class="nbody">{{if .DateBR}}<p class="ndate">{{.DateBR}}</p>{{end}}<div class="ntags">{{range .Tags}}<span class="ntag">{{.}}</span>{{end}}</div><h3>{{.Title}}</h3><p>{{.Summary}}</p><span class="more">Leia o texto completo →</span></div>
       </a>
 {{end}}{{end}}`
