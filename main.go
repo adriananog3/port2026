@@ -216,6 +216,10 @@ func (s *site) securityHeaders(h http.Header, local bool) {
 }
 
 func (s *site) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	// 0) Robôs maliciosos, varreduras e excesso de requisições (botshield.go).
+	if shield(w, r) {
+		return
+	}
 	host := strings.ToLower(r.Host)
 	if i := strings.IndexByte(host, ':'); i >= 0 {
 		host = host[:i]
@@ -279,6 +283,14 @@ func (s *site) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 	if p != "/" && strings.HasSuffix(r.URL.Path, "/") {
 		http.Redirect(w, r, p, http.StatusMovedPermanently)
 		return
+	}
+
+	// Imagens antigas do Manus: servidas de /images/cases/ quando o arquivo existir.
+	if strings.HasPrefix(p, "/manus-storage/") {
+		if a, ok := s.files["/images/cases/"+strings.TrimPrefix(p, "/manus-storage/")]; ok {
+			s.serve(w, r, a, http.StatusOK)
+			return
+		}
 	}
 
 	key := p
