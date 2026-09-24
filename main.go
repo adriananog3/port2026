@@ -211,7 +211,7 @@ func (s *site) securityHeaders(h http.Header, local bool) {
 	h.Set("X-Content-Type-Options", "nosniff")
 	h.Set("X-Frame-Options", "SAMEORIGIN")
 	h.Set("Referrer-Policy", "strict-origin-when-cross-origin")
-	h.Set("Permissions-Policy", "camera=(), microphone=(), geolocation=(), payment=(), usb=(), interest-cohort=()")
+	h.Set("Permissions-Policy", "camera=(), microphone=(self), geolocation=(), payment=(), usb=(), interest-cohort=()")
 	h.Set("Cross-Origin-Opener-Policy", "same-origin-allow-popups")
 }
 
