@@ -218,7 +218,7 @@ page = f"""<!doctype html>
     <p class="nota">Seus dados liberam o acesso e ficam guardados com segurança. <a href="/politica-de-privacidade">Política de Privacidade</a></p>
   </div>
 </dialog>
-<footer><div class="wrap">{LEGAL}<p>© Adriana Nogueira | Portfólio · Comunicação &amp; Marketing Financeiro · CEA · GAIPC™ · São Paulo · <a href="/politica-de-privacidade">Política de Privacidade</a> · <a href="#aviso-legal">Aviso legal</a></p></div></footer>
+<footer><div class="wrap">{LEGAL}<p>© Adriana Nogueira | Portfólio · Comunicação &amp; Marketing · CEA · GAIPC™ · São Paulo · <a href="/politica-de-privacidade">Política de Privacidade</a> · <a href="#aviso-legal">Aviso legal</a></p></div></footer>
 <script>
 {JS}
 </script>
