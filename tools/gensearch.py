@@ -84,6 +84,12 @@ for f in sorted((WEB / "newsletter").glob("*.html")):
     if t:
         add(t.group(1), d.group(1) if d else "", "/newsletter/" + f.stem, "Newsletter", tags)
 
+# Banco de Prompts
+_bp = json.loads((ROOT / "content/prompts.json").read_text(encoding="utf-8"))
+add("Banco de Prompts gratuito", "Prompts em português para copy, e-mail, landing pages, funis e SEO/GEO, com regras de compliance. Acesso gratuito.", "/prompts", "Prompts", " ".join(c["nome"] + " " + " ".join(q["titulo"] for q in c["prompts"]) for c in _bp["categorias"]))
+for _c in _bp["categorias"]:
+    add(_c["nome"], _c["descricao"], "/prompts", "Prompts", " ".join(q["titulo"] + " " + q["objetivo"] for q in _c["prompts"]))
+
 # Páginas institucionais
 add("Política de Privacidade e Cookies", "Como seus dados são tratados, com quem são compartilhados e como exercer seus direitos (LGPD).", "/politica-de-privacidade", "Privacidade", "lgpd dados cookies privacidade direitos operadores")
 add("Contato e Diagnóstico gratuito", "Formulário para pedir o diagnóstico gratuito, e-mail, WhatsApp e LinkedIn.", "/#contato", "Contato", "diagnóstico gratuito contato whatsapp email linkedin formulário")
