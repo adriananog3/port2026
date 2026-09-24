@@ -201,7 +201,7 @@ func TestCasesApp(t *testing.T) {
 func TestNewsletter(t *testing.T) {
 	s := newSite(t)
 	w := do(s, "GET", canon, "/newsletter", nil)
-	if w.Code != 200 || !strings.Contains(w.Body.String(), "Newsletter Café com Marketing") {
+	if w.Code != 200 || !strings.Contains(w.Body.String(), "Newsletter Exponencial Future") {
 		t.Fatalf("/newsletter: %d", w.Code)
 	}
 	for _, n := range []string{"1", "2", "3"} {
