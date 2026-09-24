@@ -250,7 +250,7 @@ func TestContato(t *testing.T) {
 	s := newSite(t)
 	var got []contactMsg
 	sender = func(_ context.Context, m contactMsg) error { got = append(got, m); return nil }
-	defer func() { sender = func(ctx context.Context, m contactMsg) error { return sendResend(ctx, m) } }()
+	defer func() { sender = func(ctx context.Context, m contactMsg) error { return sendContato(ctx, m) } }()
 	contatoLimit = &limiter{hits: map[string][]time.Time{}}
 	post := func(v url.Values, ip string) *httptest.ResponseRecorder {
 		r := httptest.NewRequest("POST", "/api/contato", strings.NewReader(v.Encode()))
@@ -293,13 +293,18 @@ func TestContato(t *testing.T) {
 	if w := post(ok, "9.9.9.9"); w.Code != 429 {
 		t.Errorf("limite por IP: %d", w.Code)
 	}
+	// Sem provedor de e-mail: 503 com fallback, sem perder a mensagem (a página monta o mailto).
+	sender = func(context.Context, contactMsg) error { return errSemChave }
+	if w := post(ok, "1.1.1.9"); w.Code != 503 || !strings.Contains(w.Body.String(), `"fallback":true`) {
+		t.Errorf("sem provedor deveria responder 503 com fallback: %d %s", w.Code, w.Body.String())
+	}
 	if w := do(s, "GET", canon, "/api/contato", nil); w.Code != 405 {
 		t.Errorf("GET em /api/contato: %d", w.Code)
 	}
 	home := do(s, "GET", canon, "/", nil)
 	b := home.Body.String()
-	// O formulário da home é o Tally incorporado (decisão da Dri em 24/09/2026).
-	for _, must := range []string{`id="form-contato"`, `tally.so/embed/68GedB`, `tally.so/r/68GedB`} {
+	// Formulário próprio (cores e fontes da marca); o Tally fica como alternativa em link.
+	for _, must := range []string{`id="form-contato"`, `action="/api/contato"`, `tally.so/r/68GedB`, `id="aviso-legal"`} {
 		if !strings.Contains(b, must) {
 			t.Errorf("home sem %s", must)
 		}
