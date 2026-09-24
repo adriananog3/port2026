@@ -3,12 +3,34 @@ Allow: /
 
 # Buscadores e IAs de citação são bem-vindos (GEO)
 User-agent: GPTBot
-Allow: /
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
 User-agent: ClaudeBot
-Allow: /
+User-agent: Claude-SearchBot
+User-agent: Claude-User
 User-agent: PerplexityBot
-Allow: /
+User-agent: Perplexity-User
 User-agent: Google-Extended
+User-agent: Applebot-Extended
 Allow: /
+
+# Raspadores abusivos: sem acesso (o servidor também os bloqueia)
+User-agent: Bytespider
+User-agent: img2dataset
+User-agent: ImagesiftBot
+User-agent: Timpibot
+User-agent: omgili
+User-agent: omgilibot
+User-agent: Diffbot
+User-agent: PetalBot
+User-agent: MJ12bot
+User-agent: DotBot
+User-agent: BLEXBot
+User-agent: DataForSeoBot
+User-agent: serpstatbot
+User-agent: SeekportBot
+User-agent: Barkrowler
+User-agent: MegaIndex
+Disallow: /
 
 Sitemap: https://adriana-nogueira.com/sitemap.xml
