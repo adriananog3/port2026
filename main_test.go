@@ -100,7 +100,7 @@ func TestHomeECabecalhos(t *testing.T) {
 			t.Errorf("home sem %q", must)
 		}
 	}
-	for _, never := range []string{"manus.space", "manuscdn", "script.google.com", "/api/lead"} {
+	for _, never := range []string{"manus.space", "manuscdn", "script.google.com"} {
 		if strings.Contains(body, never) {
 			t.Errorf("home ainda contém %q", never)
 		}
@@ -346,5 +346,42 @@ func TestShield(t *testing.T) {
 	}
 	if last != 429 {
 		t.Errorf("limite de taxa: status %d, esperado 429", last)
+	}
+}
+
+func TestLead(t *testing.T) {
+	s := newSite(t)
+	var got []leadMsg
+	leadSender = func(_ context.Context, l leadMsg) error { got = append(got, l); return nil }
+	defer func() { leadSender = func(ctx context.Context, l leadMsg) error { return sendBrevo(ctx, l) } }()
+	leadLimit = &limiter{hits: map[string][]time.Time{}}
+	post := func(body string) *httptest.ResponseRecorder {
+		r := httptest.NewRequest("POST", "/api/lead", strings.NewReader(body))
+		r.Host = canon
+		r.Header.Set("Content-Type", "application/json")
+		r.Header.Set("User-Agent", "Mozilla/5.0 (teste)")
+		r.Header.Set("X-Forwarded-For", "203.0.113.50")
+		w := httptest.NewRecorder()
+		s.ServeHTTP(w, r)
+		return w
+	}
+	if w := post(`{"tipo":"newsletter","email":"ana@empresa.com.br","consentimento":true,"origem":"home"}`); w.Code != 200 || len(got) != 1 {
+		t.Fatalf("newsletter: %d %s", w.Code, w.Body.String())
+	}
+	if w := post(`{"tipo":"prompts","nome":"Ana","empresa":"Gestora X","email":"ana@empresa.com.br","telefone":"(11) 98765-4321","consentimento":true}`); w.Code != 200 || got[1].Telefone != "+5511987654321" {
+		t.Fatalf("prompts: %d %s %+v", w.Code, w.Body.String(), got)
+	}
+	if w := post(`{"tipo":"prompts","nome":"Ana","empresa":"X","email":"ana@empresa.com.br","telefone":"123","consentimento":true}`); w.Code != 400 {
+		t.Fatalf("telefone inválido deveria dar 400: %d", w.Code)
+	}
+	if w := post(`{"tipo":"newsletter","email":"ana@empresa.com.br"}`); w.Code != 400 {
+		t.Fatalf("sem consentimento deveria dar 400: %d", w.Code)
+	}
+	if w := post(`{"tipo":"newsletter","email":"x@y.com","consentimento":true,"website":"http://spam"}`); w.Code != 200 || len(got) != 2 {
+		t.Fatalf("robô: %d %d", w.Code, len(got))
+	}
+	leadSender = func(ctx context.Context, l leadMsg) error { return errSemBrevo }
+	if w := post(`{"tipo":"newsletter","email":"b@empresa.com.br","consentimento":true}`); w.Code != 503 || !strings.Contains(w.Body.String(), "fallback") {
+		t.Fatalf("sem Brevo deveria pedir fallback: %d %s", w.Code, w.Body.String())
 	}
 }
