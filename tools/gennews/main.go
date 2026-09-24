@@ -1,4 +1,4 @@
-// gennews gera as páginas da Newsletter Café com Marketing a partir de content/*.json.
+// gennews gera as páginas da Newsletter Exponencial Future a partir de content/*.json.
 //
 //	go run ./tools/gennews
 //
@@ -300,7 +300,7 @@ func articleLD(e *edition) map[string]any {
 		"inLanguage": "pt-BR", "url": e.URL, "keywords": strings.Join(e.Tags, ", "),
 		"author":    map[string]any{"@type": "Person", "name": "Adriana Nogueira", "url": site + "/"},
 		"publisher": map[string]any{"@type": "Person", "name": "Adriana Nogueira"},
-		"isPartOf":  map[string]any{"@type": "CreativeWorkSeries", "name": "Newsletter Café com Marketing", "url": site + "/newsletter"},
+		"isPartOf":  map[string]any{"@type": "CreativeWorkSeries", "name": "Newsletter Exponencial Future", "url": site + "/newsletter"},
 		"image":     site + "/assets/adriana-nogueira-og.jpg",
 	}
 	if e.Date != "" {
