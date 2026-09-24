@@ -57,17 +57,6 @@ for m in re.finditer(r'<div class="pcard"[^>]*>(.*?)(?=<div class="pcard"|</div>
     if h:
         add(h.group(1), d.group(1) if d else "", u, "Cases")
 
-# Página de RAG
-rag = (WEB / "rag.html").read_text(encoding="utf-8")
-h1 = re.search(r"<h1[^>]*>(.*?)</h1>", rag, re.S)
-lead = re.search(r'<p class="lead">(.*?)</p>', rag, re.S)
-add(h1.group(1), lead.group(1) if lead else "", "/rag", "RAG")
-for m in re.finditer(r'<h2 id="([^"]+)">(.*?)</h2>(.*?)(?=<h2 |</main>)', rag, re.S):
-    hid, h, rest = m.groups()
-    p = re.search(r"<p[^>]*>(.*?)</p>", rest, re.S)
-    li = " ".join(re.findall(r"<(?:b|dt|th scope=\"row\")>(.*?)</(?:b|dt|th)>", rest))
-    add(h, p.group(1) if p else li, "/rag#" + hid, "RAG", li + " " + rest[:2500])
-
 # FAQ (perguntas e respostas)
 faq = (WEB / "faq.html").read_text(encoding="utf-8")
 for m in re.finditer(r"<details class=\"q\"[^>]*><summary><span>(.*?)</span>.*?<div class=\"a\">(.*?)</div></details>", faq, re.S):
