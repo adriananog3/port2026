@@ -1,0 +1,253 @@
+{
+ "titulo": "Banco de Prompts gratuito",
+ "atualizado": "2026-09-24",
+ "categorias": [
+  {
+   "id": "tecnicas",
+   "nome": "Técnicas e fórmulas de copy",
+   "descricao": "AIDA, PAS, antes-depois-ponte, storytelling e especificidade aplicados ao seu contexto.",
+   "prompts": [
+    {
+     "titulo": "Copy com AIDA sob medida",
+     "objetivo": "Transformar uma oferta em um texto persuasivo com a estrutura AIDA.",
+     "prompt": "Atue como copywriter sênior. Escreva um texto para [canal: e-mail, post ou página] sobre [produto ou serviço], voltado a [público e nível de consciência]. Use a estrutura AIDA e marque cada bloco (Atenção, Interesse, Desejo, Ação). Traga 1 dado específico por bloco, escolhido da lista [dados reais que eu tenho]. Termine com uma chamada para ação única e clara. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "PAS: problema, agitação e solução",
+     "objetivo": "Mostrar a dor do cliente com empatia antes de apresentar a solução.",
+     "prompt": "Escreva 3 versões de um texto curto (até 120 palavras) com a fórmula PAS para [público]. Problema: [dor principal com as palavras do cliente]. Agitação: consequências práticas de não resolver, sem exagero nem medo artificial. Solução: [oferta], com 2 benefícios concretos. Depois, diga qual versão tem o melhor equilíbrio entre emoção e credibilidade e por quê. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Antes, depois e ponte",
+     "objetivo": "Mostrar a transformação que a oferta viabiliza.",
+     "prompt": "Use a fórmula Antes-Depois-Ponte para [oferta]. Antes: descreva a rotina atual de [persona] em cenas concretas. Depois: como fica o dia a dia quando o problema está resolvido. Ponte: como [oferta] leva de um ponto ao outro, em 3 passos. Evite promessas absolutas; troque por evidências que eu possa comprovar, listadas em [provas disponíveis]. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "O poder da especificidade",
+     "objetivo": "Trocar afirmações vagas por detalhes que geram confiança.",
+     "prompt": "Revise o texto abaixo e troque cada afirmação vaga por uma versão específica e verificável (números, prazos, exemplos, nomes de processos). Mostre em tabela: trecho original | versão específica | que prova eu preciso ter em mãos. Não invente números: quando faltar dado, use [VERIFICAR]. Texto: [cole aqui]. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    }
+   ]
+  },
+  {
+   "id": "headlines",
+   "nome": "Headlines e linguagem",
+   "descricao": "Títulos que prendem a atenção, palavras de força e linguagem sensorial.",
+   "prompts": [
+    {
+     "titulo": "20 headlines em 5 ângulos",
+     "objetivo": "Gerar variações de título para testar.",
+     "prompt": "Crie 20 headlines para [peça] sobre [tema], para [público]. Distribua em 5 ângulos: pergunta, número, como fazer, contraste e curiosidade (4 de cada). Máximo de 70 caracteres. Indique as 3 mais fortes, com o motivo, e uma versão de cada para o LinkedIn. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Linguagem sensorial com sobriedade",
+     "objetivo": "Criar conexão emocional sem perder a credibilidade.",
+     "prompt": "Reescreva o parágrafo abaixo usando linguagem sensorial (o que a pessoa vê, ouve e sente ao usar [oferta]), mantendo um tom sóbrio, adequado a [setor]. Entregue 2 versões: uma mais emocional e uma mais técnica. Parágrafo: [cole aqui]. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Palavras de força permitidas",
+     "objetivo": "Montar um glossário de palavras persuasivas adequadas ao setor.",
+     "prompt": "Monte um glossário com 30 palavras e expressões de força para [setor e público], separadas em confiança, clareza, ação e pertencimento. Ao lado, liste as palavras a evitar por risco regulatório ou de reputação (por exemplo: garantido, sem risco, imperdível) e uma alternativa segura para cada. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    }
+   ]
+  },
+  {
+   "id": "midias",
+   "nome": "Copy para diferentes mídias",
+   "descricao": "Web, celular, e-mail, WhatsApp, redes sociais e impresso.",
+   "prompts": [
+    {
+     "titulo": "Um conteúdo, cinco canais",
+     "objetivo": "Adaptar a mesma mensagem ao formato de cada canal.",
+     "prompt": "Tenho esta mensagem central: [mensagem]. Adapte para: 1) página web (título, subtítulo e 3 blocos), 2) e-mail (assunto, pré-cabeçalho e corpo curto), 3) post do LinkedIn (gancho nas 2 primeiras linhas), 4) mensagem de WhatsApp (até 300 caracteres, com opção de sair da lista) e 5) peça impressa (título e texto de apoio). Respeite o limite e a leitura típica de cada canal. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Texto pensado para a tela do celular",
+     "objetivo": "Deixar a copy legível e rápida em telas pequenas.",
+     "prompt": "Reescreva o texto abaixo para leitura no celular: frases de até 18 palavras, parágrafos de até 3 linhas, subtítulos a cada 3 parágrafos e uma chamada para ação visível no início e no fim. Aponte o que cortar sem perder informação obrigatória (avisos legais, riscos). Texto: [cole aqui]. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Chatbot com respostas úteis",
+     "objetivo": "Escrever o roteiro de um assistente de atendimento.",
+     "prompt": "Escreva o roteiro de um chatbot de atendimento para [empresa], com: boas-vindas, 5 perguntas frequentes com respostas de até 60 palavras, quando transferir para um humano e uma mensagem de encerramento. O bot deve dizer que é automatizado, não pode recomendar investimentos e deve indicar a política de privacidade quando pedir dados. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    }
+   ]
+  },
+  {
+   "id": "psicologia",
+   "nome": "Psicologia do consumidor e emoção",
+   "descricao": "Vieses e princípios de persuasão usados com ética.",
+   "prompts": [
+    {
+     "titulo": "Mapa de vieses do meu público",
+     "objetivo": "Entender como o público decide.",
+     "prompt": "Para [persona] que está decidindo sobre [oferta], liste os 6 vieses de decisão mais prováveis (por exemplo: aversão à perda, ancoragem, prova social, autoridade, excesso de confiança, efeito manada). Para cada um: como aparece na jornada, uma frase de copy que ajuda a pessoa a decidir melhor (sem manipular) e o limite ético a respeitar. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Os princípios de Cialdini, com ética",
+     "objetivo": "Aplicar reciprocidade, compromisso, prova social, autoridade, afinidade e escassez.",
+     "prompt": "Para [oferta] e [público], proponha 1 aplicação prática de cada princípio de persuasão de Cialdini (reciprocidade, compromisso e coerência, prova social, autoridade, afinidade e escassez). Em escassez e prova social, use apenas fatos que eu possa comprovar; marque com [VERIFICAR] o que depender de dado. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Empatia antes da oferta",
+     "objetivo": "Mostrar que você entende o momento do cliente.",
+     "prompt": "Escreva a abertura de uma página para [persona] que acabou de passar por [situação]. Nos 3 primeiros parágrafos, fale só do contexto dela, com as palavras que ela usa: [termos do cliente]. A oferta só aparece no quarto parágrafo, como consequência natural. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    }
+   ]
+  },
+  {
+   "id": "boas-praticas",
+   "nome": "Erros comuns e boas práticas",
+   "descricao": "Revisão de clareza, voz ativa, tom, formatação e chamadas para ação.",
+   "prompts": [
+    {
+     "titulo": "Auditoria de copy em 10 critérios",
+     "objetivo": "Revisar um texto antes de publicar.",
+     "prompt": "Audite o texto abaixo em 10 critérios, com nota de 0 a 10 e sugestão de correção para cada: clareza, voz ativa, frases curtas, segunda pessoa, benefícios antes de características, prova, tom de voz de [marca], formatação para leitura rápida, chamada para ação e conformidade com as regras de [setor]. No fim, entregue a versão revisada. Texto: [cole aqui]. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "De características para benefícios",
+     "objetivo": "Trocar o que o produto tem pelo que ele resolve.",
+     "prompt": "Liste as características de [oferta]: [lista]. Para cada uma, escreva o benefício prático para [persona] no formato 'para que você possa…' e um exemplo concreto do dia a dia. Depois, ordene os benefícios pelo impacto na decisão de compra. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Tom de voz consistente",
+     "objetivo": "Criar um guia de tom para a equipe e para a IA.",
+     "prompt": "Crie um guia de tom de voz para [marca] com: 3 atributos (o que somos e o que não somos), 10 exemplos de frases 'assim sim / assim não', palavras preferidas e proibidas e como o tom muda em e-mail, redes sociais e atendimento. O guia será usado como contexto fixo em outras IAs. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    }
+   ]
+  },
+  {
+   "id": "setores",
+   "nome": "Copy por setor",
+   "descricao": "B2B e B2C, mercado financeiro e outros setores regulados.",
+   "prompts": [
+    {
+     "titulo": "B2B ou B2C: a mesma oferta, dois textos",
+     "objetivo": "Comparar abordagens para empresas e pessoas.",
+     "prompt": "Escreva dois textos para [oferta]: um B2B (decisor: [cargo], foco em processo, risco e retorno para a empresa) e um B2C (foco em rotina, segurança e tranquilidade). Explique em 5 tópicos o que muda entre eles: argumentos, provas, vocabulário, ciclo de decisão e chamada para ação. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Mercado financeiro: claro e transparente",
+     "objetivo": "Explicar um produto financeiro sem jargão e com os avisos certos.",
+     "prompt": "Explique [produto financeiro] para [público] em linguagem simples: o que é, para quem faz sentido, principais riscos, custos e liquidez. Inclua um parágrafo de avisos adequados (rentabilidade passada não garante resultado futuro, riscos do produto, caráter informativo). Não faça recomendação individual de investimento. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Setores regulados: checklist antes de publicar",
+     "objetivo": "Revisar peças de saúde, educação, jurídico ou finanças.",
+     "prompt": "Monte um checklist de publicação para uma peça de [setor regulado] com: afirmações que precisam de fonte, termos proibidos, avisos obrigatórios, uso de depoimentos, dados pessoais e aprovação humana. Depois, aplique o checklist ao texto abaixo e aponte o que corrigir. Texto: [cole aqui]. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    }
+   ]
+  },
+  {
+   "id": "nao-convencionais",
+   "nome": "Técnicas não convencionais",
+   "descricao": "Interatividade, gamificação, transparência e conteúdo gerado por usuários.",
+   "prompts": [
+    {
+     "titulo": "Ideias fora do óbvio, com o pé no chão",
+     "objetivo": "Gerar abordagens criativas viáveis.",
+     "prompt": "Sugira 10 abordagens não convencionais para divulgar [oferta] para [público]: por exemplo quiz, calculadora, bastidores com transparência, série narrativa, conteúdo gerado pela comunidade. Para cada uma: esforço de produção (baixo, médio ou alto), risco de reputação e um primeiro teste de baixo custo. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Quiz que educa e qualifica",
+     "objetivo": "Criar um quiz interativo para gerar contatos qualificados.",
+     "prompt": "Crie um quiz de 7 perguntas para [público] descobrir [resultado, por exemplo o nível de maturidade em marketing]. Para cada pergunta, dê 3 alternativas com pontuação. Escreva 3 perfis de resultado com uma recomendação educativa e uma chamada para ação. Inclua o aviso de uso de dados (LGPD) antes de pedir o e-mail. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Transparência como argumento",
+     "objetivo": "Usar bastidores e limites da oferta para gerar confiança.",
+     "prompt": "Escreva um texto que mostre com transparência como [oferta] funciona por dentro: o que fazemos, o que não fazemos, para quem não é indicado e quanto tempo leva. Use esse limite como prova de seriedade, não como desculpa. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    }
+   ]
+  },
+  {
+   "id": "landing",
+   "nome": "Landing pages e CTAs",
+   "descricao": "Proposta de valor, oferta, garantia, prova social e chamadas para ação.",
+   "prompts": [
+    {
+     "titulo": "Landing page completa",
+     "objetivo": "Montar a estrutura e a copy de uma página de conversão.",
+     "prompt": "Crie a copy completa de uma landing page para [oferta], com: headline e subtítulo (proposta de valor em até 12 palavras), 3 benefícios, como funciona em 3 passos, prova (use só [provas reais]), respostas a 5 objeções, oferta clara e CTA principal e secundário. Indique onde entra cada imagem. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Chamadas para ação que dizem o que acontece",
+     "objetivo": "Escrever CTAs claros e específicos.",
+     "prompt": "Escreva 15 opções de texto de botão para [ação: agendar diagnóstico, baixar material ou falar com especialista], em 3 grupos: diretas, com benefício e de baixo compromisso. Cada uma com até 5 palavras e dizendo o que acontece depois do clique. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Proposta de valor em uma frase",
+     "objetivo": "Encontrar a promessa central da oferta.",
+     "prompt": "Com base em: público [ ], problema [ ], solução [ ], diferencial comprovável [ ], escreva 10 propostas de valor de até 15 palavras. Avalie cada uma em clareza, especificidade e credibilidade, de 1 a 5, e recomende a melhor para a primeira dobra da página. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    }
+   ]
+  },
+  {
+   "id": "funis",
+   "nome": "Funis de vendas",
+   "descricao": "Mensagens para cada etapa, do primeiro contato ao pós-venda.",
+   "prompts": [
+    {
+     "titulo": "Mensagens por etapa do funil",
+     "objetivo": "Planejar o que dizer em cada momento da jornada.",
+     "prompt": "Monte uma tabela para [oferta] com as etapas: descoberta, consideração, decisão e pós-venda. Para cada etapa: objetivo, pergunta que o cliente faz, formato de conteúdo, mensagem principal, prova e chamada para ação. Mantenha a mesma promessa central em todas as etapas. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Nutrição de 7 dias",
+     "objetivo": "Criar uma sequência curta para quem acabou de se cadastrar.",
+     "prompt": "Escreva uma sequência de 5 mensagens em 7 dias para quem baixou [material]: boas-vindas e entrega, conteúdo educativo, caso ou exemplo, respostas a objeções e convite para [próximo passo]. Cada mensagem com assunto, texto de até 150 palavras e uma chamada para ação. Inclua a opção de descadastro. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Recuperação sem pressão",
+     "objetivo": "Voltar a falar com quem parou no meio do caminho.",
+     "prompt": "Escreva 3 mensagens para quem iniciou [ação] e não concluiu: lembrete útil, resposta à objeção mais comum ([objeção]) e última mensagem respeitosa. Nada de urgência falsa; ofereça ajuda humana. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    }
+   ]
+  },
+  {
+   "id": "email",
+   "nome": "E-mail marketing",
+   "descricao": "Assuntos, personalização, storytelling, segmentação e testes A/B.",
+   "prompts": [
+    {
+     "titulo": "Assuntos que são abertos",
+     "objetivo": "Criar e testar linhas de assunto.",
+     "prompt": "Crie 15 assuntos de e-mail para [campanha], com até 45 caracteres, em 5 estilos: curiosidade, benefício, pergunta, número e pessoal. Para as 5 melhores, escreva o pré-cabeçalho. Sugira como fazer o teste A/B (tamanho da amostra, métrica e duração). Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Newsletter com história",
+     "objetivo": "Transformar um tema técnico em uma boa leitura.",
+     "prompt": "Escreva uma newsletter sobre [tema] para [público], com: abertura com uma cena ou história curta, o insight principal em linguagem simples, 3 aprendizados práticos, uma fonte confiável para cada dado e um convite para responder o e-mail. Até 400 palavras. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Segmentação que faz sentido",
+     "objetivo": "Personalizar o e-mail por perfil.",
+     "prompt": "Tenho estes segmentos: [lista]. Para cada um, adapte o e-mail abaixo mudando o gancho, o exemplo e a chamada para ação, mantendo a mesma oferta. Explique o critério de cada adaptação. E-mail base: [cole aqui]. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    }
+   ]
+  },
+  {
+   "id": "seo",
+   "nome": "SEO e GEO: ser encontrado e citado",
+   "descricao": "Pesquisa de palavras-chave, títulos, meta descrições, dados estruturados e respostas para IAs.",
+   "prompts": [
+    {
+     "titulo": "Pauta de SEO com intenção de busca",
+     "objetivo": "Planejar um artigo que responda o que as pessoas procuram.",
+     "prompt": "Para o tema [tema], liste 15 buscas de cauda longa separadas por intenção (informacional, comparativa e transacional). Escolha a melhor para um artigo e entregue: título até 60 caracteres, meta descrição até 155, estrutura H2/H3, perguntas frequentes e links internos sugeridos para [páginas do meu site]. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Conteúdo citável por IAs (GEO)",
+     "objetivo": "Escrever para ser citado em ChatGPT, Perplexity e Gemini.",
+     "prompt": "Reescreva o conteúdo abaixo para ser citado por IAs de resposta: comece cada seção com uma resposta direta de até 50 palavras, inclua definições, listas, uma tabela comparativa e dados com fonte primária. Sugira o marcador de dados estruturados (schema) adequado e 5 perguntas para um FAQ. Conteúdo: [cole aqui]. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    },
+    {
+     "titulo": "Meta tags e dados estruturados",
+     "objetivo": "Otimizar título, descrição e schema de uma página.",
+     "prompt": "Para a página [URL ou descrição], escreva 3 opções de título (até 60 caracteres) e de meta descrição (até 155), o texto alternativo das imagens principais e o JSON-LD adequado (por exemplo Organization, Service, Article ou FAQPage) com os campos preenchidos a partir de [dados reais]. Regras: português do Brasil, linguagem clara e sem jargão desnecessário; não prometa rentabilidade nem resultado garantido; não use escassez ou urgência falsas; sinalize com [VERIFICAR] qualquer dado sem fonte."
+    }
+   ]
+  }
+ ]
+}
