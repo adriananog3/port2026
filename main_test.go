@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"io/fs"
 	"net/http"
 	"net/http/httptest"
@@ -25,9 +26,15 @@ func newSite(t *testing.T) *site {
 	return s
 }
 
+var testReqN int
+
 func do(s *site, method, host, target string, hdr map[string]string) *httptest.ResponseRecorder {
 	r := httptest.NewRequest(method, target, nil)
 	r.Host = host
+	// Navegador comum e IP distinto a cada chamada (o escudo barra requisições sem User-Agent e limita a taxa por IP).
+	testReqN++
+	r.Header.Set("User-Agent", "Mozilla/5.0 (teste)")
+	r.Header.Set("X-Forwarded-For", fmt.Sprintf("198.51.100.%d, 10.0.0.1", testReqN%250))
 	for k, v := range hdr {
 		r.Header.Set(k, v)
 	}
@@ -250,6 +257,7 @@ func TestContato(t *testing.T) {
 		r.Host = canon
 		r.Header.Set("Content-Type", "application/x-www-form-urlencoded")
 		r.Header.Set("X-Requested-With", "fetch")
+		r.Header.Set("User-Agent", "Mozilla/5.0 (teste)")
 		r.Header.Set("X-Forwarded-For", ip)
 		w := httptest.NewRecorder()
 		s.ServeHTTP(w, r)
@@ -298,5 +306,45 @@ func TestContato(t *testing.T) {
 	}
 	if !strings.Contains(home.Header().Get("Content-Security-Policy"), "frame-src 'self' https://tally.so") {
 		t.Error("CSP precisa liberar o iframe do Tally")
+	}
+}
+
+func TestShield(t *testing.T) {
+	s := newSite(t)
+	cases := []struct {
+		path, ua string
+		want     int
+	}{
+		{"/wp-login.php", "Mozilla/5.0", 404},
+		{"/.env", "Mozilla/5.0", 404},
+		{"/", "", 403},
+		{"/", "sqlmap/1.7", 403},
+		{"/", "Mozilla/5.0 (compatible; Bytespider; spider-feedback@bytedance.com)", 403},
+		{"/", "Mozilla/5.0 AppleWebKit/537.36 (KHTML, like Gecko; compatible; GPTBot/1.2; +https://openai.com/gptbot)", 200},
+		{"/", "Mozilla/5.0 (compatible; ClaudeBot/1.0; +claudebot@anthropic.com)", 200},
+		{"/", "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)", 200},
+		{"/rag", "Mozilla/5.0 (Windows NT 10.0; Win64; x64)", 200},
+	}
+	for _, c := range cases {
+		req := httptest.NewRequest("GET", "https://adriana-nogueira.com"+c.path, nil)
+		req.Header.Set("User-Agent", c.ua)
+		rec := httptest.NewRecorder()
+		s.ServeHTTP(rec, req)
+		if rec.Code != c.want {
+			t.Errorf("%s (%q): status %d, esperado %d", c.path, c.ua, rec.Code, c.want)
+		}
+	}
+	// Limite de taxa por IP.
+	var last int
+	for i := 0; i < rateMax+5; i++ {
+		req := httptest.NewRequest("GET", "https://adriana-nogueira.com/faq", nil)
+		req.Header.Set("User-Agent", "Mozilla/5.0")
+		req.Header.Set("X-Forwarded-For", "203.0.113.9")
+		rec := httptest.NewRecorder()
+		s.ServeHTTP(rec, req)
+		last = rec.Code
+	}
+	if last != 429 {
+		t.Errorf("limite de taxa: status %d, esperado 429", last)
 	}
 }
