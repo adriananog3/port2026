@@ -290,12 +290,13 @@ func TestContato(t *testing.T) {
 	}
 	home := do(s, "GET", canon, "/", nil)
 	b := home.Body.String()
-	for _, must := range []string{`id="form-contato"`, `name="empresa"`, `name="site"`, `name="consentimento"`} {
+	// O formulário da home é o Tally incorporado (decisão da Dri em 24/09/2026).
+	for _, must := range []string{`id="form-contato"`, `tally.so/embed/68GedB`, `tally.so/r/68GedB`} {
 		if !strings.Contains(b, must) {
 			t.Errorf("home sem %s", must)
 		}
 	}
-	if strings.Contains(b, "tally.so") || strings.Contains(home.Header().Get("Content-Security-Policy"), "tally") {
-		t.Error("Tally deveria ter saído do site")
+	if !strings.Contains(home.Header().Get("Content-Security-Policy"), "frame-src 'self' https://tally.so") {
+		t.Error("CSP precisa liberar o iframe do Tally")
 	}
 }
