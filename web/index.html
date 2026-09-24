@@ -105,9 +105,10 @@ nav .cta:hover{background:var(--platinum)}
 .hero-creds .hc-cert b{color:var(--dourado)}
 .hero-creds .hc-cert a.lnk{color:var(--dourado);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
 .hero-creds .hc-cert a.lnk:hover{color:var(--champagne)}
-.hero-creds .hc-badges{display:flex;gap:22px;align-items:center;margin-top:18px;flex-wrap:wrap}
-.hero-creds .hc-badges img{height:74px;width:auto;border-radius:10px}
-.hero-creds .hc-badges img.gaipc{height:84px}
+.hero-creds .hc-badges{display:flex;gap:22px;align-items:center;margin-top:18px;flex-wrap:wrap;line-height:0}
+.hero-creds .hc-badges a{display:block;line-height:0}
+.hero-creds .hc-badges img{display:block;height:80px;width:auto;border-radius:10px}
+.hero-creds .hc-badges img.gaipc{height:80px}
 .hero .fore{font-size:16px;color:var(--cinza);max-width:540px;margin-bottom:22px}
 .hero .tagline{max-width:560px;margin:0 0 28px;padding-left:16px;border-left:2px solid var(--dourado);font-family:'Open Sans',sans-serif;font-style:italic;font-size:22px;line-height:1.4;color:var(--champagne)}
 .hero .tagline b{color:var(--dourado);font-weight:600;font-style:normal}
@@ -135,6 +136,7 @@ nav .cta:hover{background:var(--platinum)}
 .marquee:hover .track{animation-play-state:paused}
 .marquee img{height:52px;width:auto;opacity:1;transition:.3s;flex:0 0 auto;border-radius:10px}
 .marquee img:hover{transform:scale(1.06)}
+.marquee .track a{display:block;flex:0 0 auto;line-height:0;border-radius:14px}.marquee .track a:focus-visible{outline:2px solid var(--dourado);outline-offset:4px}
 @keyframes scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 /* seções */
 section.blk{padding:52px 0;border-bottom:1px solid var(--linha)}
@@ -656,8 +658,8 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
   <p class="lbl" style="text-align:center;padding-top:22px">Experiência dentro das maiores instituições do país</p>
   <div class="marquee" aria-label="Marcas: BEE4, Itaú Unibanco, Empiricus, Guide Investimentos, Banco Modal, Accesstage">
     <div class="track">
-      <img src="/images/home/ddf7eb3d91.webp" alt="BEE4"><img src="/images/home/6dad0a07c6.webp" alt="Itaú Unibanco"><img src="/images/home/eab6d9554e.webp" alt="Empiricus"><img src="/images/home/abf087e1b1.webp" alt="Guide Investimentos"><img src="/images/home/4bc9fc93ee.webp" alt="Banco Modal / modalmais"><img src="/images/home/1befe58008.webp" alt="Accesstage">
-      <img src="/images/home/ddf7eb3d91.webp" alt=""><img src="/images/home/6dad0a07c6.webp" alt=""><img src="/images/home/eab6d9554e.webp" alt=""><img src="/images/home/abf087e1b1.webp" alt=""><img src="/images/home/4bc9fc93ee.webp" alt=""><img src="/images/home/1befe58008.webp" alt="">
+      <a href="/cases/bee4" aria-label="Ver o case BEE4"><img src="/images/home/ddf7eb3d91.webp" alt="BEE4"></a><a href="/cases/itau" aria-label="Ver o case Itaú Unibanco"><img src="/images/home/6dad0a07c6.webp" alt="Itaú Unibanco"></a><a href="/cases/empiricus" aria-label="Ver o case Empiricus"><img src="/images/home/eab6d9554e.webp" alt="Empiricus"></a><a href="/cases/guide" aria-label="Ver o case Guide Investimentos"><img src="/images/home/abf087e1b1.webp" alt="Guide Investimentos"></a><a href="/cases/modal" aria-label="Ver o case Banco Modal"><img src="/images/home/4bc9fc93ee.webp" alt="Banco Modal / modalmais"></a><img src="/images/home/1befe58008.webp" alt="Accesstage">
+      <a href="/cases/bee4" tabindex="-1" aria-hidden="true"><img src="/images/home/ddf7eb3d91.webp" alt=""></a><a href="/cases/itau" tabindex="-1" aria-hidden="true"><img src="/images/home/6dad0a07c6.webp" alt=""></a><a href="/cases/empiricus" tabindex="-1" aria-hidden="true"><img src="/images/home/eab6d9554e.webp" alt=""></a><a href="/cases/guide" tabindex="-1" aria-hidden="true"><img src="/images/home/abf087e1b1.webp" alt=""></a><a href="/cases/modal" tabindex="-1" aria-hidden="true"><img src="/images/home/4bc9fc93ee.webp" alt=""></a><img src="/images/home/1befe58008.webp" alt="">
     </div>
   </div>
 </div>
@@ -749,7 +751,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
           <li><b>Visibilidade:</b> SEO para o Google e GEO/AEO para ChatGPT, Perplexity e Google AI.</li>
         </ul>
       </div>
-      <figure class="fig "><img src="https://images.unsplash.com/photo-1642522029691-029b5a432954?auto=format&amp;fit=crop&amp;w=1000&amp;h=800&amp;q=70" alt="Homem de terno e mulher analisam um contrato em uma mesa de reunião" width="1000" height="800" loading="lazy" decoding="async"><figcaption>Foto: <a href="https://unsplash.com/photos/um-homem-e-uma-mulher-sentados-em-uma-mesa-branca-1H1LBKvD7ew" target="_blank" rel="noopener">Carrie Allen / Unsplash</a></figcaption></figure>
+      <figure class="fig "><img src="https://images.unsplash.com/photo-1642522029691-029b5a432954?auto=format&amp;fit=crop&amp;w=1000&amp;h=800&amp;q=70" alt="Homem de terno e mulher analisam um contrato em uma mesa de reunião" width="1000" height="800" loading="lazy" decoding="async"></figure>
     </div>
   </div>
 </section>
@@ -758,7 +760,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
   <div class="wrap">
     <p class="eyebrow">Seção 05 · Serviços</p>
     <h2>Do posicionamento à publicação otimizada</h2>
-    <figure class="fig fig-band"><img src="https://images.unsplash.com/photo-1563461660947-507ef49e9c47?auto=format&amp;fit=crop&amp;w=1600&amp;h=480&amp;q=70" alt="Equipe reunida com notebooks em uma sessão de trabalho" width="1600" height="480" loading="lazy" decoding="async"><figcaption>Foto: <a href="https://unsplash.com/photos/pessoas-sentadas-e-usando-laptops-XZkk5xT8Xrk" target="_blank" rel="noopener">Product School / Unsplash</a></figcaption></figure>
+    <figure class="fig fig-band"><img src="https://images.unsplash.com/photo-1563461660947-507ef49e9c47?auto=format&amp;fit=crop&amp;w=1600&amp;h=480&amp;q=70" alt="Equipe reunida com notebooks em uma sessão de trabalho" width="1600" height="480" loading="lazy" decoding="async"></figure>
     <div class="pcar svc-car" data-carousel><button type="button" class="pcar-nav pcar-prev" aria-label="Serviços anteriores" hidden>‹</button><div class="svc car-track" tabindex="0" role="region" aria-label="Carrossel de serviços: arraste para o lado ou use as setas">
       <div class="c"><p class="n">01</p><h3>Copywriting &amp; Redação</h3><p>Você publica peças que convertem e passam pelo compliance de primeira: e-mails, landing pages, VSLs e conteúdo com ponto de vista proprietário e fact-checking. Menos retrabalho, mais resposta.</p></div>
       <div class="c"><p class="n">02</p><h3>Branding &amp; Posicionamento</h3><p>Sua marca deixa de soar igual a todas as outras. Posicionamento sênior que diferencia fintechs, assessorias, gestoras e corretoras, e sustenta preço e autoridade.</p></div>
@@ -766,7 +768,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
       <div class="c"><p class="n">04</p><h3>Go-to-Market</h3><p>Seu lançamento sai do papel e ganha tração: estratégia de entrada, mensagem, canais e funil desenhados para produtos e serviços financeiros converterem.</p></div>
       <div class="c"><p class="n">05</p><h3>Thought Leadership Executivo</h3><p>Você vira referência no seu mercado sem gastar as suas horas: presença estratégica no LinkedIn, artigos e newsletters na sua voz, com autoridade e conformidade.</p></div>
       <div class="c"><p class="n">06</p><h3>IA &amp; RAG em Conformidade</h3><p>Você escala a produção com IA com risco regulatório controlado: infraestrutura agêntica documentada, RAG e automação em conformidade com LGPD e EU AI Act, sempre com supervisão humana.</p></div>
-      <div class="c"><p class="n">07</p><h3>IA Generativa auditada</h3><p>Sua demonstração de RAG funciona; a produção exige mais: citações corretas, controle de acesso e respostas estáveis quando os documentos mudam. Com uma parceira de engenharia em Python, levo a prova de conceito a um sistema confiável, com três revisões automatizadas e uma humana antes de cada entrega.</p><p style="margin-top:12px"><a href="/rag" style="color:#7A5C22;font-weight:700;text-decoration:underline;text-underline-offset:3px">Conhecer a IA Generativa auditada →</a></p></div>
+      <div class="c"><p class="n">07</p><h3>IA Generativa auditada</h3><p>Sua demonstração de RAG funciona; a produção exige mais: citações corretas, controle de acesso e respostas estáveis quando os documentos mudam. Com uma parceira de engenharia em Python, levo a prova de conceito a um sistema confiável, com três revisões automatizadas e uma humana antes de cada entrega.</p><p style="margin-top:12px"><a href="#assessoria-ia" style="color:#7A5C22;font-weight:700;text-decoration:underline;text-underline-offset:3px">Conhecer a assessoria em IA generativa →</a></p></div>
     </div><button type="button" class="pcar-nav pcar-next" aria-label="Próximos serviços">›</button><p class="pcar-hint">Arraste para o lado para ver todos os serviços →</p></div>
   </div>
 </section>
@@ -777,7 +779,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
     <p class="eyebrow">Seção 05 · Serviços · Assessoria em IA generativa</p>
     <div class="gia-intro"><div><h2 id="h-gia">O que é assessoria em IA generativa para um plano de marketing e marca bem elaborado?</h2>
     <p class="lead">É o meu processo de assessoria que ajuda empresas a decidir como, onde e se devem usar grandes modelos de linguagem (LLMs), sistemas RAG (geração aumentada por recuperação), agentes de IA e fluxos de trabalho de IA generativa.</p>
-    <p class="t">Faço revisão técnica em IA generativa para equipes que já têm um problema de negócio ou uma ideia de produto e precisam de uma opinião externa e de benchmarking antes de comprometer o orçamento. O objetivo é uma decisão clara de seguir em frente ou não, com um plano prático de prova de conceito (POC), e não uma apresentação genérica de estratégia de IA.</p></div><figure class="fig "><img src="https://images.unsplash.com/photo-1674027444485-cec3da58eef4?auto=format&amp;fit=crop&amp;w=900&amp;h=900&amp;q=70" alt="Esfera abstrata formada por pontos e linhas conectados, em referência à inteligência artificial" width="900" height="900" loading="lazy" decoding="async"><figcaption>Foto: <a href="https://unsplash.com/photos/uma-imagem-abstrata-de-uma-esfera-com-pontos-e-linhas-nGoCBxiaRO0" target="_blank" rel="noopener">Growtika / Unsplash</a></figcaption></figure></div>
+    <p class="t">Faço revisão técnica em IA generativa para equipes que já têm um problema de negócio ou uma ideia de produto e precisam de uma opinião externa e de benchmarking antes de comprometer o orçamento. O objetivo é uma decisão clara de seguir em frente ou não, com um plano prático de prova de conceito (POC), e não uma apresentação genérica de estratégia de IA.</p></div><figure class="fig "><img src="https://images.unsplash.com/photo-1674027444485-cec3da58eef4?auto=format&amp;fit=crop&amp;w=900&amp;h=900&amp;q=70" alt="Esfera abstrata formada por pontos e linhas conectados, em referência à inteligência artificial" width="900" height="900" loading="lazy" decoding="async"></figure></div>
     <div class="gia-grid">
       <div class="gia-box">
         <h3>Antes do desenvolvimento, a assessoria apoia em:</h3>
@@ -798,7 +800,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
         <ol class="gia-steps"><li>Decidir</li><li>Avaliar</li><li>Recomendar</li><li>Planejar</li></ol>
       </div>
     </div>
-    <p class="gia-next">Quando a decisão está tomada e você está pronto para implementar, avaliar, proteger e integrar o sistema de produção de conteúdo, revisão e auditoria, a assessoria se torna <a href="/rag">desenvolvimento de IA generativa</a>, com conteúdo proprietário e intervenção e edição humanas.</p>
+    <p class="gia-next">Quando a decisão está tomada e você está pronto para implementar, avaliar, proteger e integrar o sistema de produção de conteúdo, revisão e auditoria, a assessoria se torna <a href="#contato">desenvolvimento de IA generativa</a>, com conteúdo proprietário e intervenção e edição humanas.</p>
   </div>
 </section>
 
