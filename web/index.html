@@ -57,7 +57,7 @@ nav .brand img{width:56px;height:56px;border-radius:50%;border:1px solid var(--d
 nav .brand .brand-txt{display:flex;flex-direction:column;line-height:1.05;font-size:20px}
 nav .brand .brand-txt i{font-style:italic;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--dourado);font-family:'Open Sans',sans-serif;font-weight:600;margin-top:2px}
 @media(max-width:640px){nav .brand .brand-txt{font-size:17px}}
-nav .links{display:flex;gap:28px;font-size:14px;color:var(--platinum)}
+nav .links{display:flex;gap:28px;font-size:14px;color:var(--platinum)}nav .links a{white-space:nowrap}@media(min-width:1121px){nav .links.links{gap:22px}}@media(max-width:1120px){nav .lk-long{display:none}nav .links.links{gap:14px}}@media(max-width:920px){nav .links.links{display:none}}
 nav .links a:hover,nav .links a.active{color:var(--dourado)}
 nav .cta{margin-left:auto;background:var(--dourado);color:#000;font-weight:700;font-size:15px;padding:11px 22px;border-radius:999px;transition:.3s;border:none;cursor:pointer;font-family:inherit;white-space:nowrap}
 @media(max-width:860px){nav .cta{font-size:13px;padding:9px 16px}}
@@ -528,8 +528,27 @@ nav .nav-search~.nav-li.nav-li{margin-left:0}
 .fig-band{height:240px;margin:6px 0 26px}
 .gia-intro{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:26px;align-items:start}.gia-intro .fig{height:100%;min-height:260px}
 @media(max-width:860px){.ps.ps-solo.ps-fig{grid-template-columns:1fr!important}.ps-fig .fig{height:220px}.gia-intro{grid-template-columns:1fr}.gia-intro .fig{height:220px;min-height:0}.fig-band{height:170px}}
+.bp-band{padding:34px 0;border-bottom:1px solid var(--linha);background:linear-gradient(90deg,#0e0b07,#000)}.bp-band-in{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap}.bp-band h2{font-size:clamp(22px,2.6vw,28px);margin-bottom:6px}.bp-band p{color:var(--platinum);max-width:680px}.bp-band-btn{display:inline-block;background:var(--dourado);color:#000;font-weight:800;padding:14px 22px;border-radius:999px;text-decoration:none;flex-shrink:0}.bp-band-btn:hover,.bp-band-btn:focus-visible{background:#b8965b}
+.nl-form{display:flex;flex-direction:column;gap:10px;text-align:left}
+.nl-field{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #cfc8bb;border-radius:4px;padding:0 14px;min-height:54px}
+.nl-field:focus-within{border-color:#7A5C22;box-shadow:0 0 0 2px rgba(201,169,110,.45)}
+.nl-field svg{width:22px;height:22px;flex-shrink:0;color:#7A5C22}
+.nl-field input{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-size:16px;color:#141414;padding:14px 0;outline:none}
+.nl-field input::placeholder{color:#6b645b}
+.nl-form .nl-go{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:54px;border:0;border-radius:4px;background:var(--dourado);color:#000;font-weight:800;font-size:17px;cursor:pointer}
+.nl-form .nl-go:hover,.nl-form .nl-go:focus-visible{background:#b8965b}.nl-form .nl-go:disabled{opacity:.6;cursor:default}
+.nl-form .nl-go svg{width:22px;height:22px}
+.nl-ok{display:flex;gap:8px;align-items:flex-start;font-size:13px;line-height:1.45;color:#6b645b}
+.nl-ok input{margin-top:3px;accent-color:#7A5C22;width:16px;height:16px;flex-shrink:0}
+.nl-st{min-height:18px;font-size:14px;color:#3d6b2a;font-weight:600}.nl-st.erro{color:#a1261b}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+.nl-dark .nl-field{background:#000;border-color:var(--linha)}.nl-dark .nl-field input{color:var(--champagne)}.nl-dark .nl-field input::placeholder{color:#8a8a8a}.nl-dark .nl-field svg{color:var(--dourado)}
+.nl-dark .nl-ok{color:var(--cinza)}.nl-dark .nl-ok input{accent-color:var(--dourado)}.nl-dark .nl-st{color:var(--dourado)}.nl-dark .nl-st.erro{color:#ff8a7a}
+.nl-dark .nl-field:focus-within{border-color:var(--dourado)}
+.nl-fb{font-size:14px}.nl-fb a{color:#7A5C22;font-weight:700;text-decoration:underline}.nl-dark .nl-fb a{color:var(--dourado)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
 /* Identidade visual: Archivo (títulos, nome da página, botões) · Cormorant Garamond (assinatura e frases editoriais) · Open Sans (texto) */
-h1,h2,h3,h4,.brand,.brand-txt,.slab,.cover b,.resumo summary,button,.btn,.cta,.cta a,.pbtn,.news-btn,.entry-submit{font-family:'Archivo','Open Sans',system-ui,sans-serif!important}
+h1,h2,h3,h4,.brand,.brand-txt,.slab,.cover b,.resumo summary,button,.btn,.cta,.cta a,.pbtn,.news-btn,.entry-submit,.bp-band-btn{font-family:'Archivo','Open Sans',system-ui,sans-serif!important}
 h1 em,h2 em,h3 em,.brand-txt i,.brand small,blockquote p,.quote p{font-family:'Cormorant Garamond',Georgia,serif!important;font-style:italic;font-weight:600}
 h1 em,h2 em{font-size:1.1em;letter-spacing:0}
 .serif-it,.hero-quote{font-family:'Cormorant Garamond',Georgia,serif!important;font-style:italic;font-weight:600}
@@ -553,7 +572,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
   <div class="entry-modal">
     <button class="entry-close" id="entryClose" aria-label="Fechar">×</button>
     <p class="entry-eyebrow">Diagnóstico gratuito</p>
-    <h3 class="entry-h">Antes de explorar: descubra onde a sua comunicação está deixando <b>resultado na mesa</b>.</h3>
+    <h3 class="entry-h">Antes de explorar: descubra onde a sua comunicação está deixando <b>resultado na mesa</b></h3>
     <p class="entry-sub">Deixe seu contato e receba um diagnóstico do seu cenário de comunicação e marketing financeiro, sem compromisso.</p>
     <div class="entry-form"><a class="entry-submit js-contato" href="#form-contato" data-origem="popup-entrada">Quero meu diagnóstico</a></div>
     <a class="entry-alt" id="entrySkip">Prefiro explorar o site primeiro →</a>
@@ -565,10 +584,10 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
   <div class="wrap row">
     <a class="brand" href="#topo"><span class="brand-txt">Adriana Nogueira <i>Portfólio</i></span></a>
     <div class="links">
-      <a href="#topo">Sobre</a>
       <a href="#cases">Portfólio</a>
       <a href="#servicos">Serviços</a>
       <a href="/newsletter">Newsletter</a>
+      <a href="/prompts"><span class="lk-long">Banco de </span>Prompts</a>
       <a href="/faq">FAQ</a>
       <a href="#contato">Contato</a>
     </div>
@@ -647,15 +666,20 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
   <div class="wrap news-inner">
     <p class="news-eyebrow">Newsletter Café com Marketing</p>
     <h2 class="news-h">Receba insights sobre <b>Mercado, Comunicação &amp; Marketing</b> no mesmo lugar</h2>
-    <div class="news-form"><a class="news-btn js-contato" href="#form-contato" data-origem="newsletter">Quero receber</a></div>
-    <p class="news-sec">A inscrição é feita pelo formulário de contato (Tally). Ao se inscrever, você concorda em receber a Newsletter Café com Marketing por e-mail. Cancele quando quiser, em um clique. <a href="/politica-de-privacidade" style="color:inherit;text-decoration:underline">Política de privacidade</a>.</p>
+    <div class="news-form"><form class="nl-form" data-tipo="newsletter" data-origem="home" data-fallback="fb-home" novalidate><label class="nl-field"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="sr-only">Seu e-mail</span><input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" required data-nome="seu e-mail"></label><input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><button type="submit" class="nl-go">Quero receber <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><label class="nl-ok"><input type="checkbox" name="consentimento" required> <span>Quero receber a Newsletter Café com Marketing por e-mail. Posso cancelar quando quiser (LGPD).</span></label><p class="nl-st" role="status" aria-live="polite"></p><p class="nl-fb" id="fb-home" hidden><a href="/?origem=newsletter#form-contato">Concluir a inscrição pelo formulário →</a></p></form></div>
+    <p class="news-sec">Uma edição por vez, com fonte e sem ruído. Cancele quando quiser, em um clique. <a href="/politica-de-privacidade" style="color:inherit;text-decoration:underline">Política de privacidade</a>.</p>
   </div>
 </section>
+
+<section class="bp-band" aria-labelledby="h-bp"><div class="wrap bp-band-in">
+  <div><p class="eyebrow" style="margin-bottom:6px">Recurso gratuito</p><h2 id="h-bp">Banco de <em>Prompts</em> gratuito</h2><p>34 prompts em português para copy, e-mail, landing pages, funis e SEO/GEO, com as regras de compliance já embutidas.</p></div>
+  <a class="bp-band-btn" href="/prompts">Acessar o Banco de Prompts →</a>
+</div></section>
 
 <section class="blk" id="cases">
   <div class="wrap">
     <p class="eyebrow">Seção 02 · Resultados</p>
-    <h2>Números que a comunicação entregou.</h2>
+    <h2>Números que a comunicação entregou</h2>
     <div class="stats">
       <div class="stat"><p class="num">+R$ 1 MM</p><p class="desc">Receita com 1 e-mail</p><p class="src">Itaú Unibanco</p></div>
       <div class="stat"><p class="num">+57%</p><p class="desc">Em tráfego orgânico geral</p><p class="src">BEE4</p></div>
@@ -733,7 +757,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
 <section class="blk" id="servicos">
   <div class="wrap">
     <p class="eyebrow">Seção 05 · Serviços</p>
-    <h2>Do posicionamento à publicação otimizada.</h2>
+    <h2>Do posicionamento à publicação otimizada</h2>
     <figure class="fig fig-band"><img src="https://images.unsplash.com/photo-1563461660947-507ef49e9c47?auto=format&amp;fit=crop&amp;w=1600&amp;h=480&amp;q=70" alt="Equipe reunida com notebooks em uma sessão de trabalho" width="1600" height="480" loading="lazy" decoding="async"><figcaption>Foto: <a href="https://unsplash.com/photos/pessoas-sentadas-e-usando-laptops-XZkk5xT8Xrk" target="_blank" rel="noopener">Product School / Unsplash</a></figcaption></figure>
     <div class="pcar svc-car" data-carousel><button type="button" class="pcar-nav pcar-prev" aria-label="Serviços anteriores" hidden>‹</button><div class="svc car-track" tabindex="0" role="region" aria-label="Carrossel de serviços: arraste para o lado ou use as setas">
       <div class="c"><p class="n">01</p><h3>Copywriting &amp; Redação</h3><p>Você publica peças que convertem e passam pelo compliance de primeira: e-mails, landing pages, VSLs e conteúdo com ponto de vista proprietário e fact-checking. Menos retrabalho, mais resposta.</p></div>
@@ -830,7 +854,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
 <section class="blk" id="contato">
   <div class="wrap">
     <p class="eyebrow">Seção 08 · Contato</p>
-    <h2>Vamos desenhar a comunicação do mercado que vem amanhã.</h2>
+    <h2>Vamos desenhar a comunicação do mercado que vem amanhã</h2>
     <p class="muted">Diagnóstico gratuito, sem compromisso. A partir dele, uma proposta justa e sob medida para o seu momento.</p>
     <p class="muted" style="margin-top:8px;color:var(--dourado)">Atendo um número limitado de projetos por vez para garantir profundidade e entrega end-to-end. Se faz sentido para você, o melhor momento para conversar é agora.</p>
     <div class="contact-grid">
@@ -1126,6 +1150,31 @@ sync();size();
       try{rec.start();}catch(e){st.textContent='A busca por voz não está disponível neste navegador. Você pode digitar.';}
     });
   }
+})();
+</script>
+<script>
+(function(){
+  /* Formulários de cadastro direto (newsletter e Banco de Prompts): envia para /api/lead (Brevo).
+     Se o Brevo não estiver configurado, mostra o formulário alternativo (Tally) sem perder o contato. */
+  function st(f,msg,erro){var s=f.querySelector('.nl-st');if(s){s.textContent=msg;s.classList.toggle('erro',!!erro);}}
+  document.addEventListener('submit',function(e){
+    var f=e.target.closest('form.nl-form');if(!f)return;e.preventDefault();
+    var dados={tipo:f.getAttribute('data-tipo')||'newsletter',origem:f.getAttribute('data-origem')||''};
+    var campos=f.querySelectorAll('input[name]');
+    for(var i=0;i<campos.length;i++){var c=campos[i];dados[c.name]=c.type==='checkbox'?c.checked:c.value.trim();}
+    for(var j=0;j<campos.length;j++){var x=campos[j];if(x.required&&(x.type==='checkbox'?!x.checked:!x.value.trim())){x.focus();st(f,x.type==='checkbox'?'Marque a caixa de consentimento para continuar.':'Preencha '+(x.getAttribute('data-nome')||'este campo')+'.',true);return;}}
+    var b=f.querySelector('button[type=submit]');if(b)b.disabled=true;st(f,'Enviando…');
+    fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(dados)})
+      .then(function(r){return r.json().catch(function(){return {ok:false,fallback:true};});})
+      .then(function(j){
+        if(b)b.disabled=false;
+        if(j&&j.ok){st(f,j.mensagem||'Pronto!');f.reset();f.classList.add('nl-feito');f.dispatchEvent(new CustomEvent('lead:ok',{bubbles:true}));return;}
+        st(f,(j&&j.mensagem)||'Não foi possível concluir agora.',true);
+        if(j&&j.fallback){var fb=document.getElementById(f.getAttribute('data-fallback')||'');if(fb){fb.hidden=false;var ifr=fb.querySelector('iframe[data-src]');if(ifr&&!ifr.src)ifr.src=ifr.getAttribute('data-src');fb.scrollIntoView({behavior:'smooth',block:'nearest'});}}
+        if(j&&j.campo){var el=f.querySelector('[name='+j.campo+']');if(el)el.focus();}
+      })
+      .catch(function(){if(b)b.disabled=false;st(f,'Sem conexão agora. Tente de novo em instantes.',true);});
+  });
 })();
 </script>
 </body>
