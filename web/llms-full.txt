@@ -58,6 +58,7 @@
 - [Cases](https://adriana-nogueira.com/#cases): portfólio e cases da trajetória profissional
 - [FAQ](https://adriana-nogueira.com/faq): perguntas frequentes sobre a assessoria, contato profissional e aviso legal
 - [IA Generativa auditada: RAG para conhecimento empresarial](https://adriana-nogueira.com/rag): serviço de desenvolvimento RAG, fluxo em 13 etapas, escopo, quando contratar, bancos vetoriais e comparativo
+- [Banco de Prompts gratuito](https://adriana-nogueira.com/prompts): 34 prompts em português para copy, headlines, e-mail, landing pages, funis e SEO/GEO, com regras de compliance; acesso gratuito mediante cadastro
 - [Newsletter Café com Marketing](https://adriana-nogueira.com/newsletter): edições e artigos sobre marketing, IA, branding, regulação e mercado de capitais
 - [Política de Privacidade](https://adriana-nogueira.com/politica-de-privacidade)
 
