@@ -85,7 +85,7 @@ for f in sorted((WEB / "newsletter").glob("*.html")):
         add(t.group(1), d.group(1) if d else "", "/newsletter/" + f.stem, "Newsletter", tags)
 
 # Banco de Prompts
-_bp = json.loads((ROOT / "content/prompts.json").read_text(encoding="utf-8"))
+_bp = json.loads((ROOT / "web/banco-prompts.json").read_text(encoding="utf-8"))
 add("Banco de Prompts gratuito", "Prompts em português para copy, e-mail, landing pages, funis e SEO/GEO, com regras de compliance. Acesso gratuito.", "/prompts", "Prompts", " ".join(c["nome"] + " " + " ".join(q["titulo"] for q in c["prompts"]) for c in _bp["categorias"]))
 for _c in _bp["categorias"]:
     add(_c["nome"], _c["descricao"], "/prompts", "Prompts", " ".join(q["titulo"] + " " + q["objetivo"] for q in _c["prompts"]))
