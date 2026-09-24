@@ -214,7 +214,6 @@ page = f"""<!doctype html>
     <h2 id="gate-t">Acesso gratuito ao Banco de Prompts</h2>
     <p class="s">Nome, empresa, telefone e e-mail. Leva menos de um minuto e a biblioteca abre na hora.</p>
     {leadforms.prompts()}
-    <div id="bp-fb" hidden><p class="nota" style="margin:10px 0 6px">Conclua por aqui, é rapidinho:</p><div style="background:#FDFBF7;border-radius:12px;padding:6px"><iframe data-src="{iframe_src}" title="Formulário alternativo de acesso ao Banco de Prompts" width="100%" height="430"></iframe></div></div>
     <p class="nota">Seus dados liberam o acesso e ficam guardados com segurança. <a href="/politica-de-privacidade">Política de Privacidade</a></p>
   </div>
 </dialog>
