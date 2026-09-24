@@ -14,10 +14,11 @@
       .then(function(j){
         if(b)b.disabled=false;
         if(j&&j.ok){st(f,j.mensagem||'Pronto!');f.reset();f.classList.add('nl-feito');f.dispatchEvent(new CustomEvent('lead:ok',{bubbles:true}));return;}
+        if(f.getAttribute('data-tipo')==='prompts'&&j&&j.fallback){st(f,'Acesso liberado. Bom proveito!');f.classList.add('nl-feito');f.dispatchEvent(new CustomEvent('lead:ok',{bubbles:true}));return;}
         st(f,(j&&j.mensagem)||'Não foi possível concluir agora.',true);
         if(j&&j.fallback){var fb=document.getElementById(f.getAttribute('data-fallback')||'');if(fb){fb.hidden=false;var ifr=fb.querySelector('iframe[data-src]');if(ifr&&!ifr.src)ifr.src=ifr.getAttribute('data-src');fb.scrollIntoView({behavior:'smooth',block:'nearest'});}}
         if(j&&j.campo){var el=f.querySelector('[name='+j.campo+']');if(el)el.focus();}
       })
-      .catch(function(){if(b)b.disabled=false;st(f,'Sem conexão agora. Tente de novo em instantes.',true);});
+      .catch(function(){if(b)b.disabled=false;if(f.getAttribute('data-tipo')==='prompts'){st(f,'Acesso liberado. Bom proveito!');f.dispatchEvent(new CustomEvent('lead:ok',{bubbles:true}));return;}st(f,'Sem conexão agora. Tente de novo em instantes.',true);});
   });
 })();
