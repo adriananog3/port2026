@@ -63,7 +63,7 @@ nav .links a:hover,nav .links a.active{color:var(--dourado)}
 nav .cta{margin-left:auto;background:var(--dourado);color:#000;font-weight:700;font-size:15px;padding:11px 22px;border-radius:999px;transition:.3s;border:none;cursor:pointer;font-family:inherit;white-space:nowrap}
 @media(max-width:860px){nav .cta{font-size:13px;padding:9px 16px}}
 nav .cta:hover{background:var(--platinum)}
-@media(max-width:860px){nav .links{display:none}}
+.nav-li,nav .cta{flex-shrink:0}@media(min-width:861px) and (max-width:1120px){nav .row.row{gap:20px}nav .links.links{gap:16px;font-size:13.5px}nav .brand .brand-txt.brand-txt{font-size:18px}nav .cta.cta{font-size:13.5px;padding:10px 16px}nav .nav-li.nav-li{margin-right:-8px}}@media(max-width:860px){nav .links{display:none}}
 /* hero */
 .hero{position:relative;padding:80px 0 70px;background:radial-gradient(ellipse at 70% 30%,#151109 0%,#000 60%)}
 .hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:start}
@@ -204,6 +204,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visibl
 .skip-link{position:absolute;left:-9999px;top:0;background:var(--dourado);color:#000;padding:10px 16px;font-weight:800;z-index:9999;border-radius:0 0 8px 0}
 .skip-link:focus{left:0}
 .hero-art{position:absolute;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;-webkit-mask-image:linear-gradient(90deg,rgba(0,0,0,.22) 0%,rgba(0,0,0,.3) 50%,#000 80%);mask-image:linear-gradient(90deg,rgba(0,0,0,.22) 0%,rgba(0,0,0,.3) 50%,#000 80%)}.hero>.wrap{position:relative;z-index:1}.art-toggle{position:absolute;right:16px;bottom:14px;z-index:2;background:rgba(0,0,0,.6);color:var(--platinum);border:1px solid #3a3226;border-radius:999px;font-family:inherit;font-size:12px;font-weight:600;line-height:1;padding:9px 14px;cursor:pointer}.art-toggle:hover{color:var(--champagne);border-color:var(--dourado)}.art-toggle:focus-visible{outline:2px solid var(--dourado);outline-offset:2px}@media(max-width:760px){.hero-art{-webkit-mask-image:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.35));mask-image:linear-gradient(180deg,rgba(0,0,0,.2),rgba(0,0,0,.35))}}
+.tform iframe{display:block;width:100%;min-height:640px;border:0;background:transparent}.tform .tnote{margin-top:14px;font-size:13px;line-height:1.6;color:var(--cinza)}.tform .tnote a{color:var(--dourado)}
 @media(prefers-reduced-motion:reduce){*{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important;scroll-behavior:auto!important}.track{animation:none!important}}
 /* FAQ */
 .faq{margin-top:28px;display:flex;flex-direction:column;gap:12px;max-width:820px}
@@ -426,8 +427,8 @@ nav .brand .brand-txt{white-space:nowrap}
 nav a.cta{text-decoration:none;display:inline-block}
 /* LinkedIn em destaque */
 .li-ico{width:18px;height:18px;flex:0 0 auto}
-.nav-li{display:inline-flex;align-items:center;gap:8px;margin-left:auto;margin-right:12px;padding:9px 14px;border-radius:999px;background:#0A66C2;color:#fff;font-weight:700;font-size:14px;text-decoration:none;transition:.25s}
-.nav-li:hover,.nav-li:focus-visible{background:#004182;box-shadow:0 0 0 2px var(--dourado)}
+.nav-li{display:inline-flex;align-items:center;gap:0;margin-left:auto;margin-right:-34px;padding:8px;border-radius:999px;background:#0A66C2;color:#fff;font-weight:700;font-size:14px;text-decoration:none;transition:.25s}
+.nav-li:hover,.nav-li:focus-visible{background:#004182;box-shadow:0 0 0 2px var(--dourado)}.nav-li .nav-li-txt{display:none}.nav-li .li-ico{width:20px;height:20px}
 nav .nav-li + .cta{margin-left:0}
 .photo-cap{margin-top:16px;text-align:center}
 .photo-cap .pc-name{font-family:'Open Sans',sans-serif;font-size:22px;font-weight:800;color:var(--champagne);margin:0 0 2px;letter-spacing:.01em}
@@ -504,7 +505,7 @@ nav .nav-li + .cta{margin-left:0}
     <p class="entry-sub">Deixe seu contato e receba um diagnóstico do seu cenário de comunicação e marketing financeiro, sem compromisso.</p>
     <div class="entry-form"><a class="entry-submit js-contato" href="#form-contato" data-origem="popup-entrada">Quero meu diagnóstico</a></div>
     <a class="entry-alt" id="entrySkip">Prefiro explorar o site primeiro →</a>
-    <p class="entry-lgpd">O formulário é do próprio site e não usa cookies. Seus dados são usados só para responder ao seu pedido e tratados conforme a LGPD. <a href="/politica-de-privacidade" style="color:inherit;text-decoration:underline">Política de privacidade</a>.</p>
+    <p class="entry-lgpd">O formulário é operado pelo Tally. Seus dados são usados só para responder ao seu pedido e tratados conforme a LGPD. <a href="/politica-de-privacidade" style="color:inherit;text-decoration:underline">Política de privacidade</a>.</p>
   </div>
 </div>
 
@@ -576,7 +577,7 @@ nav .nav-li + .cta{margin-left:0}
     <p class="news-eyebrow">Newsletter Café com Marketing</p>
     <h2 class="news-h">Receba insights sobre <b>Mercado, Comunicação &amp; Marketing</b> no mesmo lugar</h2>
     <div class="news-form"><a class="news-btn js-contato" href="#form-contato" data-origem="newsletter">Quero receber</a></div>
-    <p class="news-sec">A inscrição é feita pelo formulário do próprio site. Ao se inscrever, você concorda em receber a Newsletter Café com Marketing por e-mail. Cancele quando quiser, em um clique. <a href="/politica-de-privacidade" style="color:inherit;text-decoration:underline">Política de privacidade</a>.</p>
+    <p class="news-sec">A inscrição é feita pelo formulário de contato (Tally). Ao se inscrever, você concorda em receber a Newsletter Café com Marketing por e-mail. Cancele quando quiser, em um clique. <a href="/politica-de-privacidade" style="color:inherit;text-decoration:underline">Política de privacidade</a>.</p>
   </div>
 </section>
 
@@ -724,20 +725,11 @@ nav .nav-li + .cta{margin-left:0}
       <a href="mailto:contato-assessoria@adriana-nogueira.com"><b>E-mail →</b><span>contato-assessoria@adriana-nogueira.com</span></a>
       <a href="/newsletter"><b>Newsletter →</b><span>Edições e artigos publicados</span></a>
     </div>
-    <form class="cform" id="form-contato" action="/api/contato" method="post" novalidate>
+    <div class="cform tform" id="form-contato">
       <h3>Contato</h3>
-      <div class="cgrid">
-        <label><span class="sr">Nome</span><input name="nome" id="c-nome" placeholder="nome" autocomplete="name" required maxlength="120"></label>
-        <label><span class="sr">E-mail</span><input name="email" type="email" placeholder="email" autocomplete="email" required maxlength="200"></label>
-        <label><span class="sr">Nome da empresa</span><input name="empresa" placeholder="nome da empresa" autocomplete="organization" maxlength="160"></label>
-        <label><span class="sr">Site da empresa</span><input name="site" placeholder="site da empresa" inputmode="url" autocomplete="url" maxlength="200"></label>
-        <label class="full"><span class="sr">Mensagem</span><textarea name="mensagem" id="c-msg" placeholder="Mensagem" rows="6" required maxlength="4000"></textarea></label>
-      </div>
-      <input type="hidden" name="origem" id="c-origem" value="contato">
-      <label class="hp" aria-hidden="true">Não preencha<input name="website" tabindex="-1" autocomplete="off"></label>
-      <label class="consent"><input type="checkbox" name="consentimento" value="sim" required> <span>Concordo que meus dados sejam usados apenas para responder a este contato, conforme a <a href="/politica-de-privacidade">Política de Privacidade</a> (LGPD).</span></label>
-      <div class="cfoot"><p class="cstatus" id="c-status" role="status" aria-live="polite"></p><button type="submit">Enviar</button></div>
-    </form>
+      <iframe id="tally-contato" src="https://tally.so/embed/68GedB?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;origem=contato" title="Formulário de contato" loading="lazy" width="100%" height="700" frameborder="0"></iframe>
+      <p class="tnote">Ao enviar, você concorda que seus dados sejam usados apenas para responder a este contato, conforme a <a href="/politica-de-privacidade">Política de Privacidade</a> (LGPD). O formulário é operado pelo Tally. Se ele não carregar, <a href="https://tally.so/r/68GedB" target="_blank" rel="noopener">abra o formulário em outra aba</a>.</p>
+    </div>
   </div>
 </section>
 
@@ -867,32 +859,16 @@ nav .nav-li + .cta{margin-left:0}
 <script>
 (function(){
   var f=document.getElementById('form-contato'); if(!f) return;
-  var st=document.getElementById('c-status'), org=document.getElementById('c-origem'), msg=document.getElementById('c-msg');
-  var pre={'newsletter':'Quero receber a Newsletter Café com Marketing.','popup-entrada':'Quero meu diagnóstico gratuito.','contato':'','chat-diagnostico':'Quero um diagnóstico gratuito.','chat-ajuda':'Preciso de ajuda com marketing financeiro.'};
+  var fr=document.getElementById('tally-contato'), base=fr?fr.getAttribute('src').replace(/&origem=[^&]*/,''):'';
   function abrir(o){
-    if(o&&/^[a-z0-9-]{1,60}$/.test(o)) org.value=o;
-    var p=pre[o]; if(p===undefined&&/^newsletter/.test(o||'')) p=pre.newsletter; if(p===undefined&&/^case/.test(o||'')) p='Quero conversar sobre um projeto parecido com este case.';
-    if(p&&!msg.value) msg.value=p;
+    if(fr&&o&&/^[a-z0-9-]{1,60}$/.test(o)){var nv=base+'&origem='+o; if(fr.getAttribute('src')!==nv) fr.setAttribute('src',nv);}
     var ov=document.getElementById('entryOverlay'); if(ov){ov.classList.remove('open');document.body.style.overflow='';}
     var cp=document.getElementById('chatPanel'); if(cp) cp.classList.remove('open');
-    f.scrollIntoView({behavior:'smooth',block:'start'}); setTimeout(function(){document.getElementById('c-nome').focus({preventScroll:true});},450);
+    f.scrollIntoView({behavior:'smooth',block:'start'}); if(fr) setTimeout(function(){fr.focus({preventScroll:true});},450);
   }
   document.addEventListener('click',function(e){var a=e.target.closest('.js-contato'); if(!a) return; e.preventDefault(); abrir(a.getAttribute('data-origem'));});
   var q=new URLSearchParams(location.search);
   if(q.get('origem')) setTimeout(function(){abrir(q.get('origem'));},300);
-  if(q.get('contato')==='enviado'){st.textContent='Mensagem enviada. Obrigada!';st.className='cstatus ok';}
-  if(q.get('contato')==='erro'){st.textContent='Não foi possível enviar. Confira os campos e tente de novo.';st.className='cstatus err';}
-  f.addEventListener('submit',function(e){
-    e.preventDefault(); var bad=null;
-    [].forEach.call(f.querySelectorAll('[required]'),function(el){var v=el.type==='checkbox'?el.checked:el.value.trim()&&el.checkValidity(); el.setAttribute('aria-invalid',v?'false':'true'); if(!v&&!bad) bad=el;});
-    if(bad){st.textContent=bad.type==='checkbox'?'Marque o consentimento para enviar.':'Preencha nome, e-mail válido e mensagem.';st.className='cstatus err';bad.focus();return;}
-    var b=f.querySelector('button'); b.disabled=true; st.textContent='Enviando…'; st.className='cstatus';
-    fetch(f.action,{method:'POST',headers:{'X-Requested-With':'fetch'},body:new URLSearchParams(new FormData(f))})
-      .then(function(r){return r.json().catch(function(){return {ok:false,mensagem:'Não foi possível enviar agora.'};});})
-      .then(function(j){st.textContent=j.mensagem;st.className='cstatus '+(j.ok?'ok':'err'); if(j.ok) f.reset();})
-      .catch(function(){st.textContent='Sem conexão. Tente de novo em instantes.';st.className='cstatus err';})
-      .then(function(){b.disabled=false;});
-  });
 })();
 </script>
 <script>
