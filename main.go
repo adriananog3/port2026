@@ -160,6 +160,7 @@ func loadSite(fsys fs.FS) (*site, error) {
 	if _, ok := s.files["/index.html"]; !ok {
 		return nil, errors.New("web/index.html ausente")
 	}
+	addFavicons(s)
 	// Imagem de compartilhamento (Open Graph) servida com nome neutro.
 	if a, ok := s.files["/assets/ovelha-og.jpg"]; ok {
 		s.files["/assets/adriana-nogueira-og.jpg"] = a
