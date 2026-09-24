@@ -70,7 +70,7 @@ reader = as_text_block('news-pages', _json.dumps(news, ensure_ascii=False)) + ""
   function close(hash){ if(ov){ov.remove();ov=null;document.body.style.overflow='';} if(hash){ var t=document.querySelector(hash); if(t) t.scrollIntoView({behavior:'smooth'}); } }
   function open(path){
     var html=pages[path]; if(!html) return false;
-    if(!ov){ ov=document.createElement('div'); ov.setAttribute('role','dialog'); ov.setAttribute('aria-label','Newsletter Café com Marketing');
+    if(!ov){ ov=document.createElement('div'); ov.setAttribute('role','dialog'); ov.setAttribute('aria-label','Newsletter Exponencial Future');
       ov.style.cssText='position:fixed;inset:0;z-index:10000;background:#FDFBF7';
       var x=document.createElement('button'); x.type='button'; x.textContent='✕ Fechar'; x.setAttribute('aria-label','Fechar a newsletter');
       x.style.cssText='position:fixed;top:12px;right:16px;z-index:10001;background:#C9A96E;color:#000;border:0;border-radius:999px;padding:9px 16px;font-weight:800;cursor:pointer';
