@@ -47,7 +47,7 @@ details.q .a{padding:0 20px 18px;color:var(--platinum);font-size:15.5px}
 .icons a.li span.ic{background:#0A66C2;color:#fff}.icons a.wa span.ic{background:#25D366;color:#fff}
 .btn{display:inline-flex;align-items:center;gap:10px;background:var(--dourado);color:#000;text-decoration:none;font-weight:700;padding:14px 26px;border-radius:40px;font-size:16px}
 .btn:hover{filter:brightness(1.08)}
-.cform{margin-top:8px}.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:640px){.cgrid{grid-template-columns:1fr}}
+.cform{margin-top:8px}.tform iframe{display:block;width:100%;min-height:640px;border:0;background:transparent}.tform .tnote{margin-top:14px;font-size:13px;line-height:1.6;color:var(--cinza)}.tform .tnote a{color:var(--dourado)}.cgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}@media(max-width:640px){.cgrid{grid-template-columns:1fr}}
 .cgrid .full{grid-column:1/-1}.cform label{display:block}.sr{position:absolute;left:-9999px}
 .cform input,.cform textarea{width:100%;background:#000;border:1px solid #2b2620;border-radius:10px;color:var(--champagne);padding:13px 14px;font:inherit;font-size:15px}
 .cform input:focus,.cform textarea:focus{outline:none;border-color:var(--dourado)}
@@ -117,19 +117,10 @@ footer{padding:32px 0 60px;text-align:center;color:var(--cinza);font-size:13px}f
 <section id="mensagem"><div class="wrap">
   <h2>Não encontrou sua dúvida? <em>mande sua mensagem</em></h2>
   <div class="rule"></div>
-  <form class="cform" id="form-contato" action="/api/contato" method="post" novalidate>
-    <div class="cgrid">
-      <label><span class="sr">Nome</span><input name="nome" id="c-nome" placeholder="nome" autocomplete="name" required maxlength="120"></label>
-      <label><span class="sr">E-mail</span><input name="email" type="email" placeholder="email" autocomplete="email" required maxlength="200"></label>
-      <label><span class="sr">Nome da empresa</span><input name="empresa" placeholder="nome da empresa" autocomplete="organization" maxlength="160"></label>
-      <label><span class="sr">Site da empresa</span><input name="site" placeholder="site da empresa" inputmode="url" autocomplete="url" maxlength="200"></label>
-      <label class="full"><span class="sr">Mensagem</span><textarea name="mensagem" placeholder="Mensagem" rows="6" required maxlength="4000"></textarea></label>
-    </div>
-    <input type="hidden" name="origem" value="faq">
-    <label class="hp" aria-hidden="true">Não preencha<input name="website" tabindex="-1" autocomplete="off"></label>
-    <label class="consent"><input type="checkbox" name="consentimento" value="sim" required> <span>Concordo que meus dados sejam usados apenas para responder a este contato, conforme a <a href="/politica-de-privacidade">Política de Privacidade</a> (LGPD).</span></label>
-    <div class="cfoot"><p class="cstatus" id="c-status" role="status" aria-live="polite"></p><button type="submit">Enviar</button></div>
-  </form>
+  <div class="cform tform" id="form-contato">
+    <iframe id="tally-contato" src="https://tally.so/embed/68GedB?alignLeft=1&amp;hideTitle=1&amp;transparentBackground=1&amp;origem=faq" title="Formulário de contato" loading="lazy" width="100%" height="700" frameborder="0"></iframe>
+    <p class="tnote">Ao enviar, você concorda que seus dados sejam usados apenas para responder a este contato, conforme a <a href="/politica-de-privacidade">Política de Privacidade</a> (LGPD). O formulário é operado pelo Tally. Se ele não carregar, <a href="https://tally.so/r/68GedB" target="_blank" rel="noopener">abra o formulário em outra aba</a>.</p>
+  </div>
 </div></section>
 
 <section id="aviso-legal" class="legal"><div class="wrap">
@@ -148,22 +139,5 @@ footer{padding:32px 0 60px;text-align:center;color:var(--cinza);font-size:13px}f
 </div></section>
 </main>
 <footer><div class="wrap"><p>© Adriana Nogueira | Portfólio · Comunicação &amp; Marketing Financeiro · CEA · GAIPC™ · São Paulo · <a href="/politica-de-privacidade">Política de Privacidade</a> · <a href="/faq#aviso-legal">Aviso legal</a></p></div></footer>
-<script>
-(function(){
-  var f=document.getElementById('form-contato'),st=document.getElementById('c-status'); if(!f) return;
-  var q=new URLSearchParams(location.search);
-  if(q.get('contato')==='enviado'){st.textContent='Mensagem enviada. Obrigada!';st.className='cstatus ok';}
-  f.addEventListener('submit',function(e){
-    e.preventDefault(); var bad=null;
-    [].forEach.call(f.querySelectorAll('[required]'),function(el){var v=el.type==='checkbox'?el.checked:el.value.trim()&&el.checkValidity(); el.setAttribute('aria-invalid',v?'false':'true'); if(!v&&!bad) bad=el;});
-    if(bad){st.textContent=bad.type==='checkbox'?'Marque o consentimento para enviar.':'Preencha nome, e-mail válido e mensagem.';st.className='cstatus err';bad.focus();return;}
-    var b=f.querySelector('button'); b.disabled=true; st.textContent='Enviando…'; st.className='cstatus';
-    fetch(f.action,{method:'POST',headers:{'X-Requested-With':'fetch'},body:new URLSearchParams(new FormData(f))})
-      .then(function(r){return r.json().catch(function(){return {ok:false,mensagem:'Não foi possível enviar agora.'};});})
-      .then(function(j){st.textContent=j.mensagem;st.className='cstatus '+(j.ok?'ok':'err'); if(j.ok) f.reset();})
-      .catch(function(){st.textContent='Sem conexão. Tente de novo em instantes.';st.className='cstatus err';})
-      .then(function(){b.disabled=false;});
-  });
-})();
-</script>
+
 </body></html>
