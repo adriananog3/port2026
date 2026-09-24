@@ -16,6 +16,17 @@ type card struct {
 	Href, Badge, DateBR, Date, Title, Summary string
 	Tags                                      []string
 	External                                  bool
+	Img                                       string
+}
+
+// Imagens de banco de imagens (Unsplash, licença gratuita) por texto da newsletter.
+type coverImg struct{ URL, Alt, Credit, Page string }
+
+var coverImages = map[string]coverImg{
+	"/newsletter/edicao-1":                         {"https://images.unsplash.com/photo-1745848413078-f85af10e5bf2?auto=format&fit=crop&w=1200&q=70", "Celular com a pasta de aplicativos de redes sociais aberta", "dlxmedia.hu", "https://unsplash.com/photos/Jrz9YXN1Vwc"},
+	"/newsletter/edicao-2":                         {"https://images.unsplash.com/photo-1762330467475-a565d04e1808?auto=format&fit=crop&w=1200&q=70", "Tela de celular com a interface de um assistente de inteligência artificial", "Zulfugar Karimov", "https://unsplash.com/photos/BlWbfrQrI5k"},
+	"/newsletter/edicao-3":                         {"https://images.unsplash.com/photo-1676911809788-5b9ee7f145fe?auto=format&fit=crop&w=1200&q=70", "Composição abstrata de cubos laranja e brancos, que remete a blocos e tokenização", "Shubham Dhage", "https://unsplash.com/photos/km9umcj61Ow"},
+	"/newsletter/branding-mercado-financeiro-2026": {"https://images.unsplash.com/photo-1559526324-593bc073d938?auto=format&fit=crop&w=1200&q=70", "Pessoa usando celular e notebook, em referência a serviços financeiros digitais", "Austin Distel", "https://unsplash.com/photos/EMPZ7yRZoGw"},
 }
 
 func updateHome(root string, tpl *template.Template, all []*edition, ext []*external) error {
@@ -36,7 +47,7 @@ func updateHome(root string, tpl *template.Template, all []*edition, ext []*exte
 	}
 	var cards []card
 	for _, e := range top {
-		cards = append(cards, card{e.Path, badgeOf(e), e.DateBR, e.Date, firstNonEmpty(e.HomeTitle, e.Title), firstNonEmpty(e.HomeSummary, e.Summary, e.Subtitle), first(orTags(e.HomeTags, e.Tags), 2), false})
+		cards = append(cards, card{e.Path, badgeOf(e), e.DateBR, e.Date, firstNonEmpty(e.HomeTitle, e.Title), firstNonEmpty(e.HomeSummary, e.Summary, e.Subtitle), first(orTags(e.HomeTags, e.Tags), 2), false, e.Img})
 	}
 	_ = ext
 	var buf bytes.Buffer
