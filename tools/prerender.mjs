@@ -37,7 +37,7 @@ for (const [slug, org] of Object.entries(cases)) {
   });
   const url = `${SITE}/cases/${slug}`;
   const title = data.title && !/^Case \|/.test(data.title) ? data.title : `${org} | Case de Adriana Nogueira`;
-  const desc = data.desc || `Case ${org}: estratégia, conteúdo e resultados de Adriana Nogueira, especialista em comunicação e marketing financeiro (CEA ANBIMA).`;
+  const desc = data.desc || `Case ${org}: estratégia, conteúdo e resultados de Adriana Nogueira, especialista em comunicação e marketing (CEA ANBIMA).`;
   const ld = {
     '@context': 'https://schema.org', '@type': 'CreativeWork', name: title, headline: data.h1 || org,
     description: desc, url, inLanguage: 'pt-BR',
