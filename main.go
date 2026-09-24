@@ -182,7 +182,7 @@ func buildCSP(hashes map[string]bool) string {
 		"style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
 		"font-src 'self' https://fonts.gstatic.com data:",
 		"img-src 'self' data: https:",
-		"frame-src 'self' https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com",
+		"frame-src 'self' https://tally.so https://www.youtube.com https://www.youtube-nocookie.com https://player.vimeo.com",
 		"media-src 'self' https:",
 		"connect-src 'self'",
 		"form-action 'self'",
