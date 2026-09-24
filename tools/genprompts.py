@@ -34,7 +34,8 @@ CSS = BASE_CSS + """
 .bp-stats{display:flex;flex-wrap:wrap;gap:10px;margin:18px 0 6px}.bp-stats span{border:1px solid var(--linha);border-radius:999px;padding:6px 14px;font-size:13.5px;color:var(--champagne)}.bp-stats b{color:var(--dourado)}
 .gate{background:linear-gradient(160deg,#0e0b07,#000);border:1px solid var(--dourado);border-radius:18px;padding:22px}
 .gate h2{font-size:22px;margin-bottom:6px}.gate p.s{font-size:14px;color:var(--cinza);margin-bottom:10px}
-.gate iframe{display:block;width:100%;min-height:430px;border:0;background:transparent}
+.gate iframe{display:block;width:100%;min-height:520px;border:0;background:transparent}
+.gate-tally{background:#FDFBF7;border-radius:12px;padding:6px;margin-top:6px}
 .gate .nota{font-size:12.5px;color:var(--cinza);line-height:1.5;margin-top:8px}.gate .nota a{color:var(--dourado);text-decoration:underline}
 .bp-car{position:relative}
 .bp-car-nav{display:flex;justify-content:flex-end;align-items:center;gap:10px;margin-bottom:12px}
@@ -48,7 +49,7 @@ CSS = BASE_CSS + """
 .car-seta:hover{transform:translateY(-50%) translateX(3px)}.car-seta[hidden]{display:none}
 .bp-car::after{content:"";position:absolute;right:0;top:54px;bottom:4px;width:70px;background:linear-gradient(90deg,transparent,#000);pointer-events:none;transition:opacity .2s}.bp-car.fim::after{opacity:0}
 .bp-cat{background:#161513;border:1px solid #3a3328;border-radius:14px;padding:16px 18px;display:flex;flex-direction:column}
-.bp-assinar{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:999px;background:var(--dourado);color:#000;font-weight:800;font-size:14.5px;letter-spacing:.02em;text-decoration:none;box-shadow:0 6px 20px rgba(201,169,110,.25);transition:transform .2s,box-shadow .2s,background .2s}.bp-assinar svg{width:18px;height:18px;flex:none}.bp-assinar:hover,.bp-assinar:focus-visible{background:#FDFBF7;transform:translateY(-2px);box-shadow:0 10px 28px rgba(201,169,110,.4)}.bp-cat small{margin-bottom:14px}.bp-cat{transition:border-color .2s,transform .2s}.bp-cat:hover{border-color:var(--dourado);transform:translateY(-3px)}
+.bp-assinar{margin-top:auto;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px 16px;border-radius:999px;background:var(--dourado);color:#000;font-weight:800;font-size:14.5px;letter-spacing:.02em;text-decoration:none;box-shadow:0 6px 20px rgba(201,169,110,.25);transition:transform .2s,box-shadow .2s,background .2s}.bp-assinar svg{width:18px;height:18px;flex:none}button.bp-assinar{border:0;cursor:pointer;font-family:inherit;width:100%}html.bp-ok .bp-assinar{display:none}.bp-assinar:hover,.bp-assinar:focus-visible{background:#FDFBF7;transform:translateY(-2px);box-shadow:0 10px 28px rgba(201,169,110,.4)}.bp-cat small{margin-bottom:14px}.bp-cat{transition:border-color .2s,transform .2s}.bp-cat:hover{border-color:var(--dourado);transform:translateY(-3px)}
 .bp-venda{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px 24px;margin:0 0 18px;padding:18px 22px;border:1px solid var(--dourado);border-radius:14px;background:linear-gradient(120deg,#1c1812,#0c0c0c)}.bp-venda p{margin:0;color:var(--champagne);font-size:16px;line-height:1.5;flex:1 1 420px;max-width:600px}.bp-venda p b{color:var(--dourado)}.bp-venda .bp-assinar{margin:0;padding:13px 22px}
 .bp-cat h3{font-size:16px;color:#FFFFFF;margin-bottom:4px}.bp-cat p{font-size:14px;color:var(--platinum)}.bp-cat small{display:block;margin-top:8px;color:var(--dourado);font-weight:700;font-size:12px;letter-spacing:.08em;text-transform:uppercase}
 .bp-cat ul{list-style:none;margin-top:8px}.bp-cat li{font-size:13.5px;color:var(--champagne);padding:3px 0 3px 16px;position:relative}.bp-cat li::before{content:"🔒";position:absolute;left:0;font-size:10px;top:6px}
@@ -62,6 +63,7 @@ html.bp-ok .bp-cat li::before{content:"✓";color:var(--dourado);font-size:12px;
 .pc{background:var(--card);border:1px solid var(--linha);border-radius:14px;padding:18px 20px;margin-bottom:12px}
 .pc header{display:flex;justify-content:space-between;gap:12px;align-items:flex-start;padding:0;border:0;background:none}
 .pc h3{font-size:17px;color:var(--champagne)}.pc .cat{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dourado);font-weight:700;margin-bottom:4px}
+.pc .io{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 0 12px}.pc .io-b{border:1px solid #3a3328;border-radius:10px;padding:12px 14px;background:#161513}.pc .io-t{font-size:11.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--dourado);font-weight:700;margin-bottom:6px}.pc .io-b p,.pc .io-b li{font-size:14px;color:var(--champagne);line-height:1.55}.pc .io-b ul{margin:0;padding-left:18px}@media(max-width:700px){.pc .io{grid-template-columns:1fr}}
 .pc .obj{font-size:14px;color:var(--cinza);margin:4px 0 10px}
 .pc pre{white-space:pre-wrap;word-wrap:break-word;background:#000;border:1px solid var(--linha);border-radius:10px;padding:14px 16px;font:14px/1.6 'Open Sans',system-ui,sans-serif;color:var(--platinum)}
 .pc .copiar{flex-shrink:0;border:1px solid var(--dourado);background:transparent;color:var(--dourado);border-radius:999px;padding:7px 14px;font:inherit;font-size:13px;font-weight:700;cursor:pointer}
@@ -92,7 +94,7 @@ cat_cards = "".join(
     f'<div class="bp-cat"><h3>{e(c["nome"])}</h3><p>{e(c["descricao"])}</p><ul>'
     + "".join(f"<li>{e(p['titulo'])}</li>" for p in c["prompts"])
     + f'</ul><small>{len(c["prompts"])} prompts</small>'
-    + '<a class="bp-assinar" href="https://wa.me/qr/2XEF52R64MEEF1" target="_blank" rel="noopener" data-evt="whatsapp_assinar" aria-label="Quero assinar: falar no WhatsApp sobre ' + e(c["nome"]) + '"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></svg>Quero assinar</a></div>\n'
+    + '<button type="button" class="bp-assinar" data-abrir-gate aria-label="Desbloquear os prompts de ' + e(c["nome"]) + '">Desbloquear estes prompts →</button></div>\n'
     for c in cats)
 
 iframe_src = f"https://tally.so/embed/{form_id}?alignLeft=1&amp;hideTitle=1&amp;dynamicHeight=1&amp;origem=banco-de-prompts"
@@ -118,7 +120,7 @@ JS = r"""(function(){
     window.addEventListener('resize',upd);upd();
   }
 var h=document.documentElement,dlg=document.getElementById('gate'),carregado=false,cards=[],cat='';
-function abrir(){if(h.classList.contains('bp-ok')||!dlg)return;if(dlg.showModal){if(!dlg.open)dlg.showModal();}else dlg.setAttribute('open','');var f=dlg.querySelector('input[name=nome]');if(f)setTimeout(function(){f.focus();},50);}
+function abrir(){if(h.classList.contains('bp-ok')||!dlg)return;if(dlg.showModal){if(!dlg.open)dlg.showModal();}else dlg.setAttribute('open','');}
 function fechar(){if(!dlg)return;if(dlg.close&&dlg.open)dlg.close();else dlg.removeAttribute('open');}
 function ok(){h.classList.add('bp-ok');try{localStorage.setItem('bp_ok','1');}catch(e){}fechar();carregar(true);}
 try{if(localStorage.getItem('bp_ok')==='1')h.classList.add('bp-ok');}catch(e){}
@@ -133,7 +135,7 @@ function norm(s){return (s||'').normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerC
 function filtrar(){var t=norm(q.value.trim()),n=0;cards.forEach(function(c){var v=(!cat||c.getAttribute('data-cat')===cat)&&(!t||norm(c.textContent).indexOf(t)>=0);c.hidden=!v;if(v)n++;});st.textContent=n+(n===1?' prompt':' prompts')+(t?' para “'+q.value.trim()+'”':'')+'.';}
 function render(d){var n=0;d.categorias.forEach(function(c){var b=el('button',null,c.nome);b.type='button';b.setAttribute('aria-pressed','false');b.setAttribute('data-cat',c.id);bar.insertBefore(b,q.previousElementSibling);
  c.prompts.forEach(function(p){n++;var a=el('article','pc');a.setAttribute('data-cat',c.id);var hd=el('header'),dv=el('div'),k=el('p','cat',c.nome),m=el('span','met',p.metodo);k.appendChild(m);var t=el('h3',null,p.titulo);t.id='p'+n+'-t';a.setAttribute('aria-labelledby',t.id);dv.appendChild(k);dv.appendChild(t);
- var bt=el('button','copiar','Copiar prompt');bt.type='button';bt.setAttribute('data-alvo','p'+n+'-p');hd.appendChild(dv);hd.appendChild(bt);a.appendChild(hd);a.appendChild(el('p','obj',p.objetivo));var pre=el('pre',null,texto(p,d.regras));pre.id='p'+n+'-p';a.appendChild(pre);lista.appendChild(a);cards.push(a);});});
+ var bt=el('button','copiar','Copiar prompt');bt.type='button';bt.setAttribute('data-alvo','p'+n+'-p');hd.appendChild(dv);hd.appendChild(bt);a.appendChild(hd);a.appendChild(el('p','obj',p.objetivo));var io=el('div','io'),en=el('div','io-b'),sa=el('div','io-b');en.appendChild(el('p','io-t','Entrada · você preenche'));var ul=el('ul');p.contexto.forEach(function(x){ul.appendChild(el('li',null,x));});en.appendChild(ul);sa.appendChild(el('p','io-t','Saída · você recebe'));sa.appendChild(el('p',null,p.entrega));io.appendChild(en);io.appendChild(sa);a.appendChild(io);var pre=el('pre',null,texto(p,d.regras));pre.id='p'+n+'-p';a.appendChild(pre);lista.appendChild(a);cards.push(a);});});
  st.textContent=n+' prompts.';}
 function carregar(foco){if(carregado||!h.classList.contains('bp-ok'))return;carregado=true;st.textContent='Carregando a biblioteca…';
  fetch('/banco-prompts.json',{credentials:'same-origin'}).then(function(r){return r.json();}).then(function(d){render(d);if(foco){var l=document.getElementById('biblioteca');if(l){l.scrollIntoView({behavior:'smooth'});var tt=document.getElementById('lib-t');if(tt)tt.focus();}}})
@@ -188,7 +190,6 @@ page = f"""<!doctype html>
 <section aria-labelledby="h-cats"><div class="wrap">
   <h2 id="h-cats">O que você <em>encontra aqui</em></h2>
   <div class="rule"></div>
-  <div class="bp-venda"><p><b>Quer aplicar os prompts ao seu negócio com orientação especializada?</b> Fale comigo no WhatsApp e conheça as condições da assinatura.</p><a class="bp-assinar" href="https://wa.me/qr/2XEF52R64MEEF1" target="_blank" rel="noopener" data-evt="whatsapp_assinar"><svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm0 18.2c-1.5 0-3-.4-4.3-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.3-.4.3-.4.8-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2c0 1.3.9 2.5 1 2.7.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.2-.2-.5-.3z"/></svg>Quero assinar</a></div>
   <div class="bp-car" id="bp-car">
     <div class="bp-car-nav"><span id="car-pos" aria-live="polite"></span><button type="button" class="car-btn" data-car="-1" aria-label="Categorias anteriores" disabled>←</button><button type="button" class="car-btn" data-car="1" aria-label="Próximas categorias">→</button></div>
     <div class="bp-cats" id="bp-cats" tabindex="0" role="region" aria-label="Categorias do Banco de Prompts, deslize para a direita">
@@ -212,8 +213,8 @@ page = f"""<!doctype html>
   <div class="gate">
     <button type="button" class="gate-x" data-fechar-gate aria-label="Fechar">×</button>
     <h2 id="gate-t">Acesso gratuito ao Banco de Prompts</h2>
-    <p class="s">Nome, empresa, telefone e e-mail. Leva menos de um minuto e a biblioteca abre na hora.</p>
-    {leadforms.prompts()}
+    <p class="s">Preencha o formulário abaixo. Assim que enviar, a biblioteca abre na hora.</p>
+    <div class="gate-tally"><iframe src="{iframe_src}" title="Formulário de acesso ao Banco de Prompts" width="100%" height="520" loading="eager"></iframe></div>
     <p class="nota">Seus dados liberam o acesso e ficam guardados com segurança. <a href="/politica-de-privacidade">Política de Privacidade</a></p>
   </div>
 </dialog>
