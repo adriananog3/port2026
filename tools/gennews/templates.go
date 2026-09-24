@@ -144,7 +144,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
 {{define "i-x"}}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></svg>{{end}}
 {{define "i-share"}}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.1a2.9 2.9 0 0 0-2 .8l-7.1-4.1a3.3 3.3 0 0 0 0-1.6l7-4.1A3 3 0 1 0 15 5a3 3 0 0 0 .1.8l-7 4.1a3 3 0 1 0 0 4.3l7.1 4.2a2.8 2.8 0 0 0-.1.7 2.9 2.9 0 1 0 2.9-3z"/></svg>{{end}}
 {{define "i-in"}}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zm7 0h3.8v1.6h.1a4.2 4.2 0 0 1 3.8-2c4 0 4.8 2.6 4.8 6.1V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg>{{end}}
-{{define "cover"}}<div class="cover cv{{.Cover}}" aria-hidden="true">{{if .Img}}<img src="{{.Img}}" alt="" loading="lazy" decoding="async">{{end}}<b{{if .Label}} class="lbl"{{end}}>{{short .}}</b>{{if not .Label}}<span>Café com Marketing</span>{{end}}</div>{{end}}
+{{define "cover"}}<div class="cover cv{{.Cover}}" aria-hidden="true">{{if .Img}}<img src="{{.Img}}" alt="" loading="lazy" decoding="async">{{end}}<b{{if .Label}} class="lbl"{{end}}>{{short .}}</b>{{if not .Label}}<span>Exponencial Future</span>{{end}}</div>{{end}}
 {{define "top"}}<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="top"><div class="in"><a class="brand" href="/">Adriana Nogueira<small>PORTFÓLIO</small></a>
 <nav aria-label="Navegação"><a href="/">Início</a><a href="/#portfolio">Cases</a><a href="/newsletter">Newsletter</a><a href="/prompts">Banco de Prompts</a></nav></div></header>{{end}}
@@ -186,7 +186,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
 </body></html>{{end}}
 
 {{define "edition"}}{{template "head"}}
-<title>{{.E.Title}} | Newsletter Café com Marketing</title>
+<title>{{.E.Title}} | Newsletter Exponencial Future</title>
 <meta name="description" content="{{if .E.Subtitle}}{{.E.Subtitle}}{{else}}{{.E.Summary}}{{end}}">
 <link rel="canonical" href="{{.E.URL}}">
 {{if not .E.Full}}<meta name="robots" content="noindex, follow">{{end}}
@@ -197,7 +197,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
 <script type="application/ld+json">{{json .LD}}</script>
 </head><body>{{template "top"}}
 <section class="hero" aria-label="Apresentação da edição"><div class="in">
-<p class="eyebrow">Newsletter Café com Marketing · {{if .E.Label}}{{.E.Label}}{{else}}Edição #{{.E.Number}}{{end}}</p>
+<p class="eyebrow">Newsletter Exponencial Future · {{if .E.Label}}{{.E.Label}}{{else}}Edição #{{.E.Number}}{{end}}</p>
 <h1>{{.E.Title}}</h1>
 {{if .E.Subtitle}}<p class="sub">{{.E.Subtitle}}</p>{{end}}
 <div class="meta">{{if .E.DateBR}}<span>{{.E.DateBR}} ·</span>{{end}}{{if .E.ReadTime}}<span>{{.E.ReadTime}} min de leitura ·</span>{{end}}<span>Por Adriana Nogueira</span></div>
@@ -221,7 +221,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
 {{if .Quote.Text}}<blockquote class="quote"><p>“{{.Quote.Text}}”</p><cite>{{.Quote.Author}}</cite></blockquote>{{end}}
 {{else}}<article class="body">{{$.E.BodyHTML}}</article>{{end}}{{end}}
 <section class="cta"><h2>Receba as próximas edições</h2><p>Marketing, IA, branding e regulação do mercado financeiro, com fonte e sem ruído.</p>
-<div class="cta-form"><form class="nl-form" data-tipo="newsletter" data-origem="newsletter-texto" data-fallback="fb-newsletter-texto" novalidate><label class="nl-field"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="sr-only">Seu e-mail</span><input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" required data-nome="seu e-mail"></label><input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><button type="submit" class="nl-go">Quero receber <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><label class="nl-ok"><input type="checkbox" name="consentimento" required> <span>Quero receber a Newsletter Café com Marketing por e-mail. Posso cancelar quando quiser (LGPD).</span></label><p class="nl-st" role="status" aria-live="polite"></p><p class="nl-fb" id="fb-newsletter-texto" hidden><a href="/?origem=newsletter-{{if .E.Slug}}{{.E.Slug}}{{else}}edicao-{{.E.Number}}{{end}}#form-contato">Concluir a inscrição pelo formulário →</a></p></form></div></section>
+<div class="cta-form"><form class="nl-form" data-tipo="newsletter" data-origem="newsletter-texto" data-fallback="fb-newsletter-texto" novalidate><label class="nl-field"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="sr-only">Seu e-mail</span><input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" required data-nome="seu e-mail"></label><input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><button type="submit" class="nl-go">Quero receber <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><label class="nl-ok"><input type="checkbox" name="consentimento" required> <span>Quero receber a Newsletter Exponencial Future por e-mail. Posso cancelar quando quiser (LGPD).</span></label><p class="nl-st" role="status" aria-live="polite"></p><p class="nl-fb" id="fb-newsletter-texto" hidden><a href="/?origem=newsletter-{{if .E.Slug}}{{.E.Slug}}{{else}}edicao-{{.E.Number}}{{end}}#form-contato">Concluir a inscrição pelo formulário →</a></p></form></div></section>
 <a class="back" href="/newsletter">← Todas as edições</a>
 </main>
 <aside class="aside" aria-label="Matérias relacionadas"><h2>Matérias relacionadas</h2>
@@ -238,14 +238,14 @@ else{window.prompt('Copie o link:',u);}});})();
 {{template "foot"}}{{end}}
 
 {{define "index"}}{{template "head"}}
-<title>Newsletter Café com Marketing | Adriana Nogueira</title>
-<meta name="description" content="Todas as edições da Newsletter Café com Marketing: marketing, IA, branding, regulação e mercado de capitais, por Adriana Nogueira (CEA ANBIMA).">
+<title>Newsletter Exponencial Future | Adriana Nogueira</title>
+<meta name="description" content="Todas as edições da Newsletter Exponencial Future: marketing, IA, branding, regulação e mercado de capitais, por Adriana Nogueira (CEA ANBIMA).">
 <link rel="canonical" href="{{.Site}}/newsletter">
-<meta property="og:type" content="website"><meta property="og:title" content="Newsletter Café com Marketing"><meta property="og:url" content="{{.Site}}/newsletter"><meta property="og:image" content="{{.Site}}/assets/adriana-nogueira-og.jpg">
+<meta property="og:type" content="website"><meta property="og:title" content="Newsletter Exponencial Future"><meta property="og:url" content="{{.Site}}/newsletter"><meta property="og:image" content="{{.Site}}/assets/adriana-nogueira-og.jpg">
 </head><body>{{template "top"}}
 <main class="mag" id="conteudo">
-<h1 class="skip">Newsletter Café com Marketing</h1>
-<p class="eyebrow" style="color:#7A5F2C;margin:0 0 14px">Newsletter Café com Marketing · marketing, IA, branding e regulação do mercado financeiro</p>
+<h1 class="skip">Newsletter Exponencial Future</h1>
+<p class="eyebrow" style="color:#7A5F2C;margin:0 0 14px">Newsletter Exponencial Future · marketing, IA, branding e regulação do mercado financeiro</p>
 <div class="mag-top">
 {{with .Feat}}<a class="feat" href="{{.Path}}">{{template "cover" .}}<div><p class="cat">{{if .Cat}}{{.Cat}}{{else}}{{badge .}}{{end}}</p><h2 class="slab">{{.Title}}</h2><p>{{if .HomeSummary}}{{.HomeSummary}}{{else if .Summary}}{{.Summary}}{{else}}{{.Subtitle}}{{end}}</p></div></a>{{end}}
 <div class="side">{{range .Side}}<a class="mini" href="{{.Path}}">{{template "cover" .}}<p class="cat" style="margin-top:10px">{{if .Cat}}{{.Cat}}{{else}}{{badge .}}{{end}}</p><h3 class="slab">{{.Title}}</h3></a>{{end}}</div>
@@ -254,7 +254,7 @@ else{window.prompt('Copie o link:',u);}});})();
 <div class="rows">{{range .All}}<a class="row" href="{{.Path}}">{{template "cover" .}}<div><p class="cat">{{badge .}}{{if .Cat}} · {{.Cat}}{{end}}</p><h3 class="slab">{{.Title}}</h3><p>{{if .HomeSummary}}{{.HomeSummary}}{{else if .Summary}}{{.Summary}}{{else}}{{.Subtitle}}{{end}}</p>{{if .DateBR}}<span class="d">{{.DateBR}}{{if .ReadTime}} · {{.ReadTime}} min de leitura{{end}}</span>{{end}}</div></a>{{end}}</div>
 {{if .Ext}}<h2 class="stitle slab">Café com Caos no LinkedIn</h2>
 <div class="rows">{{range .Ext}}<a class="row" href="{{.URL}}" target="_blank" rel="noopener"><div class="cover cv3" aria-hidden="true"><b style="font-size:26px">☕</b><span>LinkedIn</span></div><div><p class="cat">{{.Label}}</p><h3 class="slab">{{.Title}}</h3><p>{{.Summary}}</p><span class="d">{{.DateBR}} · Leia o texto completo ↗</span></div></a>{{end}}</div>{{end}}
-<div class="subs"><div><h2 class="slab">Receba as próximas edições</h2><p>Uma leitura objetiva, com fonte, direto no seu e-mail.</p><div class="cta-form"><form class="nl-form nl-dark" data-tipo="newsletter" data-origem="newsletter-pagina" data-fallback="fb-newsletter-pagina" novalidate><label class="nl-field"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="sr-only">Seu e-mail</span><input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" required data-nome="seu e-mail"></label><input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><button type="submit" class="nl-go">Quero receber <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><label class="nl-ok"><input type="checkbox" name="consentimento" required> <span>Quero receber a Newsletter Café com Marketing por e-mail. Posso cancelar quando quiser (LGPD).</span></label><p class="nl-st" role="status" aria-live="polite"></p><p class="nl-fb" id="fb-newsletter-pagina" hidden><a href="/?origem=newsletter-pagina#form-contato">Concluir a inscrição pelo formulário →</a></p></form></div></div>
+<div class="subs"><div><h2 class="slab">Receba as próximas edições</h2><p>Uma leitura objetiva, com fonte, direto no seu e-mail.</p><div class="cta-form"><form class="nl-form nl-dark" data-tipo="newsletter" data-origem="newsletter-pagina" data-fallback="fb-newsletter-pagina" novalidate><label class="nl-field"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="sr-only">Seu e-mail</span><input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" required data-nome="seu e-mail"></label><input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><button type="submit" class="nl-go">Quero receber <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><label class="nl-ok"><input type="checkbox" name="consentimento" required> <span>Quero receber a Newsletter Exponencial Future por e-mail. Posso cancelar quando quiser (LGPD).</span></label><p class="nl-st" role="status" aria-live="polite"></p><p class="nl-fb" id="fb-newsletter-pagina" hidden><a href="/?origem=newsletter-pagina#form-contato">Concluir a inscrição pelo formulário →</a></p></form></div></div>
 <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" style="background:#0A66C2;color:#fff;box-shadow:none" href="{{.LinkedIn}}" target="_blank" rel="noopener">Seguir no LinkedIn</a></div></div>
 <a class="back" href="/">← Voltar ao início</a>
 </main>
