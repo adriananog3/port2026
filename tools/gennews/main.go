@@ -105,6 +105,10 @@ type edition struct {
 	DateBR   string
 	URL      string
 	Path     string
+	Img      string
+	ImgAlt   string
+	ImgBy    string
+	ImgPage  string
 }
 
 type external struct {
@@ -217,6 +221,11 @@ func main() {
 		a.Path = "/newsletter/" + a.Slug
 	}
 	all = append(all, arts.Articles...)
+	for _, e := range all {
+		if c, ok := coverImages[e.Path]; ok {
+			e.Img, e.ImgAlt, e.ImgBy, e.ImgPage = c.URL, c.Alt, c.Credit, c.Page
+		}
+	}
 	for _, e := range all {
 		e.DateBR = dateBR(e.Date)
 		e.URL = site + e.Path
