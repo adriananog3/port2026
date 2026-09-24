@@ -117,6 +117,25 @@ footer{background:#000;color:#BDBDBD;text-align:center;font-size:14px;padding:26
 h1,h2,h3,h4,.brand,.brand-txt,.slab,.cover b,.resumo summary,button,.btn,.cta,.cta a,.pbtn,.news-btn,.entry-submit{font-family:'Archivo','Open Sans',system-ui,sans-serif!important}
 h1 em,h2 em,h3 em,.brand-txt i,.brand small,blockquote p,.quote p{font-family:'Cormorant Garamond',Georgia,serif!important;font-style:italic;font-weight:600}
 h1 em,h2 em{font-size:1.1em;letter-spacing:0}
+.nl-form{display:flex;flex-direction:column;gap:10px;text-align:left}
+.nl-field{display:flex;align-items:center;gap:12px;background:#fff;border:1px solid #cfc8bb;border-radius:4px;padding:0 14px;min-height:54px}
+.nl-field:focus-within{border-color:#7A5C22;box-shadow:0 0 0 2px rgba(201,169,110,.45)}
+.nl-field svg{width:22px;height:22px;flex-shrink:0;color:#7A5C22}
+.nl-field input{flex:1;min-width:0;border:0;background:transparent;font:inherit;font-size:16px;color:#141414;padding:14px 0;outline:none}
+.nl-field input::placeholder{color:#6b645b}
+.nl-form .nl-go{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;min-height:54px;border:0;border-radius:4px;background:var(--dourado);color:#000;font-weight:800;font-size:17px;cursor:pointer}
+.nl-form .nl-go:hover,.nl-form .nl-go:focus-visible{background:#b8965b}.nl-form .nl-go:disabled{opacity:.6;cursor:default}
+.nl-form .nl-go svg{width:22px;height:22px}
+.nl-ok{display:flex;gap:8px;align-items:flex-start;font-size:13px;line-height:1.45;color:#6b645b}
+.nl-ok input{margin-top:3px;accent-color:#7A5C22;width:16px;height:16px;flex-shrink:0}
+.nl-st{min-height:18px;font-size:14px;color:#3d6b2a;font-weight:600}.nl-st.erro{color:#a1261b}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+.nl-dark .nl-field{background:#000;border-color:var(--linha)}.nl-dark .nl-field input{color:var(--champagne)}.nl-dark .nl-field input::placeholder{color:#8a8a8a}.nl-dark .nl-field svg{color:var(--dourado)}
+.nl-dark .nl-ok{color:var(--cinza)}.nl-dark .nl-ok input{accent-color:var(--dourado)}.nl-dark .nl-st{color:var(--dourado)}.nl-dark .nl-st.erro{color:#ff8a7a}
+.nl-dark .nl-field:focus-within{border-color:var(--dourado)}
+.nl-fb{font-size:14px}.nl-fb a{color:#7A5C22;font-weight:700;text-decoration:underline}.nl-dark .nl-fb a{color:var(--dourado)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
+.cta-form{max-width:460px;margin:16px auto 0}.subs .cta-form{margin:16px 0 0}
 </style>{{end}}
 
 
@@ -128,9 +147,34 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
 {{define "cover"}}<div class="cover cv{{.Cover}}" aria-hidden="true">{{if .Img}}<img src="{{.Img}}" alt="" loading="lazy" decoding="async">{{end}}<b{{if .Label}} class="lbl"{{end}}>{{short .}}</b>{{if not .Label}}<span>Café com Marketing</span>{{end}}</div>{{end}}
 {{define "top"}}<a class="skip" href="#conteudo">Pular para o conteúdo</a>
 <header class="top"><div class="in"><a class="brand" href="/">Adriana Nogueira<small>PORTFÓLIO</small></a>
-<nav aria-label="Navegação"><a href="/">Início</a><a href="/#portfolio">Cases</a><a href="/newsletter">Newsletter</a></nav></div></header>{{end}}
+<nav aria-label="Navegação"><a href="/">Início</a><a href="/#portfolio">Cases</a><a href="/newsletter">Newsletter</a><a href="/prompts">Banco de Prompts</a></nav></div></header>{{end}}
 
 {{define "foot"}}<footer><p class="legal"><strong>Aviso Legal e Mídia Incorporada:</strong> este site representa meu portfólio de carreira e meu atual projeto pessoal. Marcas, logotipos e materiais exibidos são propriedade intelectual das respectivas empresas e instituições; a reprodução aqui tem caráter exclusivamente demonstrativo e profissional. Este site descreve serviços de preparação de documentos, materiais, comunicação e estratégia e não constitui recomendação de investimento, consultoria jurídica, contábil ou de valores mobiliários. Conteúdo produzido sob supervisão humana, com fact-checking e conformidade LGPD + EU AI Act. <a href="/faq#aviso-legal">Aviso legal completo</a> · <a href="/politica-de-privacidade">Política de Privacidade</a></p><p>© Adriana Nogueira · Comunicação &amp; Marketing Financeiro · CEA · GAIPC™ · <a href="/politica-de-privacidade">Privacidade</a> · <a href="/faq">FAQ</a></p></footer>
+<script>
+(function(){
+  /* Formulários de cadastro direto (newsletter e Banco de Prompts): envia para /api/lead (Brevo).
+     Se o Brevo não estiver configurado, mostra o formulário alternativo (Tally) sem perder o contato. */
+  function st(f,msg,erro){var s=f.querySelector('.nl-st');if(s){s.textContent=msg;s.classList.toggle('erro',!!erro);}}
+  document.addEventListener('submit',function(e){
+    var f=e.target.closest('form.nl-form');if(!f)return;e.preventDefault();
+    var dados={tipo:f.getAttribute('data-tipo')||'newsletter',origem:f.getAttribute('data-origem')||''};
+    var campos=f.querySelectorAll('input[name]');
+    for(var i=0;i<campos.length;i++){var c=campos[i];dados[c.name]=c.type==='checkbox'?c.checked:c.value.trim();}
+    for(var j=0;j<campos.length;j++){var x=campos[j];if(x.required&&(x.type==='checkbox'?!x.checked:!x.value.trim())){x.focus();st(f,x.type==='checkbox'?'Marque a caixa de consentimento para continuar.':'Preencha '+(x.getAttribute('data-nome')||'este campo')+'.',true);return;}}
+    var b=f.querySelector('button[type=submit]');if(b)b.disabled=true;st(f,'Enviando…');
+    fetch('/api/lead',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(dados)})
+      .then(function(r){return r.json().catch(function(){return {ok:false,fallback:true};});})
+      .then(function(j){
+        if(b)b.disabled=false;
+        if(j&&j.ok){st(f,j.mensagem||'Pronto!');f.reset();f.classList.add('nl-feito');f.dispatchEvent(new CustomEvent('lead:ok',{bubbles:true}));return;}
+        st(f,(j&&j.mensagem)||'Não foi possível concluir agora.',true);
+        if(j&&j.fallback){var fb=document.getElementById(f.getAttribute('data-fallback')||'');if(fb){fb.hidden=false;var ifr=fb.querySelector('iframe[data-src]');if(ifr&&!ifr.src)ifr.src=ifr.getAttribute('data-src');fb.scrollIntoView({behavior:'smooth',block:'nearest'});}}
+        if(j&&j.campo){var el=f.querySelector('[name='+j.campo+']');if(el)el.focus();}
+      })
+      .catch(function(){if(b)b.disabled=false;st(f,'Sem conexão agora. Tente de novo em instantes.',true);});
+  });
+})();
+</script>
 </body></html>{{end}}
 
 {{define "edition"}}{{template "head"}}
@@ -169,7 +213,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
 {{if .Quote.Text}}<blockquote class="quote"><p>“{{.Quote.Text}}”</p><cite>{{.Quote.Author}}</cite></blockquote>{{end}}
 {{else}}<article class="body">{{$.E.BodyHTML}}</article>{{end}}{{end}}
 <section class="cta"><h2>Receba as próximas edições</h2><p>Marketing, IA, branding e regulação do mercado financeiro, com fonte e sem ruído.</p>
-<a class="btn" href="/?origem=newsletter-{{if .E.Slug}}{{.E.Slug}}{{else}}edicao-{{.E.Number}}{{end}}#form-contato">Assinar a Newsletter Café com Marketing</a></section>
+<div class="cta-form"><form class="nl-form" data-tipo="newsletter" data-origem="newsletter-texto" data-fallback="fb-newsletter-texto" novalidate><label class="nl-field"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="sr-only">Seu e-mail</span><input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" required data-nome="seu e-mail"></label><input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><button type="submit" class="nl-go">Quero receber <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><label class="nl-ok"><input type="checkbox" name="consentimento" required> <span>Quero receber a Newsletter Café com Marketing por e-mail. Posso cancelar quando quiser (LGPD).</span></label><p class="nl-st" role="status" aria-live="polite"></p><p class="nl-fb" id="fb-newsletter-texto" hidden><a href="/?origem=newsletter-{{if .E.Slug}}{{.E.Slug}}{{else}}edicao-{{.E.Number}}{{end}}#form-contato">Concluir a inscrição pelo formulário →</a></p></form></div></section>
 <a class="back" href="/newsletter">← Todas as edições</a>
 </main>
 <aside class="aside" aria-label="Matérias relacionadas"><h2>Matérias relacionadas</h2>
@@ -202,8 +246,8 @@ else{window.prompt('Copie o link:',u);}});})();
 <div class="rows">{{range .All}}<a class="row" href="{{.Path}}">{{template "cover" .}}<div><p class="cat">{{badge .}}{{if .Cat}} · {{.Cat}}{{end}}</p><h3 class="slab">{{.Title}}</h3><p>{{if .HomeSummary}}{{.HomeSummary}}{{else if .Summary}}{{.Summary}}{{else}}{{.Subtitle}}{{end}}</p>{{if .DateBR}}<span class="d">{{.DateBR}}{{if .ReadTime}} · {{.ReadTime}} min de leitura{{end}}</span>{{end}}</div></a>{{end}}</div>
 {{if .Ext}}<h2 class="stitle slab">Café com Caos no LinkedIn</h2>
 <div class="rows">{{range .Ext}}<a class="row" href="{{.URL}}" target="_blank" rel="noopener"><div class="cover cv3" aria-hidden="true"><b style="font-size:26px">☕</b><span>LinkedIn</span></div><div><p class="cat">{{.Label}}</p><h3 class="slab">{{.Title}}</h3><p>{{.Summary}}</p><span class="d">{{.DateBR}} · Leia o texto completo ↗</span></div></a>{{end}}</div>{{end}}
-<div class="subs"><div><h2 class="slab">Receba as próximas edições</h2><p>Uma leitura objetiva, com fonte, direto no seu e-mail.</p></div>
-<div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="/?origem=newsletter-pagina#form-contato">Assinar a newsletter</a><a class="btn" style="background:#0A66C2;color:#fff;box-shadow:none" href="{{.LinkedIn}}" target="_blank" rel="noopener">Seguir no LinkedIn</a></div></div>
+<div class="subs"><div><h2 class="slab">Receba as próximas edições</h2><p>Uma leitura objetiva, com fonte, direto no seu e-mail.</p><div class="cta-form"><form class="nl-form nl-dark" data-tipo="newsletter" data-origem="newsletter-pagina" data-fallback="fb-newsletter-pagina" novalidate><label class="nl-field"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="sr-only">Seu e-mail</span><input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" required data-nome="seu e-mail"></label><input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><button type="submit" class="nl-go">Quero receber <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><label class="nl-ok"><input type="checkbox" name="consentimento" required> <span>Quero receber a Newsletter Café com Marketing por e-mail. Posso cancelar quando quiser (LGPD).</span></label><p class="nl-st" role="status" aria-live="polite"></p><p class="nl-fb" id="fb-newsletter-pagina" hidden><a href="/?origem=newsletter-pagina#form-contato">Concluir a inscrição pelo formulário →</a></p></form></div></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" style="background:#0A66C2;color:#fff;box-shadow:none" href="{{.LinkedIn}}" target="_blank" rel="noopener">Seguir no LinkedIn</a></div></div>
 <a class="back" href="/">← Voltar ao início</a>
 </main>
 {{template "foot"}}{{end}}
