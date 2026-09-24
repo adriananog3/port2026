@@ -83,7 +83,7 @@ footer{background:#000;color:#BDBDBD;text-align:center;font-size:14px;padding:26
 .rows{display:grid;grid-template-columns:1fr 1fr;gap:18px}
 .row{display:grid;grid-template-columns:200px 1fr;gap:18px;text-decoration:none;color:var(--texto);background:#fff;border:1px solid #E6E1D6;padding:14px;border-radius:4px}
 .row h3{font-size:19px;line-height:1.3;color:#000;margin:2px 0 6px}.row p{font-size:15px;line-height:1.55;margin:0 0 6px;color:#555;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.row .d{font-size:13px;color:#888}
+.row .d{font-size:13px;color:#666}
 .subs{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;background:#000;color:#FDFBF7;padding:26px 28px;border-radius:4px;margin:46px 0 0}
 .subs h2{margin:0;font-size:24px}.subs p{margin:4px 0 0;color:#BDBDBD;font-size:15px}
 /* ---- página da edição ---- */
@@ -140,7 +140,7 @@ footer{background:#000;color:#BDBDBD;text-align:center;font-size:14px;padding:26
 <meta property="og:image" content="{{.Site}}/assets/adriana-nogueira-og.jpg"><meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{{json .LD}}</script>
 </head><body>{{template "top"}}
-<section class="hero"><div class="in">
+<section class="hero" aria-label="Apresentação da edição"><div class="in">
 <p class="eyebrow">Newsletter Café com Marketing · {{if .E.Label}}{{.E.Label}}{{else}}Edição #{{.E.Number}}{{end}}</p>
 <h1>{{.E.Title}}</h1>
 {{if .E.Subtitle}}<p class="sub">{{.E.Subtitle}}</p>{{end}}
@@ -187,8 +187,8 @@ else{window.prompt('Copie o link:',u);}});})();
 <link rel="canonical" href="{{.Site}}/newsletter">
 <meta property="og:type" content="website"><meta property="og:title" content="Newsletter Café com Marketing"><meta property="og:url" content="{{.Site}}/newsletter"><meta property="og:image" content="{{.Site}}/assets/adriana-nogueira-og.jpg">
 </head><body>{{template "top"}}
+<main class="mag" id="conteudo">
 <h1 class="skip">Newsletter Café com Marketing</h1>
-<div class="mag" id="conteudo">
 <p class="eyebrow" style="color:#7A5F2C;margin:0 0 14px">Newsletter Café com Marketing · marketing, IA, branding e regulação do mercado financeiro</p>
 <div class="mag-top">
 {{with .Feat}}<a class="feat" href="{{.Path}}">{{template "cover" .}}<div><p class="cat">{{if .Cat}}{{.Cat}}{{else}}{{badge .}}{{end}}</p><h2 class="slab">{{.Title}}</h2><p>{{if .HomeSummary}}{{.HomeSummary}}{{else if .Summary}}{{.Summary}}{{else}}{{.Subtitle}}{{end}}</p></div></a>{{end}}
@@ -201,7 +201,7 @@ else{window.prompt('Copie o link:',u);}});})();
 <div class="subs"><div><h2 class="slab">Receba as próximas edições</h2><p>Uma leitura objetiva, com fonte, direto no seu e-mail.</p></div>
 <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" href="/?origem=newsletter-pagina#form-contato">Assinar a newsletter</a><a class="btn" style="background:#0A66C2;color:#fff;box-shadow:none" href="{{.LinkedIn}}" target="_blank" rel="noopener">Seguir no LinkedIn</a></div></div>
 <a class="back" href="/">← Voltar ao início</a>
-</div>
+</main>
 {{template "foot"}}{{end}}
 `
 
