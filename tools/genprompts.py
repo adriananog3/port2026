@@ -138,7 +138,7 @@ page = f"""<!doctype html>
 <title>Banco de Prompts gratuito para marketing e copy | Adriana Nogueira</title>
 <meta name="description" content="{total} prompts estruturados em português, com papel, contexto, etapas, formato de entrega e regras de compliance: marca, copy, e-mail, redes, SEO/GEO, mídia paga, mercado financeiro e IA generativa. Acesso gratuito.">
 <link rel="canonical" href="{SITE}/prompts">
-<meta property="og:type" content="website"><meta property="og:title" content="Banco de Prompts gratuito | Adriana Nogueira"><meta property="og:description" content="{total} prompts estruturados para marketing, copy e IA generativa, com compliance desde o início."><meta property="og:url" content="{SITE}/prompts"><meta property="og:image" content="{SITE}/assets/adriana-nogueira-og.jpg"><meta property="og:locale" content="pt_BR">
+<meta property="og:type" content="website"><meta property="og:title" content="Banco de Prompts gratuito | Adriana Nogueira"><meta property="og:description" content="{total} prompts estruturados para marketing, copy e IA generativa, com compliance desde o início."><meta property="og:url" content="{SITE}/prompts"><meta property="og:image" content="{SITE}/assets/adriana-nogueira-og.jpg"><meta property="og:locale" content="pt_BR"><meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#000000">
 <link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="48x48">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
