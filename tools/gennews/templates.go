@@ -245,7 +245,8 @@ else{window.prompt('Copie o link:',u);}});})();
 <title>Newsletter Exponencial Future | Adriana Nogueira</title>
 <meta name="description" content="Todas as edições da Newsletter Exponencial Future: marketing, IA, branding, regulação e mercado de capitais, por Adriana Nogueira (CEA ANBIMA).">
 <link rel="canonical" href="{{.Site}}/newsletter">
-<meta property="og:type" content="website"><meta property="og:title" content="Newsletter Exponencial Future"><meta property="og:url" content="{{.Site}}/newsletter"><meta property="og:image" content="{{.Site}}/assets/adriana-nogueira-og.jpg">
+<meta property="og:type" content="website"><meta property="og:title" content="Newsletter Exponencial Future"><meta property="og:url" content="{{.Site}}/newsletter"><meta property="og:image" content="{{.Site}}/assets/adriana-nogueira-og.jpg"><meta property="og:description" content="Todas as edições da Newsletter Exponencial Future: marketing, IA, branding, regulação e mercado de capitais, por Adriana Nogueira (CEA ANBIMA)."><meta property="og:locale" content="pt_BR"><meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Newsletter Exponencial Future","url":"https://adriana-nogueira.com/newsletter","inLanguage":"pt-BR","description":"Marketing, IA, branding, regulação e mercado de capitais, por Adriana Nogueira (CEA ANBIMA).","author":{"@type":"Person","name":"Adriana Nogueira","url":"https://adriana-nogueira.com/","sameAs":["https://www.linkedin.com/in/adriana-nogueira-cea-marketing3/"]}}</script>
 </head><body>{{template "top"}}
 <main class="mag" id="conteudo">
 <h1 class="skip">Newsletter Exponencial Future</h1>
