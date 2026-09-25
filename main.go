@@ -256,6 +256,17 @@ func (s *site) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		handleTally(w, r)
 		return
 	}
+	if r.URL.Path == "/api/prompts/tally" {
+		handleBPTally(w, r)
+		return
+	}
+	if r.URL.Path == "/banco-prompts.json" && !validBPCookie(r) {
+		w.Header().Set("Cache-Control", "no-store")
+		w.Header().Set("Content-Type", "application/json; charset=utf-8")
+		w.WriteHeader(http.StatusForbidden)
+		w.Write([]byte(`{"ok":false,"mensagem":"Preencha o formulário para liberar o Banco de Prompts."}`))
+		return
+	}
 	if r.Method != http.MethodGet && r.Method != http.MethodHead {
 		w.Header().Set("Allow", "GET, HEAD")
 		http.Error(w, "Método não permitido", http.StatusMethodNotAllowed)
@@ -333,6 +344,9 @@ func (s *site) serve(w http.ResponseWriter, r *http.Request, a *asset, status in
 	h.Set("Vary", "Accept-Encoding")
 	if status == http.StatusOK {
 		h.Set("Cache-Control", a.cacheCtl)
+		if r.URL.Path == "/banco-prompts.json" {
+			h.Set("Cache-Control", "private, no-store")
+		}
 		h.Set("ETag", a.etag)
 		if inm := r.Header.Get("If-None-Match"); inm != "" && strings.Contains(inm, a.etag) {
 			w.WriteHeader(http.StatusNotModified)
