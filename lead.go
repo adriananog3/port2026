@@ -161,6 +161,9 @@ func handleLead(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	slog.Info("lead", "resultado", "cadastrado", "tipo", l.Tipo, "origem", l.Origem)
+	if l.Tipo == "prompts" {
+		issueBPCookie(w)
+	}
 	msg := "Pronto! Você vai receber a próxima edição no seu e-mail."
 	if l.Tipo == "prompts" {
 		msg = "Acesso liberado. Bom proveito!"
