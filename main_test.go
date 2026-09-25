@@ -303,8 +303,8 @@ func TestContato(t *testing.T) {
 	}
 	home := do(s, "GET", canon, "/", nil)
 	b := home.Body.String()
-	// Formulário próprio (cores e fontes da marca); o Tally fica como alternativa em link.
-	for _, must := range []string{`id="form-contato"`, `action="/api/contato"`, `tally.so/r/68GedB`, `id="aviso-legal"`} {
+	// Contato: o Diagnóstico gratuito leva ao briefing em /diagnostico (formulário próprio, via /api/contato).
+	for _, must := range []string{`href="/diagnostico"`, `id="aviso-legal"`} {
 		if !strings.Contains(b, must) {
 			t.Errorf("home sem %s", must)
 		}
