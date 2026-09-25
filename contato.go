@@ -127,7 +127,7 @@ func handleContato(w http.ResponseWriter, r *http.Request) {
 		reply(http.StatusOK, true, "Mensagem enviada. Obrigada!")
 		return
 	}
-	m := contactMsg{Nome: f("nome", 120), Email: f("email", 200), Empresa: f("empresa", 160), Site: f("site", 200), Telefone: f("telefone", 40), Mensagem: f("mensagem", 4000), Origem: origem}
+	m := contactMsg{Nome: f("nome", 120), Email: f("email", 200), Empresa: f("empresa", 160), Site: f("site", 200), Telefone: f("telefone", 40), Mensagem: f("mensagem", 8000), Origem: origem}
 	if m.Nome == "" || m.Email == "" || m.Mensagem == "" {
 		reply(http.StatusBadRequest, false, "Preencha nome, e-mail e mensagem.")
 		return
