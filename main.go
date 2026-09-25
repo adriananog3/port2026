@@ -256,6 +256,10 @@ func (s *site) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		handleTally(w, r)
 		return
 	}
+	if r.URL.Path == "/ir/whatsapp" {
+		handleIrWhatsapp(w, r)
+		return
+	}
 	if r.URL.Path == "/api/prompts/tally" {
 		handleBPTally(w, r)
 		return
