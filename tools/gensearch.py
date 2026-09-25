@@ -81,7 +81,8 @@ for _c in _bp["categorias"]:
 
 # Páginas institucionais
 add("Política de Privacidade e Cookies", "Como seus dados são tratados, com quem são compartilhados e como exercer seus direitos (LGPD).", "/politica-de-privacidade", "Privacidade", "lgpd dados cookies privacidade direitos operadores")
-add("Contato e Diagnóstico gratuito", "Formulário para pedir o diagnóstico gratuito, e-mail, WhatsApp e LinkedIn.", "/#contato", "Contato", "diagnóstico gratuito contato whatsapp email linkedin formulário")
+add("Diagnóstico gratuito", "Briefing de 19 perguntas para pedir o diagnóstico gratuito: negócio, público, objetivos e compliance.", "/diagnostico", "Contato", "diagnóstico gratuito briefing formulário questionário proposta")
+add("Contato", "E-mail, WhatsApp e LinkedIn.", "/#contato", "Contato", "contato whatsapp email linkedin")
 
 (WEB / "busca.json").write_text(json.dumps(items, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
 print(f"busca: {len(items)} itens indexados em web/busca.json")
