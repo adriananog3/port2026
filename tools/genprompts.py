@@ -224,6 +224,7 @@ page = f"""<!doctype html>
 </script>
 <script>
 {leadforms.JS}</script>
+<script src="/assets/brevo-chat-v1.js" defer></script>
 </body></html>
 """
 (ROOT / "web/prompts.html").write_text(page, encoding="utf-8")
