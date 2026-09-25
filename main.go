@@ -73,7 +73,6 @@ var legacyRoutes = map[string]string{
 	"/comunidade":                                "/#newsletter",
 	"/politica-de-cookies":                       "/politica-de-privacidade#cookies",
 	"/contato":                                   "/#contato",
-	"/diagnostico":                               "/#contato",
 }
 
 // ---------- arquivos pré-processados em memória ----------
