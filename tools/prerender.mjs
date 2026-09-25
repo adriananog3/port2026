@@ -12,6 +12,14 @@ const SITE = 'https://adriana-nogueira.com';
 const cases = {
   bee4: 'BEE4', itau: 'Itaú Unibanco', guide: 'Guide Investimentos', modal: 'Banco Modal (modalmais)', empiricus: 'Empiricus Research',
 };
+// Descrições de cada case (mesmas do useSEO dos componentes, revisadas para busca e IA).
+const descs = {
+  bee4: 'Case BEE4: comunicação estratégica, branding e marketing para o primeiro mercado de acesso regulado pela CVM no Brasil, com Go-to-Market, PR e campanhas B2B.',
+  itau: 'Case Itaú Unibanco: campanhas de alto impacto (+R$ 1 milhão com um e-mail), comunicação para Itaú e íon e estratégia de marketing em posição-chave.',
+  guide: 'Case Guide Investimentos: estratégia de marketing, conteúdo e comunicação para corretora, com campanhas de aquisição, branding e posicionamento.',
+  modal: 'Case Banco Modal (modalmais): conteúdo, copywriting e marketing digital para plataforma de investimentos, com campanhas de aquisição e e-mail marketing.',
+  empiricus: 'Case Empiricus Research: copywriting de resposta direta, conteúdo financeiro e campanhas de vendas para casa de análise de investimentos.',
+};
 const faq = JSON.parse(fs.readFileSync(path.join(path.dirname(new URL(import.meta.url).pathname), 'faq.json'), 'utf8'));
 const esc = s => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
 fs.mkdirSync(path.join(web, 'cases'), { recursive: true });
@@ -37,7 +45,7 @@ for (const [slug, org] of Object.entries(cases)) {
   });
   const url = `${SITE}/cases/${slug}`;
   const title = data.title && !/^Case \|/.test(data.title) ? data.title : `${org} | Case de Adriana Nogueira`;
-  const desc = data.desc || `Case ${org}: estratégia, conteúdo e resultados de Adriana Nogueira, especialista em comunicação e marketing (CEA ANBIMA).`;
+  const desc = descs[slug] || data.desc || `Case ${org}: estratégia, conteúdo e resultados de Adriana Nogueira, especialista em comunicação e marketing (CEA ANBIMA).`;
   const ld = {
     '@context': 'https://schema.org', '@type': 'CreativeWork', name: title, headline: data.h1 || org,
     description: desc, url, inLanguage: 'pt-BR',
@@ -51,9 +59,13 @@ for (const [slug, org] of Object.entries(cases)) {
     `<meta name="robots" content="index, follow, max-image-preview:large" />`,
     `<meta property="og:type" content="article" /><meta property="og:locale" content="pt_BR" />`,
     `<meta property="og:title" content="${esc(title)}" /><meta property="og:description" content="${esc(desc)}" />`,
-    `<meta property="og:url" content="${url}" /><meta property="og:image" content="${SITE}/assets/ovelha-og.png" />`,
+    `<meta property="og:url" content="${url}" /><meta property="og:image" content="${SITE}/assets/adriana-nogueira-og.jpg" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
     `<script type="application/ld+json">${JSON.stringify(ld)}</script>`,
+    `<script type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Início', item: SITE + '/' },
+      { '@type': 'ListItem', position: 2, name: 'Cases', item: SITE + '/#cases' },
+      { '@type': 'ListItem', position: 3, name: org, item: url }] })}</script>`,
     ...(faq[slug] ? [`<script type="application/ld+json">${JSON.stringify({
       '@context': 'https://schema.org', '@type': 'FAQPage',
       mainEntity: faq[slug].map(([q, a]) => ({ '@type': 'Question', name: q, acceptedAnswer: { '@type': 'Answer', text: a } })),
@@ -61,7 +73,7 @@ for (const [slug, org] of Object.entries(cases)) {
   ].join('\n');
   let out = tpl.replace('<!--SEO-->', seo)
     .replace(/<title>[^<]*<\/title>/, `<title>${esc(title)}</title>`)
-    .replace('<div id="root"></div>', `<div id="root">${data.html}</div>`);
+    .replace('<div id="root"></div>', `<div id="root">${data.h1 ? '' : `<h1 style="position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap">${esc(title.replace(/ \| Adriana Nogueira$/, ''))}</h1>`}${data.html}</div>`);
   fs.writeFileSync(path.join(web, 'cases', `${slug}.html`), out);
   console.log(slug, '|', title, '|', Math.round(out.length / 1024) + ' KB');
   await p.close();
