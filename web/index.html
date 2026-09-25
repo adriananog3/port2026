@@ -723,8 +723,8 @@ window.addEventListener('message',function(ev){if(ev.origin!=='https://tally.so'
 
 <section class="blk" id="cases">
   <div class="wrap">
-    <p class="eyebrow">Seção 03 · Resultados</p>
-    <h2>Números que a comunicação entregou</h2>
+    <p class="eyebrow">Seção 03 · Destaques em Resultados</p>
+    <h2>Números que a minha comunicação entregou</h2>
     <div class="stats">
       <div class="stat"><p class="num">+R$ 1 MM</p><p class="desc">Receita com 1 e-mail</p><p class="src">Itaú Unibanco</p></div>
       <div class="stat"><p class="num">+57%</p><p class="desc">Em tráfego orgânico geral</p><p class="src">BEE4</p></div>
@@ -733,6 +733,13 @@ window.addEventListener('message',function(ev){if(ev.origin!=='https://tally.so'
       <div class="stat"><p class="num">~74%</p><p class="desc">Retenção de investidores sem intenção de renovar</p><p class="src">Empiricus</p></div>
       <div class="stat"><p class="num">Até 64%</p><p class="desc">Em taxa de abertura de e-mails</p><p class="src">Itaú Unibanco</p></div>
     </div>
+    <script>(function(){var ns=document.querySelectorAll('#cases .stat .num');if(!ns.length||!('IntersectionObserver' in window))return;
+if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+function prep(n){var t=n.textContent,m=t.match(/^(\D*?)(\d+)(.*)$/);if(!m)return null;n.setAttribute('aria-label',t);return {n:n,a:m[1],v:+m[2],z:m[3],t:t};}
+var it=[];ns.forEach(function(n){var o=prep(n);if(o){it.push(o);n.textContent=o.a+'0'+o.z;}});
+function run(o){var d=o.v>=10?1600:900,s=null;function f(ts){if(!s)s=ts;var k=Math.min(1,(ts-s)/d),e=1-Math.pow(1-k,3);o.n.textContent=o.a+Math.round(o.v*e)+o.z;if(k<1)requestAnimationFrame(f);else o.n.textContent=o.t;}requestAnimationFrame(f);}
+var io=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;io.unobserve(en.target);it.forEach(function(o){if(o.n===en.target)run(o);});});},{threshold:.4});
+it.forEach(function(o){io.observe(o.n);});})();</script>
 
     <p class="eyebrow" id="portfolio" style="margin-top:52px;scroll-margin-top:90px">Seção 04 · Portfólio e Cases</p>
     <h2>Onde a estratégia virou resultado</h2>
