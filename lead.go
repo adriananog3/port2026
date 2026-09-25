@@ -14,6 +14,7 @@ package main
 //   BREVO_API_KEY          chave da API v3 do Brevo (sem ela, responde 503 e o site usa o formulário do Tally)
 //   BREVO_LIST_NEWSLETTER  ID da lista da newsletter
 //   BREVO_LIST_PROMPTS     ID da lista do Banco de Prompts
+//   BREVO_LIST_TALLY       ID da lista de leads do Tally (usada por /api/tally)
 //
 // LGPD: nada é gravado em disco; os logs registram só tipo, origem e resultado.
 
@@ -176,8 +177,11 @@ func sendBrevo(ctx context.Context, l leadMsg) error {
 		return errSemBrevo
 	}
 	listEnv := "BREVO_LIST_NEWSLETTER"
-	if l.Tipo == "prompts" {
+	switch l.Tipo {
+	case "prompts":
 		listEnv = "BREVO_LIST_PROMPTS"
+	case "tally":
+		listEnv = "BREVO_LIST_TALLY"
 	}
 	var lists []int
 	if id, err := strconv.Atoi(os.Getenv(listEnv)); err == nil && id > 0 {
