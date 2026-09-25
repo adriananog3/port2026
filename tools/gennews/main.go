@@ -22,7 +22,7 @@ import (
 
 const site = "https://adriana-nogueira.com"
 const tally = "https://tally.so/r/68GedB"
-const whatsapp = "https://wa.me/qr/2XEF52R64MEEF1"
+const whatsapp = "/ir/whatsapp?origem=newsletter"
 const linkedin = "https://www.linkedin.com/in/adriana-nogueira-cea-marketing3/"
 
 type item struct {
