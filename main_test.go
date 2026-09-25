@@ -227,7 +227,7 @@ func TestNewsletter(t *testing.T) {
 		t.Errorf("artigo de branding: %d", w.Code)
 	}
 	ed := do(s, "GET", canon, "/newsletter/edicao-2", nil).Body.String()
-	for _, must := range []string{"https://wa.me/qr/2XEF52R64MEEF1", "https://www.linkedin.com/in/adriana-nogueira-cea-marketing3/", `id="compartilhar"`} {
+	for _, must := range []string{"/ir/whatsapp?origem=newsletter", "https://www.linkedin.com/in/adriana-nogueira-cea-marketing3/", `id="compartilhar"`} {
 		if !strings.Contains(ed, must) {
 			t.Errorf("barra da edição sem %s", must)
 		}
