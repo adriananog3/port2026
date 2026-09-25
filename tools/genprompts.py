@@ -2,8 +2,8 @@
 """Gera web/prompts.html: Banco de Prompts gratuito (acesso liberado depois do formulário).
 
 Fonte: web/banco-prompts.json (edite direto nele: categorias > prompts com titulo, objetivo, metodo,
-papel, contexto, tarefa, entrega e checagem; as regras comuns ficam em "regras"). A biblioteca é carregada pelo navegador
-depois do cadastro; a página mostra só categorias, títulos e objetivos.
+papel, contexto, tarefa, entrega e checagem; as regras comuns ficam em "regras"). A biblioteca só é entregue pelo servidor
+depois do cadastro (cookie bp_acesso, ver bpgate.go); a página não mostra os prompts antes disso.
 Depois: python3 tools/genprompts.py && python3 tools/gensearch.py
 """
 import html
@@ -106,28 +106,14 @@ ld = {"@context": "https://schema.org", "@type": "CreativeWork", "name": "Banco 
       "dateModified": data.get("atualizado", "")}
 
 JS = r"""(function(){
-  var cr=document.getElementById('bp-cats'),car=document.getElementById('bp-car');
-  if(cr&&car){
-    var pos=document.getElementById('car-pos'),seta=car.querySelector('.car-seta'),bts=car.querySelectorAll('[data-car]');
-    var passo=function(){var c=cr.querySelector('.bp-cat');return c?c.getBoundingClientRect().width+14:cr.clientWidth;};
-    var upd=function(){var n=cr.children.length,w=passo(),ini=Math.round(cr.scrollLeft/w)+1,vis=Math.max(1,Math.floor((cr.clientWidth+14)/w)),fim=cr.scrollLeft+cr.clientWidth>=cr.scrollWidth-4;
-      pos.textContent=ini+'–'+Math.min(n,ini+vis-1)+' de '+n;
-      bts.forEach(function(b){b.disabled=(b.dataset.car==='-1')?cr.scrollLeft<=4:fim;});
-      seta.hidden=fim;car.classList.toggle('fim',fim);};
-    bts.forEach(function(b){b.addEventListener('click',function(){cr.scrollBy({left:passo()*(+b.dataset.car),behavior:'smooth'});});});
-    cr.addEventListener('keydown',function(ev){if(ev.key==='ArrowRight'||ev.key==='ArrowLeft'){ev.preventDefault();cr.scrollBy({left:passo()*(ev.key==='ArrowRight'?1:-1),behavior:'smooth'});}});
-    cr.addEventListener('scroll',function(){window.requestAnimationFrame(upd);},{passive:true});
-    window.addEventListener('resize',upd);upd();
-  }
 var h=document.documentElement,dlg=document.getElementById('gate'),carregado=false,cards=[],cat='';
 function abrir(){if(h.classList.contains('bp-ok')||!dlg)return;if(dlg.showModal){if(!dlg.open)dlg.showModal();}else dlg.setAttribute('open','');}
 function fechar(){if(!dlg)return;if(dlg.close&&dlg.open)dlg.close();else dlg.removeAttribute('open');}
-function ok(){h.classList.add('bp-ok');try{localStorage.setItem('bp_ok','1');}catch(e){}fechar();carregar(true);}
-try{if(localStorage.getItem('bp_ok')==='1')h.classList.add('bp-ok');}catch(e){}
+function ok(){carregar(true);}
 document.addEventListener('click',function(e){if(e.target.closest('[data-abrir-gate]')){e.preventDefault();abrir();}if(e.target.closest('[data-fechar-gate]')){e.preventDefault();fechar();}});
 if(dlg)dlg.addEventListener('click',function(e){if(e.target===dlg)fechar();});
 document.addEventListener('lead:ok',ok);
-window.addEventListener('message',function(ev){if(ev.origin!=='https://tally.so')return;var d=ev.data;if(typeof d==='string'){try{d=JSON.parse(d);}catch(x){return;}}if(d&&d.event==='Tally.FormSubmitted')ok();});
+window.addEventListener('message',function(ev){if(ev.origin!=='https://tally.so')return;var d=ev.data;if(typeof d==='string'){try{d=JSON.parse(d);}catch(x){return;}}if(d&&d.event==='Tally.FormSubmitted')fetch('/api/prompts/tally',{method:'POST',credentials:'same-origin'}).then(function(){ok();});});
 function el(t,c,x){var n=document.createElement(t);if(c)n.className=c;if(x!=null)n.textContent=x;return n;}
 function texto(p,R){return 'PAPEL\n'+p.papel+'\n\nCONTEXTO (troque o que está entre colchetes)\n'+p.contexto.map(function(x){return '- '+x;}).join('\n')+'\n\nTAREFA\n'+p.tarefa.map(function(x,i){return (i+1)+'. '+x;}).join('\n')+'\n\nFORMATO DE ENTREGA\n'+p.entrega+'\n\nANTES DE ENTREGAR, CONFIRA\n'+p.checagem+'\n\nREGRAS\n'+R;}
 var st=document.getElementById('lib-st'),q=document.getElementById('lib-q'),bar=document.querySelector('.lib-bar'),lista=document.getElementById('lib-lista');
@@ -137,14 +123,14 @@ function render(d){var n=0;d.categorias.forEach(function(c){var b=el('button',nu
  c.prompts.forEach(function(p){n++;var a=el('article','pc');a.setAttribute('data-cat',c.id);var hd=el('header'),dv=el('div'),k=el('p','cat',c.nome),m=el('span','met',p.metodo);k.appendChild(m);var t=el('h3',null,p.titulo);t.id='p'+n+'-t';a.setAttribute('aria-labelledby',t.id);dv.appendChild(k);dv.appendChild(t);
  var bt=el('button','copiar','Copiar prompt');bt.type='button';bt.setAttribute('data-alvo','p'+n+'-p');hd.appendChild(dv);hd.appendChild(bt);a.appendChild(hd);a.appendChild(el('p','obj',p.objetivo));var io=el('div','io'),en=el('div','io-b'),sa=el('div','io-b');en.appendChild(el('p','io-t','Entrada · você preenche'));var ul=el('ul');p.contexto.forEach(function(x){ul.appendChild(el('li',null,x));});en.appendChild(ul);sa.appendChild(el('p','io-t','Saída · você recebe'));sa.appendChild(el('p',null,p.entrega));io.appendChild(en);io.appendChild(sa);a.appendChild(io);var pre=el('pre',null,texto(p,d.regras));pre.id='p'+n+'-p';a.appendChild(pre);lista.appendChild(a);cards.push(a);});});
  st.textContent=n+' prompts.';}
-function carregar(foco){if(carregado||!h.classList.contains('bp-ok'))return;carregado=true;st.textContent='Carregando a biblioteca…';
- fetch('/banco-prompts.json',{credentials:'same-origin'}).then(function(r){return r.json();}).then(function(d){render(d);if(foco){var l=document.getElementById('biblioteca');if(l){l.scrollIntoView({behavior:'smooth'});var tt=document.getElementById('lib-t');if(tt)tt.focus();}}})
- .catch(function(){carregado=false;st.textContent='Não foi possível carregar agora. Atualize a página.';});}
+function carregar(foco){if(carregado)return;carregado=true;st.textContent='Carregando a biblioteca…';
+ fetch('/banco-prompts.json',{credentials:'same-origin',cache:'no-store'}).then(function(r){if(!r.ok)throw new Error('bloqueado');return r.json();}).then(function(d){h.classList.add('bp-ok');fechar();render(d);if(foco){var l=document.getElementById('biblioteca');if(l){l.scrollIntoView({behavior:'smooth'});var tt=document.getElementById('lib-t');if(tt)tt.focus();}}})
+ .catch(function(){carregado=false;if(foco)st.textContent='Não foi possível liberar agora. Tente de novo em instantes.';else setTimeout(abrir,900);});}
 if(bar){bar.addEventListener('click',function(e){var b=e.target.closest('button[data-cat]');if(!b)return;cat=b.getAttribute('data-cat');[].forEach.call(bar.querySelectorAll('button[data-cat]'),function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});filtrar();});q.addEventListener('input',filtrar);}
 document.addEventListener('click',function(e){var b=e.target.closest('.copiar');if(!b)return;var pre=document.getElementById(b.getAttribute('data-alvo'));if(!pre)return;
  function feito(){var o=b.textContent;b.textContent='Copiado ✓';st.textContent='Prompt copiado.';setTimeout(function(){b.textContent=o;},1800);}
  if(navigator.clipboard){navigator.clipboard.writeText(pre.textContent).then(feito,function(){});}else{var r=document.createRange();r.selectNodeContents(pre);var s=getSelection();s.removeAllRanges();s.addRange(r);}});
-if(h.classList.contains('bp-ok'))carregar(false);else setTimeout(abrir,900);
+carregar(false);
 })();"""
 
 page = f"""<!doctype html>
@@ -187,18 +173,6 @@ page = f"""<!doctype html>
   </aside></div>
 </div></header>
 
-<section aria-labelledby="h-cats"><div class="wrap">
-  <h2 id="h-cats">O que você <em>encontra aqui</em></h2>
-  <div class="rule"></div>
-  <div class="bp-car" id="bp-car">
-    <div class="bp-car-nav"><span id="car-pos" aria-live="polite"></span><button type="button" class="car-btn" data-car="-1" aria-label="Categorias anteriores" disabled>←</button><button type="button" class="car-btn" data-car="1" aria-label="Próximas categorias">→</button></div>
-    <div class="bp-cats" id="bp-cats" tabindex="0" role="region" aria-label="Categorias do Banco de Prompts, deslize para a direita">
-{cat_cards}    </div>
-    <button type="button" class="car-seta" data-car="1" aria-label="Ver mais categorias">→</button>
-  </div>
-  <div class="bp-lock" style="margin-top:18px"><p>A biblioteca completa abre na hora, depois de um cadastro rápido.</p><button type="button" class="bp-cta" data-abrir-gate>Desbloquear os {total} prompts →</button></div>
-</div></section>
-
 <section class="lib" id="biblioteca" aria-labelledby="lib-t"><div class="wrap">
   <h2 id="lib-t" tabindex="-1">Sua <em>biblioteca</em></h2>
   <div class="rule"></div>
@@ -214,7 +188,8 @@ page = f"""<!doctype html>
     <button type="button" class="gate-x" data-fechar-gate aria-label="Fechar">×</button>
     <h2 id="gate-t">Acesso gratuito ao Banco de Prompts</h2>
     <p class="s">Preencha o formulário abaixo. Assim que enviar, a biblioteca abre na hora.</p>
-    <div class="gate-tally"><iframe src="{iframe_src}" title="Formulário de acesso ao Banco de Prompts" width="100%" height="520" loading="eager"></iframe></div>
+    {leadforms.prompts()}
+    <div class="gate-tally" id="bp-fb" hidden><iframe data-src="{iframe_src}" title="Formulário de acesso ao Banco de Prompts" width="100%" height="520"></iframe></div>
     <p class="nota">Seus dados liberam o acesso e ficam guardados com segurança. <a href="/politica-de-privacidade">Política de Privacidade</a></p>
   </div>
 </dialog>
