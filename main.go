@@ -252,6 +252,10 @@ func (s *site) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		handleLead(w, r)
 		return
 	}
+	if r.URL.Path == "/api/tally" {
+		handleTally(w, r)
+		return
+	}
 	if r.Method != http.MethodGet && r.Method != http.MethodHead {
 		w.Header().Set("Allow", "GET, HEAD")
 		http.Error(w, "Método não permitido", http.StatusMethodNotAllowed)
