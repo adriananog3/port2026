@@ -1,0 +1,319 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Diagnóstico gratuito | Adriana Nogueira</title><meta name="description" content="Briefing do Diagnóstico gratuito de comunicação e marketing: responda em menos de 5 minutos e receba um diagnóstico sob medida para o seu negócio.">
+<link rel="canonical" href="https://adriana-nogueira.com/diagnostico">
+<meta name="theme-color" content="#000000"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="icon" href="/favicon.ico" sizes="48x48"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700;800&amp;family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&amp;family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&amp;display=swap" rel="stylesheet">
+<style>
+:root{--preto:#000;--champagne:#FDFBF7;--dourado:#C9A96E;--platinum:#D9D9D9;--cinza:#898989;--branco:#FFFFFF}
+*{box-sizing:border-box}
+body{margin:0;background:var(--champagne);color:#000;font:400 17px/1.55 "Open Sans",system-ui,sans-serif}
+a{color:#000;text-decoration-color:var(--dourado);text-underline-offset:3px}
+.skip{position:absolute;left:-9999px;top:8px;background:var(--dourado);color:#000;padding:8px 14px;z-index:9}.skip:focus{left:8px}
+header.top{background:#000;padding:16px}
+header.top .in{max-width:760px;margin:0 auto;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+header.top a.brand{color:var(--champagne);text-decoration:none;font-family:Archivo,sans-serif;font-weight:800;font-size:18px}
+header.top a.brand i{display:block;font-family:"Cormorant Garamond",serif;font-style:italic;color:var(--dourado);font-size:12px;letter-spacing:.2em;text-transform:uppercase;font-weight:600}
+header.top a.back{color:var(--champagne);font-size:14px}
+main{max-width:760px;margin:0 auto;padding:0 16px 64px}
+.hero{background:#000;color:var(--champagne);margin-top:28px;padding:40px 28px 34px;text-align:center;border-bottom:3px solid var(--dourado)}
+.hero .eyebrow{font-family:Archivo,sans-serif;font-size:12px;letter-spacing:.34em;text-transform:uppercase;color:var(--platinum);margin:0 0 10px}
+.hero h1{font-family:Archivo,sans-serif;font-weight:800;font-size:clamp(28px,6vw,40px);color:var(--dourado);margin:0;line-height:1.15}
+.hero .sub{margin:12px 0 0;font-size:17px}
+.hero .sub i{display:block;font-family:"Cormorant Garamond",serif;color:var(--platinum);font-size:20px}
+.intro{margin:26px 0 8px;font-size:18px}
+.progress{position:sticky;top:0;z-index:5;background:var(--champagne);padding:10px 0 8px;margin-top:8px}
+.progress .track{height:4px;background:var(--platinum);border-radius:2px;overflow:hidden}
+.progress .fill{height:100%;width:0;background:var(--dourado);transition:width .3s ease}
+.progress small{display:block;margin-top:6px;font-family:Archivo,sans-serif;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#000;font-variant-numeric:tabular-nums}
+section{margin-top:34px}
+.band{background:#000;color:var(--champagne);font-family:Archivo,sans-serif;font-weight:700;font-size:15px;letter-spacing:.1em;text-transform:uppercase;padding:12px 18px;border-top:2px solid var(--dourado);border-bottom:2px solid var(--dourado);margin:0}
+.fields{display:grid;gap:18px;padding:20px 0 4px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:560px){.two{grid-template-columns:1fr}}
+label.f{display:grid;gap:6px}
+.lbl{font-weight:600;font-size:16px;line-height:1.3}
+.req{color:#000}
+.hint{font-size:14px;color:#000;line-height:1.35;opacity:.8}
+input[type=text],input[type=email],input[type=tel],select,textarea{width:100%;font:inherit;font-size:17px;color:#000;background:var(--branco);border:1px solid var(--platinum);border-radius:4px;padding:11px 12px;min-height:46px}
+textarea{min-height:96px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--dourado);box-shadow:0 0 0 4px rgba(201,169,110,.35)}
+.money{position:relative;display:block}.money input{padding-left:44px}.money span{position:absolute;left:12px;top:50%;transform:translateY(-50%);font-weight:600;pointer-events:none}
+fieldset{border:0;padding:0;margin:0;display:grid;gap:8px}
+legend{font-weight:600;font-size:16px;padding:0;margin-bottom:4px}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opt{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--platinum);background:var(--branco);border-radius:999px;padding:8px 14px;cursor:pointer;font-size:16px;user-select:none}
+.opt input{accent-color:var(--dourado);width:16px;height:16px;margin:0}
+.opt:has(input:checked){border-color:var(--dourado);background:var(--champagne)}
+.opt:has(input:focus-visible){box-shadow:0 0 0 4px rgba(201,169,110,.35)}
+.follow{display:grid;gap:6px;margin-top:4px}.follow[hidden]{display:none}.follow input{max-width:320px}
+.consent{margin-top:34px;padding:18px;border:1px solid var(--platinum);border-left:4px solid var(--dourado);background:var(--branco);display:grid;gap:10px}
+.consent .lbl{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.consent input{accent-color:var(--dourado);width:18px;height:18px;margin-top:3px;flex:none}
+.consent p{margin:0;font-size:14px;line-height:1.5}
+.hp{position:absolute!important;left:-9999px!important;width:1px;height:1px;opacity:0}
+.err{color:#000;font-weight:700;font-size:15px;margin:12px 0 0;border-left:4px solid var(--dourado);padding-left:10px}.err:empty{display:none}
+.actions{margin-top:26px;display:grid;gap:12px}
+.btn{font-family:Archivo,sans-serif;font-weight:700;font-size:15px;letter-spacing:.06em;text-transform:uppercase;border:0;border-radius:999px;padding:16px 22px;cursor:pointer;text-align:center;text-decoration:none;display:inline-flex;justify-content:center;align-items:center;gap:10px;min-height:54px}
+.btn.primary{background:var(--dourado);color:#000}.btn.primary:hover{background:var(--platinum)}.btn.primary:disabled{opacity:.6;cursor:default}
+.btn.dark{background:#000;color:var(--champagne);border:1px solid var(--dourado)}
+.btn.ghost{background:transparent;color:#000;border:1px solid var(--platinum)}
+.btn:focus-visible{outline:3px solid var(--dourado);outline-offset:3px}
+.note{font-size:14px;text-align:center;margin:0}
+.done{display:grid;gap:18px;margin-top:28px}.done[hidden]{display:none}
+.done .band{text-align:center}
+.done h2.t{font-family:Archivo,sans-serif;font-size:24px;margin:0;text-align:center}
+.done p{margin:0;text-align:center}
+.summary{background:var(--branco);border:1px solid var(--platinum);padding:16px;white-space:pre-wrap;font-size:15px;line-height:1.5;max-height:280px;overflow:auto}
+.sign{font-family:"Cormorant Garamond",serif;font-style:italic;font-weight:600;font-size:22px;text-align:center}
+.toast{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);background:#000;color:var(--champagne);font-size:13px;padding:10px 16px;border-radius:4px;border:1px solid var(--dourado);opacity:0;pointer-events:none;transition:opacity .2s}.toast.show{opacity:1}
+footer{background:#000;color:var(--platinum);text-align:center;font-size:13px;padding:32px 16px 40px}
+footer a{color:var(--dourado)}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+</style></head>
+<body>
+<a class="skip" href="#conteudo">Pular para o conteúdo</a>
+<header class="top"><div class="in"><a class="brand" href="/">Adriana Nogueira <i>Portfólio</i></a><a class="back" href="/">← Voltar ao site</a></div></header>
+<main id="conteudo">
+  <div class="hero">
+    <p class="eyebrow">Briefing para</p>
+    <h1>Diagnóstico gratuito</h1>
+    <p class="sub">Assessoria de Comunicação Corporativa e Marketing <i>com compliance desde o início</i></p>
+  </div>
+
+  <p class="intro"><b>Leva menos de 5 minutos.</b> Responda só o que souber. O resto a gente descobre junto no diagnóstico.</p>
+
+  <div class="progress" id="progress"><div class="track"><div class="fill" id="pfill"></div></div><small id="ptext">0 de 19 respondidas</small></div>
+
+  <form id="form" novalidate>
+    <input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <section>
+      <h2 class="band">Sobre você</h2>
+      <div class="fields">
+        <div class="two">
+          <label class="f"><span class="lbl">Empresa <span class="req">*</span></span><input type="text" id="empresa" name="empresa" autocomplete="organization" required></label>
+          <label class="f"><span class="lbl">Setor</span>
+            <select id="setor" name="setor">
+              <option value="">Selecione</option>
+              <option>Assessoria de investimentos</option>
+              <option>Gestora de recursos</option>
+              <option>Fintech</option>
+              <option>Multi-family office / Wealth</option>
+              <option>Banco, corretora ou DTVM</option>
+              <option>Empresa B2B (serviços ao mercado financeiro)</option>
+              <option>Saúde</option>
+              <option>Engenharia</option>
+              <option>Outro</option>
+            </select></label>
+        </div>
+        <div class="two">
+          <label class="f"><span class="lbl">Seu nome <span class="req">*</span></span><input type="text" id="nome" name="nome" autocomplete="name" required></label>
+          <label class="f"><span class="lbl">Cargo</span><input type="text" id="cargo" name="cargo" autocomplete="organization-title"></label>
+        </div>
+        <div class="two">
+          <label class="f"><span class="lbl">E-mail <span class="req">*</span></span><input type="email" id="email" name="email" autocomplete="email" required inputmode="email"></label>
+          <label class="f"><span class="lbl">WhatsApp</span><input type="tel" id="whatsapp" name="whatsapp" autocomplete="tel" inputmode="tel" placeholder="(11) 9 0000-0000"></label>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="band">Seu negócio em poucas palavras</h2>
+      <div class="fields">
+        <label class="f"><span class="lbl">O que a empresa faz e qual o diferencial?</span><textarea id="faz" name="faz"></textarea></label>
+        <label class="f"><span class="lbl">Qual produto ou serviço é o carro-chefe?</span><input type="text" id="carro" name="carro"></label>
+        <label class="f"><span class="lbl">Ticket médio atual</span><span class="hint">Valor aproximado por cliente ou contrato.</span>
+          <span class="money"><span>R$</span><input type="text" id="ticket" name="ticket" inputmode="decimal" placeholder="0,00"></span></label>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="band">O que você espera do marketing e da IA?</h2>
+      <div class="fields">
+        <label class="f"><span class="lbl">Qual o maior objetivo hoje?</span><textarea id="objetivo" name="objetivo"></textarea></label>
+        <label class="f"><span class="lbl">Meta principal para os próximos 6 meses</span><textarea id="meta" name="meta"></textarea></label>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="band">Quem é seu cliente ideal?</h2>
+      <div class="fields">
+        <label class="f"><span class="lbl">Descreva seu melhor cliente</span><span class="hint">Perfil, faixa etária, renda ou patrimônio.</span><textarea id="cliente" name="cliente"></textarea></label>
+        <label class="f"><span class="lbl">Quais as principais dores dele?</span><textarea id="dores" name="dores"></textarea></label>
+        <fieldset>
+          <legend>Já tem uma base de contatos?</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="base" value="Não">Não</label>
+            <label class="opt"><input type="radio" name="base" value="Sim">Sim</label>
+          </div>
+          <div class="follow" id="base_follow" hidden><label class="f"><span class="hint">Aproximadamente quantos contatos?</span><input type="text" id="base_qtd" name="base_qtd" inputmode="numeric" placeholder="ex.: 1.200"></label></div>
+        </fieldset>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="band">Seu marketing hoje</h2>
+      <div class="fields">
+        <fieldset>
+          <legend>Quais canais a empresa usa hoje?</legend>
+          <div class="opts">
+            <label class="opt"><input type="checkbox" name="canais" value="Site">Site</label>
+            <label class="opt"><input type="checkbox" name="canais" value="Instagram">Instagram</label>
+            <label class="opt"><input type="checkbox" name="canais" value="LinkedIn">LinkedIn</label>
+            <label class="opt"><input type="checkbox" name="canais" value="YouTube">YouTube</label>
+            <label class="opt"><input type="checkbox" name="canais" value="E-mail">E-mail</label>
+            <label class="opt"><input type="checkbox" name="canais" value="WhatsApp">WhatsApp</label>
+            <label class="opt"><input type="checkbox" name="canais" value="TikTok">TikTok</label>
+            <label class="opt"><input type="checkbox" name="canais" value="Outro" id="canal_outro_chk">Outro</label>
+          </div>
+          <div class="follow" id="canal_follow" hidden><label class="f"><span class="hint">Qual?</span><input type="text" id="canal_outro" name="canal_outro"></label></div>
+        </fieldset>
+        <label class="f"><span class="lbl">Já contratou apoio externo de marketing? Como foi?</span><textarea id="apoio" name="apoio"></textarea></label>
+        <fieldset>
+          <legend>Tem alguém dedicado ao marketing na empresa?</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="dedicado" value="Não">Não</label>
+            <label class="opt"><input type="radio" name="dedicado" value="Sim">Sim</label>
+          </div>
+          <div class="follow" id="dedicado_follow" hidden><label class="f"><span class="hint">Quantas pessoas?</span><input type="text" id="dedicado_qtd" name="dedicado_qtd" inputmode="numeric"></label></div>
+        </fieldset>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="band">Como você vende hoje?</h2>
+      <div class="fields">
+        <fieldset>
+          <legend>O processo de vendas é estruturado?</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="processo" value="Sim">Sim</label>
+            <label class="opt"><input type="radio" name="processo" value="Mais ou menos">Mais ou menos</label>
+            <label class="opt"><input type="radio" name="processo" value="Não">Não</label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>Usa CRM?</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="crm" value="Não">Não</label>
+            <label class="opt"><input type="radio" name="crm" value="Sim">Sim</label>
+          </div>
+          <div class="follow" id="crm_follow" hidden><label class="f"><span class="hint">Qual?</span><input type="text" id="crm_qual" name="crm_qual" placeholder="ex.: RD Station, HubSpot, Pipedrive"></label></div>
+        </fieldset>
+        <fieldset>
+          <legend>Sabe o custo de aquisição (CAC) por cliente?</legend>
+          <div class="opts">
+            <label class="opt"><input type="radio" name="cac" value="Não">Não</label>
+            <label class="opt"><input type="radio" name="cac" value="Sim">Sim</label>
+          </div>
+          <div class="follow" id="cac_follow" hidden><label class="f"><span class="hint">Aproximadamente quanto?</span><span class="money"><span>R$</span><input type="text" id="cac_valor" name="cac_valor" inputmode="decimal"></span></label></div>
+        </fieldset>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="band">Seus concorrentes</h2>
+      <div class="fields">
+        <label class="f"><span class="lbl">Quem são os 2 ou 3 principais e onde eles são melhores que você?</span><textarea id="concorrentes" name="concorrentes"></textarea></label>
+      </div>
+    </section>
+
+    <div class="consent">
+      <label class="lbl"><input type="checkbox" id="consent" name="consent" required><span>Autorizo o uso destas informações para a preparação do meu Diagnóstico gratuito. <span class="req">*</span></span></label>
+      <p>Seus dados são usados exclusivamente para elaborar o diagnóstico e fazer o contato de retorno, conforme a LGPD (Lei 13.709/2018). Não são compartilhados com terceiros nem usados para outros fins. Você pode pedir a correção ou a exclusão a qualquer momento pelo e-mail <a href="mailto:contato-assessoria@adriana-nogueira.com">contato-assessoria@adriana-nogueira.com</a>. Veja a <a href="/politica-de-privacidade">Política de Privacidade</a>.</p>
+    </div>
+
+    <p class="err" id="formerr" role="alert"></p>
+
+    <div class="actions">
+      <button type="submit" class="btn primary" id="submit">Enviar briefing</button>
+      <p class="note">As respostas seguem direto para a caixa de e-mail da Adriana.</p>
+    </div>
+  </form>
+
+  <div class="done" id="done" hidden>
+    <h2 class="band">Pronto! Isso é tudo.</h2>
+    <h2 class="t" id="donetitle">Recebi suas respostas</h2>
+    <p id="donemsg">Vou analisar tudo e preparar um diagnóstico sob medida para o seu negócio. Retorno pelo e-mail que você informou.</p>
+    <div class="actions" id="fbacts" hidden>
+      <a class="btn primary" id="mail" href="#">Enviar por e-mail</a>
+      <a class="btn dark" href="https://wa.me/qr/2XEF52R64MEEF1" target="_blank" rel="noopener">Abrir WhatsApp</a>
+      <button type="button" class="btn ghost" id="copy">Copiar respostas</button>
+    </div>
+    <div class="summary" id="summary" tabindex="0" hidden></div>
+    <p class="sign">Abraços, Dri!</p>
+    <div class="actions"><a class="btn ghost" href="/">Voltar ao site</a></div>
+  </div>
+</main>
+<div class="toast" id="toast">Copiado</div>
+<footer><div class="aviso-legal" id="aviso-legal" role="note" aria-label="Aviso legal e mídia incorporada"><style>.aviso-legal{max-width:980px;margin:0 auto 20px;padding:0;text-align:left;font-family:'Open Sans',system-ui,sans-serif;font-size:13px;line-height:1.65;color:#D9D9D9}.aviso-legal p,.aviso-legal li{margin:0 0 8px;font-size:13px;line-height:1.65;color:#D9D9D9;font-family:inherit}.aviso-legal .av-t{margin-bottom:10px;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#C9A96E}.aviso-legal b{color:#FDFBF7;font-weight:700}.aviso-legal ol{margin:0 0 8px 20px;padding:0}.aviso-legal li{margin-bottom:2px}.aviso-legal .av-base{color:#9A9A9A}.aviso-legal a{color:#C9A96E;text-decoration:underline;text-underline-offset:2px}</style>
+<p class="av-t">Aviso legal e mídia incorporada</p>
+<p>Este site representa meu portfólio de carreira e meu atual projeto pessoal. Alguns conteúdos, marcas, logotipos e materiais exibidos são propriedade intelectual das respectivas empresas e instituições para as quais foram desenvolvidos. A reprodução desses materiais aqui tem caráter exclusivamente demonstrativo e profissional. Todos os direitos sobre marcas e conteúdos de terceiros pertencem aos seus respectivos titulares e não a mim.</p>
+<p>Este site descreve serviços de preparação de documentos, materiais, comunicação e estratégia. Não constitui recomendação de investimento, consultoria jurídica, contábil ou de valores mobiliários, e não garante resultados financeiros. Serviços regulados são conduzidos por profissionais habilitados do cliente. Conteúdo produzido sob supervisão humana, com fact-checking e conformidade LGPD + EU AI Act.</p>
+<p><b>Premissas fundamentais:</b></p>
+<ol><li>Fact-checking obrigatório em toda informação.</li><li>Supervisão e curadoria humana: soberania humana antes de publicar ou finalizar.</li><li>Compliance desde o início: conformidade incorporada na origem, não no fim.</li></ol>
+<p class="av-base"><b>Base normativa:</b> Guia de IA do TCU · LGPD (Lei 13.709/2018) · Marco Civil da Internet · PL 2.338/2023 · EU AI Act · ISO/IEC 38507 e 23894 · CVM · BACEN · ANBIMA · ANCORD · CMN · CONAR · CF/1988 · CC · CLT · CP · CTN · Lei 8.906/94 (OAB) · Lei 7.492/86 (crimes contra o sistema financeiro) · Lei 9.613/98 (lavagem de dinheiro) · ECA Digital (Lei 15.211/2025).</p>
+<p class="av-base">Dados pessoais enviados pelos formulários são tratados conforme a <a href="/politica-de-privacidade">Política de Privacidade</a>. Resumos e trechos assistidos por IA são identificados como tais e revisados por Adriana Nogueira antes da publicação (EU AI Act, art. 50).</p>
+</div><p>© Adriana Nogueira · Comunicação &amp; Marketing · CEA · GAIPC™ · São Paulo · <a href="/">Voltar ao início</a> · <a href="/faq">FAQ</a></p></footer>
+<script>
+(function(){
+  var form=document.getElementById('form'),done=document.getElementById('done');
+  var $=function(id){return document.getElementById(id);};
+  function bindFollow(name,val,followId){var rs=form.querySelectorAll('input[name="'+name+'"]');function upd(){var c=form.querySelector('input[name="'+name+'"]:checked');$(followId).hidden=!(c&&c.value===val);}rs.forEach(function(r){r.addEventListener('change',upd);});upd();}
+  bindFollow('base','Sim','base_follow');bindFollow('dedicado','Sim','dedicado_follow');bindFollow('crm','Sim','crm_follow');bindFollow('cac','Sim','cac_follow');
+  $('canal_outro_chk').addEventListener('change',function(){$('canal_follow').hidden=!this.checked;});
+  var qs=[['empresa'],['setor'],['nome'],['cargo'],['email'],['whatsapp'],['faz'],['carro'],['ticket'],['objetivo'],['meta'],['cliente'],['dores'],['radio','base'],['check','canais'],['apoio'],['radio','dedicado'],['radio','processo'],['radio','crm']];
+  function answered(q){if(q[0]==='radio'||q[0]==='check')return !!form.querySelector('input[name="'+q[1]+'"]:checked');var el=$(q[0]);return !!(el&&el.value.trim());}
+  function progress(){var n=qs.filter(answered).length;$('pfill').style.width=Math.round(n/qs.length*100)+'%';$('ptext').textContent=n+' de '+qs.length+' respondidas';}
+  progress();form.addEventListener('input',progress);form.addEventListener('change',progress);
+  function v(id){var el=$(id);return el&&el.value.trim()?el.value.trim():'';}
+  function r(name){var c=form.querySelector('input[name="'+name+'"]:checked');return c?c.value:'';}
+  function line(l,val){return val?'• '+l+': '+val+'\n':'';}
+  function build(){
+    var t='BRIEFING PARA DIAGNÓSTICO GRATUITO\n\n';
+    t+='SOBRE VOCÊ\n'+line('Empresa',v('empresa'))+line('Setor',v('setor'))+line('Nome',v('nome'))+line('Cargo',v('cargo'))+line('E-mail',v('email'))+line('WhatsApp',v('whatsapp'))+'\n';
+    t+='SEU NEGÓCIO\n'+line('O que faz e diferencial',v('faz'))+line('Carro-chefe',v('carro'))+line('Ticket médio',v('ticket')?'R$ '+v('ticket'):'')+'\n';
+    t+='EXPECTATIVAS\n'+line('Maior objetivo hoje',v('objetivo'))+line('Meta 6 meses',v('meta'))+'\n';
+    var base=r('base');if(base==='Sim'&&v('base_qtd'))base+=' (aprox. '+v('base_qtd')+' contatos)';
+    t+='CLIENTE IDEAL\n'+line('Melhor cliente',v('cliente'))+line('Principais dores',v('dores'))+line('Base de contatos',base)+'\n';
+    var canais=Array.prototype.map.call(form.querySelectorAll('input[name="canais"]:checked'),function(c){return c.value==='Outro'&&v('canal_outro')?'Outro ('+v('canal_outro')+')':c.value;}).join(', ');
+    var ded=r('dedicado');if(ded==='Sim'&&v('dedicado_qtd'))ded+=' ('+v('dedicado_qtd')+' pessoa(s))';
+    t+='MARKETING HOJE\n'+line('Canais',canais)+line('Apoio externo de marketing',v('apoio'))+line('Alguém dedicado ao marketing',ded)+'\n';
+    var crm=r('crm');if(crm==='Sim'&&v('crm_qual'))crm+=' ('+v('crm_qual')+')';
+    var cac=r('cac');if(cac==='Sim'&&v('cac_valor'))cac+=' (aprox. R$ '+v('cac_valor')+')';
+    t+='COMO VENDE HOJE\n'+line('Processo estruturado',r('processo'))+line('CRM',crm)+line('CAC conhecido',cac)+'\n';
+    t+='CONCORRENTES\n'+line('Principais e onde são melhores',v('concorrentes'))+'\n';
+    t+='Consentimento LGPD: autorizado para fins do diagnóstico.';
+    return t.replace(/\n{3,}/g,'\n\n');
+  }
+  function showDone(ok,text){
+    var nome=v('nome').split(' ')[0];
+    form.hidden=true;$('progress').hidden=true;done.hidden=false;
+    if(ok){$('donetitle').textContent='Obrigada, '+nome+'! Recebi suas respostas';}
+    else{
+      $('donetitle').textContent='Obrigada, '+nome+'! Falta só um passo';
+      $('donemsg').textContent='O envio automático está indisponível agora. Envie suas respostas por e-mail com um toque, ou copie o texto e mande pelo WhatsApp.';
+      $('fbacts').hidden=false;$('summary').hidden=false;$('summary').textContent=text;
+      $('mail').setAttribute('href','mailto:contato-assessoria@adriana-nogueira.com?subject='+encodeURIComponent('Briefing · Diagnóstico gratuito · '+v('empresa'))+'&body='+encodeURIComponent(text));
+    }
+    window.scrollTo({top:0});
+  }
+  form.addEventListener('submit',function(e){
+    e.preventDefault();var err=$('formerr');err.textContent='';var miss=[];
+    if(!v('empresa'))miss.push('Empresa');if(!v('nome'))miss.push('Seu nome');
+    var em=v('email');if(!em||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(em))miss.push('E-mail válido');
+    if(!$('consent').checked)miss.push('Autorização de uso das informações');
+    if(miss.length){err.textContent='Para concluir, preencha: '+miss.join(', ')+'.';var first=miss[0]==='Empresa'?$('empresa'):miss[0]==='Seu nome'?$('nome'):miss[0]==='E-mail válido'?$('email'):$('consent');first.focus();first.scrollIntoView({block:'center'});return;}
+    var text=build(),btn=$('submit');btn.disabled=true;btn.textContent='Enviando…';
+    var fd=new URLSearchParams();fd.set('nome',v('nome'));fd.set('email',v('email'));fd.set('empresa',v('empresa'));fd.set('telefone',v('whatsapp'));fd.set('mensagem',text);fd.set('origem','diagnostico');fd.set('consentimento','sim');fd.set('website',form.website.value);
+    fetch('/api/contato',{method:'POST',headers:{'Content-Type':'application/x-www-form-urlencoded','X-Requested-With':'fetch'},body:fd.toString()})
+      .then(function(res){return res.json().catch(function(){return {};}).then(function(j){return res.ok&&j.ok;});})
+      .catch(function(){return false;})
+      .then(function(ok){btn.disabled=false;btn.textContent='Enviar briefing';showDone(ok,text);});
+  });
+  var toast=$('toast'),tt;function showToast(m){toast.textContent=m;toast.classList.add('show');clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove('show');},1800);}
+  $('copy').addEventListener('click',function(){var text=$('summary').textContent;function fb(){var s=$('summary');var rg=document.createRange();rg.selectNodeContents(s);var sel=window.getSelection();sel.removeAllRanges();sel.addRange(rg);showToast('Texto selecionado. Use Ctrl+C');}
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(text).then(function(){showToast('Respostas copiadas');},fb);}else fb();});
+})();
+</script>
+<script src="/assets/brevo-chat-v1.js" defer></script>
+</body></html>
