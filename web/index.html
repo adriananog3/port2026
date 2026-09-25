@@ -1003,6 +1003,7 @@ it.forEach(function(o){io.observe(o.n);});})();</script>
   // pop-up de entrada (fácil de fechar, não bloqueia). Aparece 1x por sessão.
   var ov=document.getElementById('entryOverlay');
   function closeEntry(){ if(ov){ov.classList.remove('open'); document.body.style.overflow='';} }
+  if(location.hash==='#form-contato')location.replace('/faq'+location.search+'#form-contato');
   var jaViu=/[?&](origem|contato)=/.test(location.search)||location.hash==='#form-contato'||location.hash==='#contato'; // veio direto para o formulário: sem pop-up
   try{ jaViu=jaViu||sessionStorage.getItem('on_entry')==='1'; }catch(e){}
   if(ov && !jaViu){
