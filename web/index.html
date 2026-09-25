@@ -291,19 +291,6 @@ footer{padding:40px 0 60px;text-align:center;color:var(--cinza);font-size:13px}
 footer .disc{max-width:680px;margin:0 auto 12px;font-style:italic}
 footer ol.prem{max-width:680px;margin:0 auto 12px;padding-left:22px;text-align:left;font-style:normal}footer ol.prem li{margin-bottom:2px}
 footer .foot-contato{max-width:680px;margin:18px auto 16px;padding:18px 20px;border:1px solid var(--linha);border-radius:14px;background:var(--card);text-align:left;font-size:14px;color:var(--platinum)}footer .foot-contato b{color:var(--champagne)}footer .foot-contato .fc-tag{font-style:italic;font-size:16px;color:var(--champagne);margin-bottom:8px}footer .foot-contato p{margin-bottom:8px}footer .foot-contato a{color:var(--dourado)}footer .fc-links{line-height:2}
-/* chat launcher */
-.chat-fab{position:fixed;right:22px;bottom:22px;z-index:60;background:var(--dourado);color:#000;font-weight:800;font-size:15px;padding:15px 24px;border-radius:999px;box-shadow:0 10px 30px rgba(201,169,110,.35);cursor:pointer;border:none;display:flex;align-items:center;gap:9px;transition:.3s}
-.chat-fab:hover{background:var(--platinum);transform:translateY(-2px)}
-.chat-panel{position:fixed;right:22px;bottom:88px;z-index:60;width:340px;max-width:calc(100vw - 44px);background:var(--card);border:1px solid var(--dourado);border-radius:16px;overflow:hidden;display:none;box-shadow:0 20px 60px rgba(0,0,0,.6)}
-.chat-panel.open{display:block}
-.chat-head{background:#0e0b07;padding:16px 18px;display:flex;align-items:center;gap:12px;border-bottom:1px solid var(--linha)}
-.chat-head img{width:38px;height:38px;border-radius:50%;border:1px solid var(--dourado)}
-.chat-head b{color:var(--champagne);font-size:15px}
-.chat-head span{color:var(--cinza);font-size:12px}
-.chat-body{padding:18px}
-.chat-body .msg{background:#000;border:1px solid var(--linha);border-left:3px solid var(--dourado);border-radius:10px;padding:14px;font-size:14px;color:var(--platinum);margin-bottom:14px}
-.chat-body .opt{display:block;width:100%;text-align:left;background:transparent;border:1px solid var(--linha);border-radius:10px;padding:12px 14px;color:var(--platinum);font-size:14px;margin-bottom:9px;cursor:pointer;transition:.2s;font-family:inherit}
-.chat-body .opt:hover{border-color:var(--dourado);color:var(--dourado)}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
 nav .brand .brand-txt{white-space:nowrap}
 @media(max-width:440px){nav .row{gap:12px}nav .brand .brand-txt{font-size:15px}nav .cta{font-size:12px;padding:8px 12px;margin-left:auto}}
@@ -594,7 +581,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
       <a href="#contato">Contato</a>
     </div>
     <button type="button" class="nav-search" id="navSearch" aria-haspopup="dialog" aria-controls="buscaDlg" aria-label="Buscar no site por texto ou por voz" title="Buscar (texto ou voz)"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.2"/><path d="M20 20l-4.2-4.2" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M5.5 11a6.5 6.5 0 0 0 13 0M12 17.5V21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
-    <a class="nav-li" href="https://www.linkedin.com/in/adriana-nogueira-cea-marketing3/" target="_blank" rel="noopener" aria-label="LinkedIn de Adriana Nogueira (abre em nova aba)"><svg class="li-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="nav-li-txt">LinkedIn</span></a><button class="cta" id="navChat" type="button" aria-controls="chatPanel" aria-expanded="false">Fale com a especialista</button>
+    <a class="nav-li" href="https://www.linkedin.com/in/adriana-nogueira-cea-marketing3/" target="_blank" rel="noopener" aria-label="LinkedIn de Adriana Nogueira (abre em nova aba)"><svg class="li-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg><span class="nav-li-txt">LinkedIn</span></a><button class="cta" id="navChat" type="button">Fale com a especialista</button>
   </div>
 </nav>
 
@@ -930,21 +917,7 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
   </div>
 </footer>
 
-<!-- SDR chat launcher (preview) -->
-<div class="chat-panel" id="chatPanel" role="dialog" aria-label="Atendimento">
-  <div class="chat-head">
-    <img src="/images/home/f1ac0f5d23.webp" width="38" height="38" alt="Adriana Nogueira" style="border-radius:50%;border:1px solid #C9A96E;object-fit:cover">
-    <div><b>Atendimento · Adriana Nogueira</b><br><span>Respondemos rápido 🖤</span></div>
-  </div>
-  <div class="chat-body">
-    <div class="msg">Olá! Que bom te ver por aqui. O que te trouxe à Assessoria da Adriana Nogueira?</div>
-    <a class="opt js-contato" href="#form-contato" data-origem="chat-diagnostico">Quero um diagnóstico gratuito</a>
-    <a class="opt js-contato" href="#form-contato" data-origem="chat-ajuda">Preciso de ajuda com marketing</a>
-    <a class="opt" href="https://www.linkedin.com/in/adriana-nogueira-cea-marketing3/" target="_blank" rel="noopener">Falar pelo LinkedIn</a>
-  </div>
-</div>
 <script>
-  var fab=document.getElementById('navChat'),panel=document.getElementById('chatPanel');
   if(fab&&panel){fab.addEventListener('click',function(e){e.stopPropagation();var o=panel.classList.toggle('open');fab.setAttribute('aria-expanded',o);});document.addEventListener('click',function(e){if(panel.classList.contains('open')&&!panel.contains(e.target)&&e.target!==fab){panel.classList.remove('open');fab.setAttribute('aria-expanded','false');}});document.addEventListener('keydown',function(e){if(e.key==='Escape'&&panel.classList.contains('open')){panel.classList.remove('open');fab.setAttribute('aria-expanded','false');fab.focus();}});}
   document.querySelectorAll('.readmore').forEach(function(btn){
     var tgt=document.getElementById(btn.getAttribute('aria-controls'));
@@ -1022,7 +995,6 @@ f.addEventListener('submit',function(ev){ev.preventDefault();
   function abrir(o){
     if(fr&&o&&/^[a-z0-9-]{1,60}$/.test(o)){var nv=base+'&origem='+o; if(fr.getAttribute('src')!==nv) fr.setAttribute('src',nv);}
     var ov=document.getElementById('entryOverlay'); if(ov){ov.classList.remove('open');document.body.style.overflow='';}
-    var cp=document.getElementById('chatPanel'); if(cp) cp.classList.remove('open');
     f.scrollIntoView({behavior:'smooth',block:'start'}); if(fr) setTimeout(function(){fr.focus({preventScroll:true});},450);
   }
   document.addEventListener('click',function(e){var a=e.target.closest('.js-contato'); if(!a) return; e.preventDefault(); abrir(a.getAttribute('data-origem'));});
@@ -1197,5 +1169,6 @@ sync();size();
   });
 })();
 </script>
+<script src="/assets/brevo-chat-v1.js" defer></script>
 </body>
 </html>
