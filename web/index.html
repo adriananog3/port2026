@@ -735,9 +735,9 @@ window.addEventListener('message',function(ev){if(ev.origin!=='https://tally.so'
     </div>
     <script>(function(){var ns=document.querySelectorAll('#cases .stat .num');if(!ns.length||!('IntersectionObserver' in window))return;
 if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)return;
-function prep(n){var t=n.textContent,m=t.match(/^(\D*?)(\d+)(.*)$/);if(!m)return null;n.setAttribute('aria-label',t);return {n:n,a:m[1],v:+m[2],z:m[3],t:t};}
+function prep(n){var t=n.textContent,m=t.match(/^(\D*?)(\d+)(.*)$/);if(!m)return null;n.setAttribute('aria-label',t);var k=/^\s*mil/.test(m[3])?1e3:1,c=/^\s*MM/.test(m[3])?1:0;return {n:n,a:m[1],v:+m[2]*k,z:k>1?'':m[3],c:c,t:t};}
 var it=[];ns.forEach(function(n){var o=prep(n);if(o){it.push(o);n.textContent=o.a+'0'+o.z;}});
-function run(o){var d=o.v>=10?1600:900,s=null;function f(ts){if(!s)s=ts;var k=Math.min(1,(ts-s)/d),e=1-Math.pow(1-k,3);o.n.textContent=o.a+Math.round(o.v*e)+o.z;if(k<1)requestAnimationFrame(f);else o.n.textContent=o.t;}requestAnimationFrame(f);}
+function run(o){var d=1800,s=null;function f(ts){if(!s)s=ts;var k=Math.min(1,(ts-s)/d),e=1-Math.pow(1-k,3);o.n.textContent=o.a+(o.v*e).toLocaleString('pt-BR',{minimumFractionDigits:o.c,maximumFractionDigits:o.c})+o.z;if(k<1)requestAnimationFrame(f);else o.n.textContent=o.t;}requestAnimationFrame(f);}
 var io=new IntersectionObserver(function(es){es.forEach(function(en){if(!en.isIntersecting)return;io.unobserve(en.target);it.forEach(function(o){if(o.n===en.target)run(o);});});},{threshold:.4});
 it.forEach(function(o){io.observe(o.n);});})();</script>
 
