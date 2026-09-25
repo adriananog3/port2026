@@ -1,0 +1,5 @@
+Contact: mailto:contato-assessoria@adriana-nogueira.com
+Expires: 2027-09-23T00:00:00.000Z
+Preferred-Languages: pt, en
+Canonical: https://adriana-nogueira.com/.well-known/security.txt
+Policy: https://adriana-nogueira.com/politica-de-privacidade
