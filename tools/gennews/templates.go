@@ -183,6 +183,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
   });
 })();
 </script>
+<script src="/assets/brevo-chat-v1.js" defer></script>
 </body></html>{{end}}
 
 {{define "edition"}}{{template "head"}}
