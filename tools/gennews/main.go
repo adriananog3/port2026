@@ -271,7 +271,7 @@ func main() {
 	for _, e := range all {
 		f, err := os.Create(filepath.Join(out, strings.TrimPrefix(e.Path, "/newsletter/")+".html"))
 		must(err)
-		must(tpl.ExecuteTemplate(f, "edition", map[string]any{"E": e, "Site": site, "Tally": tally, "LD": articleLD(e), "LinkedIn": linkedin, "WhatsApp": whatsapp}))
+		must(tpl.ExecuteTemplate(f, "edition", map[string]any{"E": e, "Site": site, "Tally": tally, "LD": articleLD(e), "LinkedIn": linkedin, "WhatsApp": whatsapp, "Ferr": mkFerramentas(e.URL, e.Title)}))
 		f.Close()
 	}
 	f, err := os.Create(filepath.Join(out, "index.html"))
@@ -301,7 +301,7 @@ func main() {
 		}
 	}
 	_, _, _ = feat, side, rest
-	must(tpl.ExecuteTemplate(f, "index", map[string]any{"All": all, "Feat": featCard, "Dest": dest, "Cards": cards, "Sections": buildSections(cards), "ExtCards": extCards(cards), "Ext": extra.External, "Site": site, "Tally": tally, "LinkedIn": linkedin}))
+	must(tpl.ExecuteTemplate(f, "index", map[string]any{"All": all, "Feat": featCard, "Dest": dest, "Cards": cards, "Sections": buildSections(cards), "ExtCards": extCards(cards), "Ext": extra.External, "Ferr": mkFerramentas(site+"/newsletter", "Newsletter Exponencial Future | Adriana Nogueira"), "Site": site, "Tally": tally, "LinkedIn": linkedin}))
 	f.Close()
 	must(updateHome(root, tpl, all, extra.External))
 	fmt.Printf("newsletter: %d páginas (%d edições novas em Markdown, %d artigos) + página inicial, cards da home e sitemap\n", len(all), len(md), len(arts.Articles))
