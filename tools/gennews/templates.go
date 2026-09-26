@@ -247,19 +247,65 @@ else{window.prompt('Copie o link:',u);}});})();
 <link rel="canonical" href="{{.Site}}/newsletter">
 <meta property="og:type" content="website"><meta property="og:title" content="Newsletter Exponencial Future"><meta property="og:url" content="{{.Site}}/newsletter"><meta property="og:image" content="{{.Site}}/assets/adriana-nogueira-og.jpg"><meta property="og:description" content="Todas as edições da Newsletter Exponencial Future: marketing, IA, branding, regulação e mercado de capitais, por Adriana Nogueira (CEA ANBIMA)."><meta property="og:locale" content="pt_BR"><meta name="twitter:card" content="summary_large_image">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Newsletter Exponencial Future","url":"https://adriana-nogueira.com/newsletter","inLanguage":"pt-BR","description":"Marketing, IA, branding, regulação e mercado de capitais, por Adriana Nogueira (CEA ANBIMA).","author":{"@type":"Person","name":"Adriana Nogueira","url":"https://adriana-nogueira.com/","sameAs":["https://www.linkedin.com/in/adriana-nogueira-cea-marketing3/"]}}</script>
+<style>
+.nx{max-width:1200px}
+.nx-head{display:flex;align-items:baseline;gap:22px;flex-wrap:wrap;margin:10px 0 14px}
+.nx-h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(46px,7vw,76px);line-height:1;margin:0;color:#000;letter-spacing:-.01em}
+.nx-tag{font-family:'Archivo','Open Sans',sans-serif;font-weight:700;font-size:clamp(17px,2vw,23px);margin:0;color:#000}
+.nx-cta{display:flex;align-items:center;gap:18px 26px;flex-wrap:wrap;margin:0 0 34px}
+.nx-cta p{margin:0;max-width:640px;font-size:17px;line-height:1.55;color:#2b2b2b}
+.nx-btn{display:inline-block;background:#C9A96E;color:#000;font-family:'Archivo',sans-serif;font-weight:800;padding:14px 24px;border-radius:6px;text-decoration:none}
+.nx-btn:hover,.nx-btn:focus-visible{background:#000;color:#FDFBF7}
+.nx-art{aspect-ratio:16/10;overflow:hidden;border-radius:4px;background:#C9A96E}
+.nx-art svg{display:block;width:100%;height:100%}
+.nx-top{display:grid;grid-template-columns:1.4fr 1fr;gap:36px;align-items:start}
+.nx-feat{display:block;background:#F3EEE4;text-decoration:none;color:#000;border-radius:4px;overflow:hidden}
+.nx-feat .nx-art{border-radius:0;aspect-ratio:16/8}
+.nx-fb{padding:24px 28px 26px}
+.nx-cat{font-family:'Open Sans',sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;color:#7A5F2C;margin:0 0 10px}
+.nx-feat h2{font-family:'Archivo',sans-serif;font-weight:800;font-size:clamp(24px,2.6vw,32px);line-height:1.2;margin:0 0 12px}
+.nx-sum{margin:0 0 16px;font-size:16px;line-height:1.6;color:#333;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.nx-meta{display:flex;justify-content:space-between;gap:12px;margin:0;font-size:14px;color:#5f5f5f}
+.nx-feat .nx-meta{justify-content:flex-start;gap:22px}
+.nx-st{font-family:'Archivo',sans-serif;font-weight:800;font-size:20px;margin:0 0 18px;padding-bottom:12px;border-bottom:3px solid #C9A96E}
+.nx-mini{display:grid;grid-template-columns:44% 1fr;gap:14px;padding:0 0 18px;margin:0 0 18px;border-bottom:1px solid #D9D9D9;text-decoration:none;color:#000}
+.nx-mini:last-child{border-bottom:0}.nx-mini .nx-meta{flex-direction:column;gap:2px}
+.nx-mini h3,.nx-li h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:16px;line-height:1.4;margin:0 0 10px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.nx-mini > div:last-child,.nx-li > div:last-child{display:flex;flex-direction:column;justify-content:space-between}
+.nx-sec{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(34px,4.4vw,46px);line-height:1.1;margin:58px 0 22px;color:#000}
+.nx-list{display:grid;grid-template-columns:1fr 1fr;gap:26px 34px}
+.nx-li{display:grid;grid-template-columns:42% 1fr;gap:16px;padding-bottom:14px;border-bottom:2px solid #D9D9D9;text-decoration:none;color:#000}
+.nx-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.nx-card{display:flex;flex-direction:column;text-decoration:none;color:#000}
+.nx-card h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:15px;line-height:1.4;margin:14px 0 12px;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.nx-by{margin:auto 0 6px;font-size:14px;color:#5f5f5f}.nx-date{margin:0;font-size:14px;color:#5f5f5f}
+.nx a:hover h2,.nx a:hover h3,.nx a:focus-visible h2,.nx a:focus-visible h3{text-decoration:underline;text-decoration-color:#C9A96E;text-decoration-thickness:2px;text-underline-offset:4px}
+.nx a:hover .nx-art svg{transform:scale(1.03)}.nx-art svg{transition:transform .35s}
+@media(prefers-reduced-motion:reduce){.nx-art svg{transition:none}.nx a:hover .nx-art svg{transform:none}}
+.nx-band{background:#F3EEE4;box-shadow:0 0 0 100vmax #F3EEE4;clip-path:inset(0 -100vmax);margin:70px 0 50px;padding:50px 0 56px}
+.nx-center{text-align:center;margin-top:0}.nx-bsub{text-align:center;margin:-8px auto 28px;max-width:620px;color:#444;font-size:16px}
+.nx-bgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,300px));justify-content:center;gap:28px}
+.nx-bcard{text-decoration:none;color:#000;display:flex;flex-direction:column}
+.nx-blabel{font-family:'Open Sans',sans-serif;font-weight:700;font-size:13px;color:#5f5f5f;margin:0 0 10px}
+.nx-bcard .nx-art{aspect-ratio:1/1}
+.nx-bcard h3{font-family:'Archivo',sans-serif;font-weight:700;font-size:17px;line-height:1.4;margin:14px 0 10px}
+@media(max-width:1000px){.nx-top{grid-template-columns:1fr}.nx-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:700px){.nx-list{grid-template-columns:1fr}.nx-fb{padding:18px}.nx-li,.nx-mini{grid-template-columns:40% 1fr}}
+@media(max-width:460px){.nx-grid{grid-template-columns:1fr}}
+</style>
 </head><body>{{template "top"}}
-<main class="mag" id="conteudo">
-<h1 class="skip">Newsletter Exponencial Future</h1>
-<p class="eyebrow" style="color:#7A5F2C;margin:0 0 14px">Newsletter Exponencial Future · marketing, IA, branding e regulação do mercado financeiro</p>
-<div class="mag-top">
-{{with .Feat}}<a class="feat" href="{{.Path}}">{{template "cover" .}}<div><p class="cat">{{if .Cat}}{{.Cat}}{{else}}{{badge .}}{{end}}</p><h2 class="slab">{{.Title}}</h2><p>{{if .HomeSummary}}{{.HomeSummary}}{{else if .Summary}}{{.Summary}}{{else}}{{.Subtitle}}{{end}}</p></div></a>{{end}}
-<div class="side">{{range .Side}}<a class="mini" href="{{.Path}}">{{template "cover" .}}<p class="cat" style="margin-top:10px">{{if .Cat}}{{.Cat}}{{else}}{{badge .}}{{end}}</p><h3 class="slab">{{.Title}}</h3></a>{{end}}</div>
-</div>
-<h2 class="stitle slab">Últimas publicadas</h2>
-<div class="rows">{{range .All}}<a class="row" href="{{.Path}}">{{template "cover" .}}<div><p class="cat">{{badge .}}{{if .Cat}} · {{.Cat}}{{end}}</p><h3 class="slab">{{.Title}}</h3><p>{{if .HomeSummary}}{{.HomeSummary}}{{else if .Summary}}{{.Summary}}{{else}}{{.Subtitle}}{{end}}</p>{{if .DateBR}}<span class="d">{{.DateBR}}{{if .ReadTime}} · {{.ReadTime}} min de leitura{{end}}</span>{{end}}</div></a>{{end}}</div>
-{{if .Ext}}<h2 class="stitle slab">Café com Caos no LinkedIn</h2>
-<div class="rows">{{range .Ext}}<a class="row" href="{{.URL}}" target="_blank" rel="noopener"><div class="cover cv3" aria-hidden="true"><svg viewBox="0 0 64 64" class="cafe-cup" width="52" height="52" fill="none" stroke="#C9A96E" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 6c-3 4 3 6 0 10M32 6c-3 4 3 6 0 10M42 6c-3 4 3 6 0 10"/><path d="M10 24h42v14a16 16 0 0 1-16 16h-10A16 16 0 0 1 10 38z"/><path d="M52 28h3a7 7 0 0 1 0 14h-4"/><path d="M6 58h50"/></svg><svg viewBox="0 0 24 24" class="cafe-li" width="20" height="20" aria-hidden="true"><rect width="24" height="24" rx="4" fill="#0A66C2"/><path fill="#fff" d="M7.1 9.5H4.6V19h2.5V9.5zM5.9 5.2a1.45 1.45 0 1 0 0 2.9 1.45 1.45 0 0 0 0-2.9zM19.4 13.6c0-2.6-.6-4.3-3.5-4.3-1.4 0-2.3.5-2.7 1.3V9.5h-2.4V19h2.5v-4.7c0-1.2.2-2.4 1.8-2.4 1.5 0 1.5 1.4 1.5 2.5V19h2.5v-5.4z"/></svg><span class="cafe-t">Café com Caos</span></div><div><p class="cat">{{.Label}}</p><h3 class="slab">{{.Title}}</h3><p>{{.Summary}}</p><span class="d">{{.DateBR}} · Leia o texto completo ↗</span></div></a>{{end}}</div>{{end}}
-<div class="subs"><div><h2 class="slab">Receba as próximas edições</h2><p>Que tal garantir leituras objetivas e de fontes confiáveis por meio de fact-checking para ajudar nas suas decisões?</p><p class="subs-sug">Mande sugestões de pautas que você gostaria de ler!</p><div class="cta-form"><form class="nl-form nl-dark" data-tipo="newsletter" data-origem="newsletter-pagina" data-fallback="fb-newsletter-pagina" data-ok="Obrigado, você já está inscrito(a)!" novalidate><label class="nl-field"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="sr-only">Seu e-mail</span><input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" required data-nome="seu e-mail"></label><input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><label class="nl-sugf"><span class="sr-only">Sugestão de pauta (opcional)</span><textarea name="sugestao" rows="3" maxlength="1500" placeholder="Sua sugestão de pauta (opcional)"></textarea></label><label class="nl-ok"><input type="checkbox" name="consentimento" required> <span>Quero receber a Newsletter Exponencial Future por e-mail. Posso cancelar quando quiser (LGPD).</span></label><button type="submit" class="nl-go">Quero me inscrever <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><p class="nl-st" role="status" aria-live="polite"></p><p class="nl-fb" id="fb-newsletter-pagina" hidden><a href="mailto:contato-assessoria@adriana-nogueira.com?subject=Quero%20receber%20a%20newsletter">Concluir a inscrição por e-mail →</a></p></form></div></div>
+<main class="mag nx" id="conteudo">
+<div class="nx-head"><h1 class="nx-h1">Newsletter</h1><p class="nx-tag">Exponencial Future · marketing, IA, branding e regulação do mercado financeiro</p></div>
+<div class="nx-cta"><p>Receba análises objetivas, com fact-checking e fontes confiáveis, para apoiar as suas decisões.</p><a class="nx-btn" href="#assinar">Quero me inscrever</a></div>
+{{with .Feat}}<div class="nx-top"><a class="nx-feat" href="{{.Href}}"{{if .External}} target="_blank" rel="noopener"{{end}}><div class="nx-art">{{.Ilus}}</div><div class="nx-fb"><p class="nx-cat">{{.Kind}}{{if .Cat}} · {{.Cat}}{{end}}</p><h2>{{.Title}}</h2>{{if .Summary}}<p class="nx-sum">{{.Summary}}</p>{{end}}<p class="nx-meta"><span>Adriana Nogueira</span><span>{{.DateBR}}</span></p></div></a>{{end}}
+<aside class="nx-side" aria-labelledby="nx-dest"><h2 class="nx-st" id="nx-dest">Artigos em destaque</h2>{{range .Dest}}<a class="nx-mini" href="{{.Href}}"{{if .External}} target="_blank" rel="noopener"{{end}}><div class="nx-art">{{.Ilus}}</div><div><h3>{{.Title}}</h3><p class="nx-meta"><span>{{if .External}}{{.Kind}} ↗{{else}}Adriana Nogueira{{end}}</span><span>{{.DateBR}}</span></p></div></a>{{end}}</aside></div>
+<h2 class="nx-sec">Últimos artigos</h2>
+<div class="nx-list">{{range .Cards}}<a class="nx-li" href="{{.Href}}"{{if .External}} target="_blank" rel="noopener"{{end}}><div class="nx-art">{{.Ilus}}</div><div><h3>{{.Title}}</h3><p class="nx-meta"><span>{{if .External}}{{.Kind}} no LinkedIn ↗{{else}}Adriana Nogueira{{end}}</span><span>{{.DateBR}}</span></p></div></a>{{end}}</div>
+{{range .Sections}}<h2 class="nx-sec">{{.Title}}</h2>
+<div class="nx-grid">{{range .Cards}}<a class="nx-card" href="{{.Href}}"{{if .External}} target="_blank" rel="noopener"{{end}}><div class="nx-art">{{.Ilus}}</div><h3>{{.Title}}</h3><p class="nx-by">{{if .External}}{{.Kind}} no LinkedIn ↗{{else}}Adriana Nogueira{{end}}</p><p class="nx-date">{{.DateBR}}</p></a>{{end}}</div>
+{{end}}{{if .ExtCards}}<section class="nx-band" aria-labelledby="nx-cafe"><h2 class="nx-sec nx-center" id="nx-cafe">Café com Caos no LinkedIn</h2><p class="nx-bsub">Crônicas curtas sobre marketing, tecnologia e comportamento, publicadas no LinkedIn.</p>
+<div class="nx-bgrid">{{range .ExtCards}}<a class="nx-bcard" href="{{.Href}}" target="_blank" rel="noopener"><p class="nx-blabel">{{.Kind}}</p><div class="nx-art">{{.Ilus}}</div><h3>{{.Title}}</h3><p class="nx-date">{{.DateBR}} · Leia no LinkedIn ↗</p></a>{{end}}</div></section>{{end}}
+<div class="subs" id="assinar"><div><h2 class="slab">Receba as próximas edições</h2><p>Que tal garantir leituras objetivas e de fontes confiáveis por meio de fact-checking para ajudar nas suas decisões?</p><p class="subs-sug">Mande sugestões de pautas que você gostaria de ler!</p><div class="cta-form"><form class="nl-form nl-dark" data-tipo="newsletter" data-origem="newsletter-pagina" data-fallback="fb-newsletter-pagina" data-ok="Obrigado, você já está inscrito(a)!" novalidate><label class="nl-field"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="sr-only">Seu e-mail</span><input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" required data-nome="seu e-mail"></label><input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><label class="nl-sugf"><span class="sr-only">Sugestão de pauta (opcional)</span><textarea name="sugestao" rows="3" maxlength="1500" placeholder="Sua sugestão de pauta (opcional)"></textarea></label><label class="nl-ok"><input type="checkbox" name="consentimento" required> <span>Quero receber a Newsletter Exponencial Future por e-mail. Posso cancelar quando quiser (LGPD).</span></label><button type="submit" class="nl-go">Quero me inscrever <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><p class="nl-st" role="status" aria-live="polite"></p><p class="nl-fb" id="fb-newsletter-pagina" hidden><a href="mailto:contato-assessoria@adriana-nogueira.com?subject=Quero%20receber%20a%20newsletter">Concluir a inscrição por e-mail →</a></p></form></div></div>
 <div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" style="background:#0A66C2;color:#fff;box-shadow:none" href="{{.LinkedIn}}" target="_blank" rel="noopener">Seguir no LinkedIn</a></div></div>
 <a class="back" href="/">← Voltar ao início</a>
 </main>
