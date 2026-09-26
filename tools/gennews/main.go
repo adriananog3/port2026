@@ -288,7 +288,20 @@ func main() {
 			rest = append(rest, e)
 		}
 	}
-	must(tpl.ExecuteTemplate(f, "index", map[string]any{"All": all, "Feat": feat, "Side": side, "Rest": rest, "Ext": extra.External, "Site": site, "Tally": tally, "LinkedIn": linkedin}))
+	cards := buildCards(all, extra.External)
+	var featCard *nlCard
+	var dest []nlCard
+	for i := range cards { // destaque principal: o texto mais recente publicado no próprio site
+		if !cards[i].External && featCard == nil {
+			featCard = &cards[i]
+			continue
+		}
+		if len(dest) < 3 {
+			dest = append(dest, cards[i])
+		}
+	}
+	_, _, _ = feat, side, rest
+	must(tpl.ExecuteTemplate(f, "index", map[string]any{"All": all, "Feat": featCard, "Dest": dest, "Cards": cards, "Sections": buildSections(cards), "ExtCards": extCards(cards), "Ext": extra.External, "Site": site, "Tally": tally, "LinkedIn": linkedin}))
 	f.Close()
 	must(updateHome(root, tpl, all, extra.External))
 	fmt.Printf("newsletter: %d páginas (%d edições novas em Markdown, %d artigos) + página inicial, cards da home e sitemap\n", len(all), len(md), len(arts.Articles))
