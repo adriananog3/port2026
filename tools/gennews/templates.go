@@ -249,9 +249,11 @@ else{window.prompt('Copie o link:',u);}});})();
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Newsletter Exponencial Future","url":"https://adriana-nogueira.com/newsletter","inLanguage":"pt-BR","description":"Marketing, IA, branding, regulação e mercado de capitais, por Adriana Nogueira (CEA ANBIMA).","author":{"@type":"Person","name":"Adriana Nogueira","url":"https://adriana-nogueira.com/","sameAs":["https://www.linkedin.com/in/adriana-nogueira-cea-marketing3/"]}}</script>
 <style>
 .nx{max-width:1200px}
-.nx-head{display:flex;align-items:baseline;gap:22px;flex-wrap:wrap;margin:10px 0 28px}
+.nx-head{margin:10px 0 30px}
 .nx-h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(46px,7vw,76px);line-height:1;margin:0;color:#000;letter-spacing:-.01em}
-.nx-tag{font-family:'Archivo','Open Sans',sans-serif;font-weight:700;font-size:clamp(17px,2vw,23px);margin:0;color:#000}
+.nx-brand{font-style:italic;color:#7A5F2C;white-space:nowrap;box-shadow:inset 0 -.16em 0 rgba(201,169,110,.45)}
+.nx-tag{font-family:'Archivo','Open Sans',sans-serif;font-weight:600;font-size:clamp(16px,1.6vw,19px);letter-spacing:.02em;margin:14px 0 0;color:#2b2b2b}
+@media(max-width:560px){.nx-brand{white-space:normal}}
 .nx-cta{display:flex;align-items:center;justify-content:space-between;gap:18px 26px;flex-wrap:wrap;margin:36px 0 0;padding:22px 0 0;border-top:1px solid #D9D9D9}
 .nx-cta p{margin:0;max-width:640px;font-size:17px;line-height:1.55;color:#2b2b2b}
 .nx-btn{display:inline-block;background:#C9A96E;color:#000;font-family:'Archivo',sans-serif;font-weight:800;padding:14px 24px;border-radius:6px;text-decoration:none}
@@ -295,7 +297,7 @@ else{window.prompt('Copie o link:',u);}});})();
 </style>
 </head><body>{{template "top"}}
 <main class="mag nx" id="conteudo">
-<div class="nx-head"><h1 class="nx-h1">Newsletter</h1><p class="nx-tag">Exponencial Future · marketing, IA, branding e regulação do mercado financeiro</p></div>
+<div class="nx-head"><h1 class="nx-h1">Newsletter <span class="nx-brand">Exponencial Future</span></h1><p class="nx-tag">Marketing, IA, branding e regulação do mercado financeiro</p></div>
 {{with .Feat}}<div class="nx-top"><a class="nx-feat" href="{{.Href}}"{{if .External}} target="_blank" rel="noopener"{{end}}><div class="nx-art">{{.Ilus}}</div><div class="nx-fb"><p class="nx-cat">{{.Kind}}{{if .Cat}} · {{.Cat}}{{end}}</p><h2>{{.Title}}</h2>{{if .Summary}}<p class="nx-sum">{{.Summary}}</p>{{end}}<p class="nx-meta"><span>Adriana Nogueira</span><span>{{.DateBR}}</span></p></div></a>{{end}}
 <aside class="nx-side" aria-labelledby="nx-dest"><h2 class="nx-st" id="nx-dest">Artigos em destaque</h2>{{range .Dest}}<a class="nx-mini" href="{{.Href}}"{{if .External}} target="_blank" rel="noopener"{{end}}><div class="nx-art">{{.Ilus}}</div><div><h3>{{.Title}}</h3><p class="nx-meta"><span>{{if .External}}{{.Kind}} ↗{{else}}Adriana Nogueira{{end}}</span><span>{{.DateBR}}</span></p></div></a>{{end}}</aside></div>
 <div class="nx-cta"><p>Receba análises objetivas, com fact-checking e fontes confiáveis, para apoiar as suas decisões.</p><a class="nx-btn" href="#assinar">Quero me inscrever</a></div>
