@@ -9,8 +9,7 @@
 3. **SEO, GEO & AEO**: marca encontrada no Google e citada pelas IAs de resposta (ChatGPT, Perplexity, Google AI).
 4. **Go-to-Market**: estratégia de entrada, mensagem, canais e funil para produtos e serviços financeiros.
 5. **Thought Leadership Executivo**: presença estratégica no LinkedIn, artigos e newsletters na voz do executivo.
-6. **IA & RAG em Conformidade**: infraestrutura agêntica documentada, RAG e automação em conformidade com LGPD e EU AI Act, sempre com supervisão humana.
-7. **IA Generativa auditada (RAG para conhecimento empresarial)**: da prova de conceito à produção, com citações corretas, controle de acesso e avaliação contínua, em parceria com engenharia especializada em Python. Três revisões automatizadas e uma humana antes de cada entrega. Detalhes: https://adriana-nogueira.com/#assessoria-ia
+6. **IA Generativa auditada (RAG para conhecimento empresarial)**: da prova de conceito à produção, com citações corretas, controle de acesso e avaliação contínua, em parceria com engenharia especializada em Python. Três revisões automatizadas e uma humana antes de cada entrega. Detalhes: https://adriana-nogueira.com/#assessoria-ia
 
 ## Resultados
 
