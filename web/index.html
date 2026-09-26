@@ -628,7 +628,6 @@ section.sec-claro{background:#FDFBF7;color:#000;border-bottom:1px solid #D9D9D9}
 <main id="conteudo">
 <header class="hero" id="topo">
   <canvas class="hero-art" id="heroArt" aria-hidden="true"></canvas>
-  <button type="button" class="art-toggle" id="heroArtToggle" aria-pressed="false">Pausar animação</button>
   <div class="wrap grid">
     <div>
       <p class="eyebrow">Seção 01 · Sobre</p>
@@ -1101,7 +1100,7 @@ document.querySelectorAll('.ctabs').forEach(function(list){
 "use strict";
 /* Campo Conforme · arte generativa do topo (decorativa).
    Criatividade (ruído de Perlin 3D) + conformidade (força elástica para a faixa de origem).
-   Acessível: respeita prefers-reduced-motion (versão estática), botão de pausa (WCAG 2.2.2),
+   Acessível: respeita prefers-reduced-motion (versão estática),
    aria-hidden, só anima quando visível. Arte gerada com apoio de IA sob direção humana. */
 var cv=document.getElementById("heroArt");
 if(!cv||!cv.getContext)return;
