@@ -44,7 +44,7 @@ main{max-width:860px;margin:0 auto;padding:40px 16px 20px}
 .cta h2{margin:0 0 8px;font-size:24px;color:#000}.cta p{margin:0 0 18px;color:#444}
 .btn{display:inline-block;background:var(--ouro);color:#000;font-weight:800;text-decoration:none;padding:13px 26px;border-radius:999px;box-shadow:0 8px 22px rgba(201,169,110,.3)}
 .btn:hover{background:#D9BE88}
-.back{display:inline-block;margin:26px 0 0;font-weight:700}
+.back{display:inline-flex;align-items:center;gap:8px;margin:26px 0 0;padding:12px 22px;background:#fff;color:#000;border:1px solid #D9D9D9;border-radius:6px;font-weight:700;text-decoration:none}.back:hover,.back:focus-visible{border-color:#000}
 .list{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:10px}
 .ed{display:flex;flex-direction:column;background:#fff;border:1px solid var(--plat);border-top:4px solid var(--ouro);border-radius:16px;padding:22px;text-decoration:none;color:var(--texto);transition:.2s}
 .ed:hover{box-shadow:0 16px 40px rgba(0,0,0,.08);transform:translateY(-3px)}
@@ -86,16 +86,18 @@ footer{background:#000;color:#BDBDBD;text-align:center;font-size:14px;padding:26
 .row{display:grid;grid-template-columns:200px 1fr;gap:18px;text-decoration:none;color:var(--texto);background:#fff;border:1px solid #E6E1D6;padding:14px;border-radius:4px}
 .row h3{font-size:19px;line-height:1.3;color:#000;margin:2px 0 6px}.row p{font-size:15px;line-height:1.55;margin:0 0 6px;color:#555;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 .row .d{font-size:13px;color:#666}
-.subs{display:flex;flex-wrap:wrap;gap:14px;align-items:center;justify-content:space-between;background:#000;color:#FDFBF7;padding:26px 28px;border-radius:4px;margin:46px 0 0}
+.subs{display:flex;flex-direction:column;flex-wrap:wrap;gap:14px;align-items:center;justify-content:center;text-align:center;background:#000;color:#FDFBF7;padding:26px 28px;border-radius:4px;margin:46px 0 0}
 .subs h2{margin:0;font-size:24px}.subs p{margin:4px 0 0;color:#BDBDBD;font-size:15px}
 /* ---- página da edição ---- */
 .art{max-width:1180px;margin:0 auto;padding:30px 16px 10px;display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:48px}
-.share{display:flex;gap:10px;align-items:center;margin:0 0 20px;flex-wrap:wrap}
-.share span{font-size:13px;color:#666;margin-right:4px}
-.share a,.share button{width:36px;height:36px;border-radius:4px;display:inline-flex;align-items:center;justify-content:center;color:#fff}
-.share a svg,.share button svg{width:19px;height:19px;fill:currentColor}
-.sh-wa{background:#25D366}.sh-in{background:#0A66C2}.sh-sh{background:#000;border:0;cursor:pointer}.sh-msg{font-size:14px;color:#2e7d32}
-.share a:hover,.share button:hover{filter:brightness(1.12)}
+.ferr{display:flex;flex-wrap:wrap;align-items:center;gap:12px 26px;background:#fff;border:1px solid #D9D9D9;border-radius:8px;padding:14px 18px;margin:0 0 26px}
+.fg{display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.fl{display:inline-flex;align-items:center;gap:6px;font-family:'Archivo','Open Sans',sans-serif;font-weight:700;font-size:13px;letter-spacing:.04em;text-transform:uppercase;color:#000;margin-right:2px}.fl svg{width:16px;height:16px;fill:#7A5F2C}
+.fb{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:36px;padding:0 12px;background:#fff;color:#000;border:1px solid #D9D9D9;border-radius:6px;font:inherit;font-size:14px;font-weight:600;text-decoration:none;cursor:pointer}
+.fb.fi{width:36px;padding:0}.fb svg{width:17px;height:17px;fill:currentColor;flex:none}.fb:hover,.fb:focus-visible{border-color:#000}
+.fpref{display:inline-flex;align-items:center;gap:8px;min-height:36px;padding:7px 14px;line-height:1.3;background:#fff;color:#000;border:1px solid #C9A96E;border-radius:6px;font-size:14px;font-weight:700;text-decoration:none}.fpref svg{width:16px;height:16px;fill:#C9A96E;flex:none}.fpref:hover,.fpref:focus-visible{border-color:#000}
+.fmsg{font-size:13px;color:#2e7d32}.fnota{flex:1 1 100%;margin:0;font-size:12.5px;color:#666}.fnota a{color:#7A5F2C}
+.follow-wa svg{fill:#25D366}
 .resumo{background:#F2EFE9;border-radius:6px;padding:4px 26px;margin:0 0 30px}
 .resumo summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:10px;padding:18px 0;font-family:"Roboto Slab",Georgia,serif;font-weight:700;font-size:19px;color:#222}
 .resumo summary::-webkit-details-marker{display:none}
@@ -138,7 +140,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
 .nl-dark .nl-field:focus-within{border-color:var(--dourado)}
 .nl-fb{font-size:14px}.nl-fb a{color:#7A5C22;font-weight:700;text-decoration:underline}.nl-dark .nl-fb a{color:var(--dourado)}
 .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
-.cta-form{max-width:460px;margin:16px auto 0}.subs .cta-form{margin:16px 0 0}
+.cta-form{max-width:460px;margin:16px auto 0}.subs>div{width:100%}.subs .cta-form{margin:16px auto 0;text-align:left}
 </style>{{end}}
 
 
@@ -146,6 +148,11 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
 {{define "i-fb"}}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.5 22v-8.2h2.8l.4-3.2h-3.2V8.5c0-.9.3-1.6 1.6-1.6h1.7V4.1A23 23 0 0 0 14.3 4c-2.5 0-4.1 1.5-4.1 4.2v2.4H7.4v3.2h2.8V22z"/></svg>{{end}}
 {{define "i-x"}}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.8 3h3.1l-6.8 7.7L22 21h-6.2l-4.9-6.4L5.3 21H2.2l7.3-8.3L2 3h6.4l4.4 5.8zm-1.1 16.2h1.7L7.4 4.7H5.6z"/></svg>{{end}}
 {{define "i-share"}}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 16.1a2.9 2.9 0 0 0-2 .8l-7.1-4.1a3.3 3.3 0 0 0 0-1.6l7-4.1A3 3 0 1 0 15 5a3 3 0 0 0 .1.8l-7 4.1a3 3 0 1 0 0 4.3l7.1 4.2a2.8 2.8 0 0 0-.1.7 2.9 2.9 0 1 0 2.9-3z"/></svg>{{end}}
+{{define "i-mail"}}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm1 2.2V17h16V7.2l-8 5.6zM5.5 7l6.5 4.6L18.5 7z"/></svg>{{end}}
+{{define "i-link"}}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.6 13.4a1 1 0 0 1 0-1.4l3.5-3.5a1 1 0 1 1 1.4 1.4L12 13.4a1 1 0 0 1-1.4 0zM8.5 20a4.5 4.5 0 0 1-3.2-7.7l2.5-2.5a1 1 0 1 1 1.4 1.4l-2.5 2.5a2.5 2.5 0 1 0 3.5 3.5l2.5-2.5a1 1 0 1 1 1.4 1.4l-2.5 2.5A4.5 4.5 0 0 1 8.5 20zm7.7-6.1a1 1 0 0 1-.7-1.7l2.5-2.5a2.5 2.5 0 1 0-3.5-3.5L12 8.7a1 1 0 1 1-1.4-1.4l2.5-2.5a4.5 4.5 0 1 1 6.4 6.4L17 13.6a1 1 0 0 1-.8.3z"/></svg>{{end}}
+{{define "i-star"}}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.5l2.9 6 6.6.8-4.9 4.5 1.3 6.5L12 17l-5.9 3.3 1.3-6.5L2.5 9.3l6.6-.8z"/></svg>{{end}}
+{{define "i-spark"}}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3l1.6 4.4L15 9l-4.4 1.6L9 15l-1.6-4.4L3 9l4.4-1.6zM18 13l.9 2.1L21 16l-2.1.9L18 19l-.9-2.1L15 16l2.1-.9zM17 3l.6 1.4L19 5l-1.4.6L17 7l-.6-1.4L15 5l1.4-.6z"/></svg>{{end}}
+{{define "ferr"}}<div class="ferr" role="group" aria-label="Resumir, compartilhar e salvar esta página"><div class="fg"><span class="fl">{{template "i-spark"}}Resumir com IA</span><a class="fb" href="{{.ChatGPT}}" target="_blank" rel="noopener" aria-label="Resumir no ChatGPT (abre em nova aba)">ChatGPT</a><a class="fb" href="{{.Perplexity}}" target="_blank" rel="noopener" aria-label="Resumir no Perplexity (abre em nova aba)">Perplexity</a><a class="fb" href="{{.Claude}}" target="_blank" rel="noopener" aria-label="Resumir no Claude (abre em nova aba)">Claude</a><a class="fb" href="{{.Google}}" target="_blank" rel="noopener" aria-label="Resumir no Modo IA do Google (abre em nova aba)">Google IA</a></div><div class="fg"><span class="fl">Compartilhar</span><a class="fb fi" href="{{.LinkedIn}}" target="_blank" rel="noopener" aria-label="Compartilhar no LinkedIn">{{template "i-in"}}</a><a class="fb fi" href="{{.WhatsApp}}" target="_blank" rel="noopener" aria-label="Compartilhar no WhatsApp">{{template "i-wa"}}</a><a class="fb fi" href="{{.X}}" target="_blank" rel="noopener" aria-label="Compartilhar no X">{{template "i-x"}}</a><a class="fb fi" href="{{.Email}}" aria-label="Enviar por e-mail">{{template "i-mail"}}</a><button type="button" class="fb fcopy" data-url="{{.URL}}" data-title="{{.Title}}">{{template "i-link"}}<span>Copiar link</span></button><span class="fmsg" role="status" aria-live="polite"></span></div><a class="fpref" href="{{.Pref}}" target="_blank" rel="noopener">{{template "i-star"}}<span>Adicionar como fonte preferida no Google</span></a><p class="fnota">Os botões abrem serviços externos em nova aba e levam só o endereço desta página; nada é enviado pelo site. <a href="/politica-de-privacidade">Privacidade</a></p></div><script>(function(){var bs=document.querySelectorAll(".fcopy");for(var i=0;i<bs.length;i++){(function(b){var m=b.parentNode.querySelector(".fmsg");b.addEventListener("click",function(){var u=b.getAttribute("data-url"),t=b.getAttribute("data-title");function ok(){m.textContent="Link copiado.";setTimeout(function(){m.textContent="";},2500);}if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(u).then(ok,function(){if(navigator.share)navigator.share({title:t,url:u}).catch(function(){});});}else if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});}else{window.prompt("Copie o link:",u);}});})(bs[i]);}})();</script>{{end}}
 {{define "i-in"}}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zm7 0h3.8v1.6h.1a4.2 4.2 0 0 1 3.8-2c4 0 4.8 2.6 4.8 6.1V21h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-2 1.3-2 2.7V21h-4z"/></svg>{{end}}
 {{define "cover"}}<div class="cover cv{{.Cover}}" aria-hidden="true">{{if .Img}}<img src="{{.Img}}" alt="" loading="lazy" decoding="async">{{end}}<b{{if .Label}} class="lbl"{{end}}>{{short .}}</b>{{if not .Label}}<span>Exponencial Future</span>{{end}}</div>{{end}}
 {{define "top"}}<a class="skip" href="#conteudo">Pular para o conteúdo</a>
@@ -209,11 +216,7 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
 {{if .E.Img}}<figure class="hfig"><img src="{{.E.Img}}" alt="{{.E.ImgAlt}}" width="1200" height="675" decoding="async"><figcaption>Imagem: <a href="{{.E.ImgPage}}" target="_blank" rel="noopener">{{.E.ImgBy}} / Unsplash</a></figcaption></figure>{{end}}
 </div></section>
 <div class="art"><main id="conteudo">
-<div class="share">
-<a class="sh-in" href="{{.LinkedIn}}" target="_blank" rel="noopener" aria-label="LinkedIn de Adriana Nogueira">{{template "i-in"}}</a>
-<a class="sh-wa" href="{{.WhatsApp}}" target="_blank" rel="noopener" aria-label="Conversar no WhatsApp">{{template "i-wa"}}</a>
-<button type="button" class="sh-sh" id="compartilhar" data-url="{{.E.URL}}" data-title="{{.E.Title}}" aria-label="Compartilhar esta edição">{{template "i-share"}}</button>
-<span class="sh-msg" id="sh-msg" role="status" aria-live="polite"></span></div>
+{{template "ferr" .Ferr}}
 {{if .E.AISummary}}<details class="resumo" open><summary><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3l1.6 4.4L15 9l-4.4 1.6L9 15l-1.6-4.4L3 9l4.4-1.6zM18 13l.9 2.1L21 16l-2.1.9L18 19l-.9-2.1L15 16l2.1-.9zM17 3l.6 1.4L19 5l-1.4.6L17 7l-.6-1.4L15 5l1.4-.6z"/></svg>Resumo</summary>
 {{range .E.AISummary}}<p>{{.}}</p>{{end}}<p class="sup">Resumo gerado com IA e supervisionado por Adriana Nogueira.</p></details>{{end}}
 {{if .E.Full}}{{with .E.Content}}
@@ -231,14 +234,8 @@ h1 em,h2 em{font-size:1.1em;letter-spacing:0}
 <aside class="aside" aria-label="Matérias relacionadas"><h2>Matérias relacionadas</h2>
 {{range .E.Related}}<a class="rel" href="{{.Path}}"><div><p class="cat">{{if .Cat}}{{.Cat}}{{else}}{{badge .}}{{end}}</p><h3>{{.Title}}</h3></div>{{template "cover" .}}</a>{{end}}
 <a class="follow" href="{{.LinkedIn}}" target="_blank" rel="noopener">{{template "i-in"}}<span>Siga Adriana Nogueira no LinkedIn<small>Novas edições e análises toda semana</small></span></a>
+<a class="follow follow-wa" href="{{.WhatsApp}}" target="_blank" rel="noopener">{{template "i-wa"}}<span>Fale com a especialista<small>Converse pelo WhatsApp</small></span></a>
 </aside></div>
-<script>
-(function(){var b=document.getElementById('compartilhar'),m=document.getElementById('sh-msg');if(!b)return;
-b.addEventListener('click',function(){var u=b.getAttribute('data-url'),t=b.getAttribute('data-title');
-if(navigator.share){navigator.share({title:t,url:u}).catch(function(){});return;}
-if(navigator.clipboard){navigator.clipboard.writeText(u).then(function(){m.textContent='Link copiado.';setTimeout(function(){m.textContent='';},2500);});}
-else{window.prompt('Copie o link:',u);}});})();
-</script>
 {{template "foot"}}{{end}}
 
 {{define "index"}}{{template "head"}}
@@ -249,7 +246,13 @@ else{window.prompt('Copie o link:',u);}});})();
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Blog","name":"Newsletter Exponencial Future","url":"https://adriana-nogueira.com/newsletter","inLanguage":"pt-BR","description":"Marketing, IA, branding, regulação e mercado de capitais, por Adriana Nogueira (CEA ANBIMA).","author":{"@type":"Person","name":"Adriana Nogueira","url":"https://adriana-nogueira.com/","sameAs":["https://www.linkedin.com/in/adriana-nogueira-cea-marketing3/"]}}</script>
 <style>
 .nx{max-width:1200px}
-.nx-head{margin:10px 0 30px}
+.nx-head{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;margin:10px 0 30px}.nx-head>div:last-child{max-width:600px}
+.nx-busca{display:flex;align-items:center;gap:8px;background:#fff;border:1px solid #D9D9D9;border-radius:8px;padding:6px 6px 6px 14px}.nx-busca:focus-within{border-color:#000}
+.nx-busca>svg{width:18px;height:18px;flex:none;color:#7A5F2C}.nx-busca input{flex:1;min-width:0;border:0;outline:0;background:transparent;font:inherit;font-size:16px;color:#000;padding:8px 0}
+.nx-mic{display:inline-flex;align-items:center;gap:6px;min-height:38px;padding:0 14px;background:#fff;color:#000;border:1px solid #D9D9D9;border-radius:6px;font:inherit;font-size:14px;font-weight:700;cursor:pointer}.nx-mic svg{width:16px;height:16px}.nx-mic:hover,.nx-mic:focus-visible{border-color:#000}.nx-mic[aria-pressed=true]{background:#000;color:#FDFBF7;border-color:#000}
+.nx-bst{min-height:18px;margin:8px 0 0;font-size:14px;font-weight:600;color:#000}.nx-bnota{margin:4px 0 0;font-size:12px;line-height:1.45;color:#666}.nx-bnota a{color:#7A5F2C}
+.nx .ferr{margin:28px 0 0}.nx-li[hidden]{display:none}
+.nx-buscando .nx-top,.nx-buscando .nx-cta,.nx-buscando .ferr,.nx-buscando .nx-grid,.nx-buscando .nx-band,.nx-buscando .nx-sec:not(#nx-ult){display:none}
 .nx-h1{font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;font-size:clamp(46px,7vw,76px);line-height:1;margin:0;color:#000;letter-spacing:-.01em}
 .nx-brand{font-style:italic;color:#7A5F2C;white-space:nowrap;box-shadow:inset 0 -.16em 0 rgba(201,169,110,.45)}
 .nx-tag{font-family:'Archivo','Open Sans',sans-serif;font-weight:600;font-size:clamp(16px,1.6vw,19px);letter-spacing:.02em;margin:14px 0 0;color:#2b2b2b}
@@ -297,19 +300,23 @@ else{window.prompt('Copie o link:',u);}});})();
 </style>
 </head><body>{{template "top"}}
 <main class="mag nx" id="conteudo">
-<div class="nx-head"><h1 class="nx-h1">Newsletter <span class="nx-brand">Exponencial Future</span></h1><p class="nx-tag">Marketing, IA, branding e regulação do mercado financeiro</p></div>
+<div class="nx-head"><div><h1 class="nx-h1">Newsletter <span class="nx-brand">Exponencial Future</span></h1><p class="nx-tag">Marketing, IA, branding e regulação do mercado financeiro</p></div>
+<div><div class="nx-busca" role="search"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><label for="nxq" class="sr-only">Buscar artigos da newsletter</label><input id="nxq" type="search" placeholder="Buscar por tema ou palavra" autocomplete="off" enterkeyhint="search"><button type="button" class="nx-mic" id="nxmic" aria-pressed="false" aria-label="Buscar por voz"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="9" y="3" width="6" height="11" rx="3" fill="currentColor"/><path d="M5 11a7 7 0 0 0 14 0M12 18v3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Falar</span></button></div><p class="nx-bst" id="nxst" role="status" aria-live="polite"></p><p class="nx-bnota">Busca por voz: só funciona quando você toca em <b>Falar</b>. O áudio vira texto no serviço de voz do seu navegador e não é gravado nem guardado pelo site. <a href="/politica-de-privacidade">Privacidade</a></p></div></div>
 {{with .Feat}}<div class="nx-top"><a class="nx-feat" href="{{.Href}}"{{if .External}} target="_blank" rel="noopener"{{end}}><div class="nx-art">{{.Ilus}}</div><div class="nx-fb"><p class="nx-cat">{{.Kind}}{{if .Cat}} · {{.Cat}}{{end}}</p><h2>{{.Title}}</h2>{{if .Summary}}<p class="nx-sum">{{.Summary}}</p>{{end}}<p class="nx-meta"><span>Adriana Nogueira</span><span>{{.DateBR}}</span></p></div></a>{{end}}
 <aside class="nx-side" aria-labelledby="nx-dest"><h2 class="nx-st" id="nx-dest">Artigos em destaque</h2>{{range .Dest}}<a class="nx-mini" href="{{.Href}}"{{if .External}} target="_blank" rel="noopener"{{end}}><div class="nx-art">{{.Ilus}}</div><div><h3>{{.Title}}</h3><p class="nx-meta"><span>{{if .External}}{{.Kind}} ↗{{else}}Adriana Nogueira{{end}}</span><span>{{.DateBR}}</span></p></div></a>{{end}}</aside></div>
 <div class="nx-cta"><p>Receba análises objetivas, com fact-checking e fontes confiáveis, para apoiar as suas decisões.</p><a class="nx-btn" href="#assinar">Quero me inscrever</a></div>
-<h2 class="nx-sec">Últimos artigos</h2>
-<div class="nx-list">{{range .Cards}}<a class="nx-li" href="{{.Href}}"{{if .External}} target="_blank" rel="noopener"{{end}}><div class="nx-art">{{.Ilus}}</div><div><h3>{{.Title}}</h3><p class="nx-meta"><span>{{if .External}}{{.Kind}} no LinkedIn ↗{{else}}Adriana Nogueira{{end}}</span><span>{{.DateBR}}</span></p></div></a>{{end}}</div>
+{{template "ferr" .Ferr}}
+<h2 class="nx-sec" id="nx-ult">Últimos artigos</h2>
+<div class="nx-list" id="nxlista">{{range .Cards}}<a class="nx-li" data-busca="{{.Title}} {{.Summary}} {{.Cat}} {{.Kind}} {{range .Tags}}{{.}} {{end}}" href="{{.Href}}"{{if .External}} target="_blank" rel="noopener"{{end}}><div class="nx-art">{{.Ilus}}</div><div><h3>{{.Title}}</h3><p class="nx-meta"><span>{{if .External}}{{.Kind}} no LinkedIn ↗{{else}}Adriana Nogueira{{end}}</span><span>{{.DateBR}}</span></p></div></a>{{end}}</div>
 {{range .Sections}}<h2 class="nx-sec">{{.Title}}</h2>
 <div class="nx-grid">{{range .Cards}}<a class="nx-card" href="{{.Href}}"{{if .External}} target="_blank" rel="noopener"{{end}}><div class="nx-art">{{.Ilus}}</div><h3>{{.Title}}</h3><p class="nx-by">{{if .External}}{{.Kind}} no LinkedIn ↗{{else}}Adriana Nogueira{{end}}</p><p class="nx-date">{{.DateBR}}</p></a>{{end}}</div>
 {{end}}{{if .ExtCards}}<section class="nx-band" aria-labelledby="nx-cafe"><h2 class="nx-sec nx-center" id="nx-cafe">Café com Caos no LinkedIn</h2><p class="nx-bsub">Crônicas curtas sobre marketing, tecnologia e comportamento, publicadas no LinkedIn.</p>
 <div class="nx-bgrid">{{range .ExtCards}}<a class="nx-bcard" href="{{.Href}}" target="_blank" rel="noopener"><p class="nx-blabel">{{.Kind}}</p><div class="nx-art">{{.Ilus}}</div><h3>{{.Title}}</h3><p class="nx-date">{{.DateBR}} · Leia no LinkedIn ↗</p></a>{{end}}</div></section>{{end}}
 <div class="subs" id="assinar"><div><h2 class="slab">Receba as próximas edições</h2><p>Que tal garantir leituras objetivas e de fontes confiáveis por meio de fact-checking para ajudar nas suas decisões?</p><p class="subs-sug">Mande sugestões de pautas que você gostaria de ler!</p><div class="cta-form"><form class="nl-form nl-dark" data-tipo="newsletter" data-origem="newsletter-pagina" data-fallback="fb-newsletter-pagina" data-ok="Obrigado, você já está inscrito(a)!" novalidate><label class="nl-field"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/><path d="M3.5 6.5l8.5 6.5 8.5-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg><span class="sr-only">Seu e-mail</span><input type="email" name="email" placeholder="Seu e-mail" autocomplete="email" required data-nome="seu e-mail"></label><input class="hp" type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true"><label class="nl-sugf"><span class="sr-only">Sugestão de pauta (opcional)</span><textarea name="sugestao" rows="3" maxlength="1500" placeholder="Sua sugestão de pauta (opcional)"></textarea></label><label class="nl-ok"><input type="checkbox" name="consentimento" required> <span>Quero receber a Newsletter Exponencial Future por e-mail. Posso cancelar quando quiser (LGPD).</span></label><button type="submit" class="nl-go">Quero me inscrever <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 12h15M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></button><p class="nl-st" role="status" aria-live="polite"></p><p class="nl-fb" id="fb-newsletter-pagina" hidden><a href="mailto:contato-assessoria@adriana-nogueira.com?subject=Quero%20receber%20a%20newsletter">Concluir a inscrição por e-mail →</a></p></form></div></div>
-<div style="display:flex;gap:10px;flex-wrap:wrap"><a class="btn" style="background:#0A66C2;color:#fff;box-shadow:none" href="{{.LinkedIn}}" target="_blank" rel="noopener">Seguir no LinkedIn</a></div></div>
+<div style="display:flex;gap:10px;flex-wrap:wrap;justify-content:center"><a class="btn" style="background:#0A66C2;color:#fff;box-shadow:none" href="{{.LinkedIn}}" target="_blank" rel="noopener">Seguir no LinkedIn</a></div></div>
 <a class="back" href="/">← Voltar ao início</a>
+<script>(function(){var inp=document.getElementById("nxq"),mic=document.getElementById("nxmic"),st=document.getElementById("nxst"),mn=document.querySelector("main.nx"),h=document.getElementById("nx-ult");if(!inp||!mn)return;var itens=[].slice.call(document.querySelectorAll("#nxlista .nx-li"));function norm(x){return (x||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");}function filtrar(){var q=norm(inp.value.trim());if(!q){mn.classList.remove("nx-buscando");itens.forEach(function(a){a.hidden=false;});h.textContent="Últimos artigos";st.textContent="";return;}var ts=q.split(/\s+/),n=0;itens.forEach(function(a){var t=norm(a.getAttribute("data-busca")+" "+a.textContent);var ok=ts.every(function(w){return t.indexOf(w)>-1;});a.hidden=!ok;if(ok)n++;});mn.classList.add("nx-buscando");h.textContent="Resultados da busca";st.textContent=n?(n+(n>1?" artigos encontrados.":" artigo encontrado.")):"Nenhum artigo encontrado. Tente outra palavra.";}inp.addEventListener("input",filtrar);inp.addEventListener("keydown",function(e){if(e.key==="Enter"){e.preventDefault();filtrar();h.scrollIntoView({behavior:"smooth",block:"start"});}if(e.key==="Escape"){inp.value="";filtrar();}});var SR=window.SpeechRecognition||window.webkitSpeechRecognition,rec=null,ouv=false;if(!SR){mic.hidden=true;return;}mic.addEventListener("click",function(){if(ouv){try{rec.stop();}catch(e){}return;}rec=new SR();rec.lang="pt-BR";rec.interimResults=true;rec.maxAlternatives=1;rec.onstart=function(){ouv=true;mic.setAttribute("aria-pressed","true");mic.setAttribute("aria-label","Parar de ouvir");st.textContent="Ouvindo… diga o tema que você procura.";};rec.onresult=function(ev){var t="";for(var i=ev.resultIndex;i<ev.results.length;i++){t+=ev.results[i][0].transcript;}inp.value=t.trim();filtrar();};rec.onerror=function(ev){st.textContent=(ev.error==="not-allowed"||ev.error==="service-not-allowed")?"Para buscar por voz, permita o uso do microfone no navegador. Você também pode digitar.":ev.error==="no-speech"?"Não ouvi nada. Toque em Falar e tente de novo.":"A busca por voz não funcionou agora. Você pode digitar.";};rec.onend=function(){ouv=false;mic.setAttribute("aria-pressed","false");mic.setAttribute("aria-label","Buscar por voz");if(inp.value.trim())filtrar();inp.focus();};try{rec.start();}catch(e){st.textContent="A busca por voz não está disponível neste navegador. Você pode digitar.";}});})();</script>
+
 </main>
 {{template "foot"}}{{end}}
 `
